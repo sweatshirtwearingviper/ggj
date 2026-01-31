@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://d0v473p6eqiic"]
+
+[ext_resource type="Script" uid="uid://5tle38c0ficv" path="res://obstacles/teleporter.gd" id="1_4q8vd"]
+[ext_resource type="SpriteFrames" uid="uid://dcnpds34yvalj" path="res://textures/gravestone.tres" id="2_4q8vd"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_htmf4"]
+
+[node name="Gravestone" type="Area2D" unique_id=511879513]
+collision_layer = 0
+collision_mask = 0
+script = ExtResource("1_4q8vd")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=2019958876]
+texture_filter = 1
+sprite_frames = ExtResource("2_4q8vd")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1712981749]
+shape = SubResource("RectangleShape2D_htmf4")

@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://c8gmmv85takiq"]
+
+[ext_resource type="Script" uid="uid://5tle38c0ficv" path="res://obstacles/teleporter.gd" id="1_1yt3t"]
+[ext_resource type="Texture2D" uid="uid://c5uuw0ydskmmm" path="res://textures/Components/Spikes-Red.png" id="2_ri5d5"]
+
+[node name="SpikeRed" type="Area2D" unique_id=511879513]
+script = ExtResource("1_1yt3t")
+mask_color = 1
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1121103754]
+texture = ExtResource("2_ri5d5")

@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://bpji2tjtmoyqx"]
+
+[ext_resource type="Script" uid="uid://5tle38c0ficv" path="res://obstacles/teleporter.gd" id="1_k74ts"]
+[ext_resource type="Texture2D" uid="uid://stqss78nkdea" path="res://textures/Components/Spikes-Black.png" id="2_k74ts"]
+
+[node name="SpikeBlack" type="Area2D" unique_id=511879513]
+script = ExtResource("1_k74ts")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1121103754]
+texture = ExtResource("2_k74ts")
