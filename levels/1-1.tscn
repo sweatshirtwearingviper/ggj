@@ -6,9 +6,12 @@
 [ext_resource type="TileSet" uid="uid://dr1au7djoqqhp" path="res://tilesets/tileset_terrain.tres" id="4_bvtcs"]
 [ext_resource type="PackedScene" uid="uid://ditptx7juvhj1" path="res://player_controller/camera/camera.tscn" id="5_gtyxv"]
 [ext_resource type="PackedScene" uid="uid://bpscfu0koqk2v" path="res://player_controller/player_easy_control/player_easy_control.tscn" id="7_bvtcs"]
-[ext_resource type="PackedScene" uid="uid://dl0y2a4fb4x65" path="res://obstacles/mask.tscn" id="7_yxke2"]
 [ext_resource type="PackedScene" uid="uid://hjaqe0luebee" path="res://obstacles/teleporter.tscn" id="8_q3ga1"]
+[ext_resource type="PackedScene" uid="uid://bg0syfjjgd7cl" path="res://obstacles/mask_red.tscn" id="8_x3ugg"]
+[ext_resource type="PackedScene" uid="uid://bqbw05dovkm5a" path="res://obstacles/mask_green.tscn" id="9_omt56"]
 [ext_resource type="PackedScene" uid="uid://d1ns42gp8pv4o" path="res://obstacles/smash_block.tscn" id="9_q3ga1"]
+[ext_resource type="PackedScene" uid="uid://chtpsqj3k2xfs" path="res://obstacles/mask_yellow.tscn" id="11_t4rme"]
+[ext_resource type="PackedScene" uid="uid://cuvab0utd4w7c" path="res://obstacles/mask_blue.tscn" id="12_81b3w"]
 
 [node name="Level2" type="Node2D" unique_id=1808532929]
 
@@ -52,21 +55,6 @@ position = Vector2(34, -204)
 [node name="PlayerEasyControl" parent="." unique_id=934248184 instance=ExtResource("7_bvtcs")]
 position = Vector2(80, -208)
 
-[node name="Mask" parent="." unique_id=511879513 instance=ExtResource("7_yxke2")]
-position = Vector2(240, -176)
-
-[node name="Mask2" parent="." unique_id=550620590 instance=ExtResource("7_yxke2")]
-position = Vector2(2512, -752)
-mask_color = 2
-
-[node name="Mask3" parent="." unique_id=1435437471 instance=ExtResource("7_yxke2")]
-position = Vector2(3888, -336)
-mask_color = 8
-
-[node name="Mask4" parent="." unique_id=1940914027 instance=ExtResource("7_yxke2")]
-position = Vector2(4816, -848)
-mask_color = 4
-
 [node name="Teleporter" parent="." unique_id=1132381800 node_paths=PackedStringArray("telepoint") instance=ExtResource("8_q3ga1")]
 position = Vector2(4144, -656)
 telepoint = NodePath("../Marker2D")
@@ -74,6 +62,12 @@ mask_color = 2
 
 [node name="Marker2D" type="Marker2D" parent="." unique_id=216842216]
 position = Vector2(4464, -848)
+
+[node name="MaskRed" parent="." unique_id=511879513 instance=ExtResource("8_x3ugg")]
+position = Vector2(465, -268)
+
+[node name="MaskGreen" parent="." unique_id=1886475098 instance=ExtResource("9_omt56")]
+position = Vector2(2535, -746)
 
 [node name="SmashBlock" parent="." unique_id=835877086 instance=ExtResource("9_q3ga1")]
 position = Vector2(3568, -720)
@@ -101,3 +95,9 @@ position = Vector2(5232, -720)
 
 [node name="SmashBlock9" parent="." unique_id=2068650213 instance=ExtResource("9_q3ga1")]
 position = Vector2(5264, -720)
+
+[node name="MaskYellow" parent="." unique_id=40489647 instance=ExtResource("11_t4rme")]
+position = Vector2(3871, -330)
+
+[node name="MaskBlue" parent="." unique_id=145491124 instance=ExtResource("12_81b3w")]
+position = Vector2(4805, -851)
