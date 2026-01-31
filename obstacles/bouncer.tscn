@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://bd8avx4kyfk1f"]
+
+[ext_resource type="PackedScene" uid="uid://duopwyl01yiih" path="res://Assets/Props/bouncing_block.tscn" id="2_kj1u6"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_y623u"]
+size = Vector2(32, 32)
+
+[node name="Bouncer" type="Area2D" unique_id=1205630108]
+collision_layer = 23
+collision_mask = 23
+
+[node name="BouncingBlock" parent="." unique_id=837443864 instance=ExtResource("2_kj1u6")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1633316433]
+shape = SubResource("RectangleShape2D_y623u")

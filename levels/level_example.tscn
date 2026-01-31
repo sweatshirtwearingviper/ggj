@@ -88,12 +88,16 @@ position = Vector2(80, -80)
 [node name="MaskYellow" parent="." unique_id=1364467720 instance=ExtResource("11_i2eqa")]
 position = Vector2(48, -80)
 
-[node name="DashCrystal" parent="." unique_id=1205630108 instance=ExtResource("12_176w8")]
-position = Vector2(464, -304)
-
-[node name="PlayerEasyControl" parent="." unique_id=934248184 instance=ExtResource("12_netub")]
-position = Vector2(16, -80)
-
 [node name="Gravestone" parent="." unique_id=1160166443 node_paths=PackedStringArray("telepoint") instance=ExtResource("14_mex3m")]
 position = Vector2(656, -80)
 telepoint = NodePath("../Spawn")
+
+[node name="DashCrystal" parent="." unique_id=1205630108 instance=ExtResource("12_176w8")]
+position = Vector2(400, -80)
+collision_layer = 0
+collision_mask = 0
+
+[node name="PlayerEasyControl" parent="." unique_id=934248184 instance=ExtResource("12_netub")]
+position = Vector2(16, -80)
+collision_layer = 415
+collision_mask = 415

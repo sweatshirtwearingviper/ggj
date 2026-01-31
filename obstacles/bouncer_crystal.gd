@@ -6,7 +6,7 @@ extends Area2D
 
 
 func _ready() -> void:
-	body_entered.connect(dash)
+	body_entered.connect(jump)
 	$Sprite2D.modulate = Color(1, 1, 1, 0.2)
 
 	if mask_color == 0:
@@ -16,21 +16,21 @@ func _ready() -> void:
 		Global.color_changed.connect(color_changed)
 
 
-func dash(_body:Node2D) -> void:
-	print(_body)
+func jump(_body:Node2D) -> void:
 	if _body is PlayerEasyControl:
 		_body.is_dashing = true
 
 
 func color_changed() -> void:
+	print(mask_color)
 	var count:int = 0
 	for color:bool in Global.current_colors:
 		if int(pow(2, count)) == mask_color and color:
 			$Sprite2D.modulate = Color(1, 1, 1, 1)
-			set_collision_layer_value(9, true)
-			set_collision_mask_value(9, true)
+			set_collision_layer_value(count + 1, true)
+			set_collision_mask_value(count + 1, true)
 		elif int(pow(2, count)) == mask_color and not color:
 			$Sprite2D.modulate = Color(1, 1, 1, 0.2)
-			set_collision_layer_value(9, false)
-			set_collision_mask_value(9, false)
+			set_collision_layer_value(count + 1, false)
+			set_collision_mask_value(count + 1, false)
 		count += 1
