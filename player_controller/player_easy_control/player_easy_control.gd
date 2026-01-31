@@ -4,9 +4,15 @@ extends CharacterBody2D
 const SPEED = 300.0
 const JUMP_VELOCITY = -400.0
 
+@onready var sprite:Sprite2D = $Character
+
 
 func _ready() -> void:
 	Global.color_changed.connect(color_changed)
+	
+	# Get the sprite's child animation node and play it here
+	var animations:AnimationPlayer = sprite.get_node('AnimationPlayer')
+	animations.current_animation = 'Idle'
 
 
 func _physics_process(delta: float) -> void:
@@ -25,6 +31,11 @@ func _physics_process(delta: float) -> void:
 	var direction := Input.get_axis("left", "right")
 	if direction:
 		velocity.x = direction * SPEED
+		# Handle sprite facing direction
+		if direction > 0:
+			sprite.flip_h = false
+		else:
+			sprite.flip_h = true
 	else:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
 

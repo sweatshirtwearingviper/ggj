@@ -2,14 +2,37 @@
 
 [ext_resource type="PackedScene" uid="uid://dixv1p4pmagw6" path="res://levels/ruler.tscn" id="1_vgt4e"]
 [ext_resource type="TileSet" uid="uid://dbgnho1wr7mar" path="res://tilesets/tileset_masks.tres" id="2_skox6"]
+[ext_resource type="Script" uid="uid://l7ym5t6nhaf4" path="res://levels/mask_tile_map_layer.gd" id="3_8xmsw"]
 [ext_resource type="TileSet" uid="uid://dr1au7djoqqhp" path="res://tilesets/tileset_terrain.tres" id="3_13k7l"]
 
 [node name="Level" type="Node2D" unique_id=1808532929]
 
 [node name="Ruler" parent="." unique_id=1900040170 instance=ExtResource("1_vgt4e")]
 
-[node name="Mask" type="TileMapLayer" parent="." unique_id=786131689]
+[node name="Red" type="TileMapLayer" parent="." unique_id=786131689]
 tile_set = ExtResource("2_skox6")
+script = ExtResource("3_8xmsw")
+mask_color = 1
+
+[node name="Green" type="TileMapLayer" parent="." unique_id=202435490]
+tile_set = ExtResource("2_skox6")
+script = ExtResource("3_8xmsw")
+mask_color = 2
+
+[node name="Blue" type="TileMapLayer" parent="." unique_id=434546063]
+tile_set = ExtResource("2_skox6")
+script = ExtResource("3_8xmsw")
+mask_color = 4
+
+[node name="Yellow" type="TileMapLayer" parent="." unique_id=1689960147]
+tile_set = ExtResource("2_skox6")
+script = ExtResource("3_8xmsw")
+mask_color = 8
+
+[node name="Violet" type="TileMapLayer" parent="." unique_id=213659598]
+tile_set = ExtResource("2_skox6")
+script = ExtResource("3_8xmsw")
+mask_color = 16
 
 [node name="Terrain" type="TileMapLayer" parent="." unique_id=333135433]
 tile_set = ExtResource("3_13k7l")

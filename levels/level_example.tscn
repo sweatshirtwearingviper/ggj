@@ -1,0 +1,44 @@
+[gd_scene format=4 uid="uid://bi8lmj74ksy4j"]
+
+[ext_resource type="PackedScene" uid="uid://dixv1p4pmagw6" path="res://levels/ruler.tscn" id="1_h7y5g"]
+[ext_resource type="TileSet" uid="uid://dbgnho1wr7mar" path="res://tilesets/tileset_masks.tres" id="2_g104l"]
+[ext_resource type="Script" uid="uid://l7ym5t6nhaf4" path="res://levels/mask_tile_map_layer.gd" id="3_caklk"]
+[ext_resource type="TileSet" uid="uid://dr1au7djoqqhp" path="res://tilesets/tileset_terrain.tres" id="4_khfb4"]
+
+[node name="Level" type="Node2D" unique_id=1808532929]
+
+[node name="Ruler" parent="." unique_id=1900040170 instance=ExtResource("1_h7y5g")]
+
+[node name="Red" type="TileMapLayer" parent="." unique_id=786131689]
+tile_map_data = PackedByteArray("AAAEAP3/AAAAAAAAAAAEAPz/AAAAAAAAAAAEAPv/AAAAAAAAAAAEAPr/AAAAAAAAAAA=")
+tile_set = ExtResource("2_g104l")
+script = ExtResource("3_caklk")
+mask_color = 1
+
+[node name="Green" type="TileMapLayer" parent="." unique_id=202435490]
+tile_map_data = PackedByteArray("AAAHAP3/AAABAAAAAAAHAPz/AAABAAAAAAAHAPv/AAABAAAAAAAHAPr/AAABAAAAAAA=")
+tile_set = ExtResource("2_g104l")
+script = ExtResource("3_caklk")
+mask_color = 2
+
+[node name="Blue" type="TileMapLayer" parent="." unique_id=434546063]
+tile_map_data = PackedByteArray("AAAKAP3/AAACAAAAAAAKAPz/AAACAAAAAAAKAPv/AAACAAAAAAAKAPr/AAACAAAAAAA=")
+tile_set = ExtResource("2_g104l")
+script = ExtResource("3_caklk")
+mask_color = 4
+
+[node name="Yellow" type="TileMapLayer" parent="." unique_id=1689960147]
+tile_map_data = PackedByteArray("AAANAP3/AAAAAAEAAAANAPz/AAAAAAEAAAANAPv/AAAAAAEAAAANAPr/AAAAAAEAAAA=")
+tile_set = ExtResource("2_g104l")
+script = ExtResource("3_caklk")
+mask_color = 8
+
+[node name="Violet" type="TileMapLayer" parent="." unique_id=213659598]
+tile_map_data = PackedByteArray("AAARAP3/AAABAAEAAAARAPz/AAABAAEAAAARAPv/AAABAAEAAAARAPr/AAABAAEAAAA=")
+tile_set = ExtResource("2_g104l")
+script = ExtResource("3_caklk")
+mask_color = 16
+
+[node name="Terrain" type="TileMapLayer" parent="." unique_id=333135433]
+tile_map_data = PackedByteArray("AAAAAP7/AAAAAAAAAAAAAP//AAAAAAEAAAABAP7/AAAAAAAAAAABAP//AAAAAAEAAAACAP7/AAAAAAAAAAACAP//AAAAAAEAAAADAP7/AAAAAAAAAAADAP//AAAAAAEAAAAEAP7/AAAAAAAAAAAEAP//AAAAAAEAAAAFAP7/AAAAAAAAAAAFAP//AAAAAAEAAAAGAP7/AAAAAAAAAAAGAP//AAAAAAEAAAAHAP7/AAAAAAAAAAAHAP//AAAAAAEAAAAIAP7/AAAAAAAAAAAIAP//AAAAAAEAAAAJAP7/AAAAAAAAAAAJAP//AAAAAAEAAAAKAP7/AAAAAAAAAAAKAP//AAAAAAEAAAALAP7/AAAAAAAAAAALAP//AAAAAAEAAAAMAP7/AAAAAAAAAAAMAP//AAAAAAEAAAANAP7/AAAAAAAAAAANAP//AAAAAAEAAAAOAP7/AAAAAAAAAAAOAP//AAAAAAEAAAAPAP7/AAAAAAAAAAAPAP//AAAAAAEAAAAQAP7/AAAAAAAAAAAQAP//AAAAAAEAAAARAP7/AAAAAAAAAAARAP//AAAAAAEAAAASAP7/AAAAAAAAAAASAP//AAAAAAEAAAATAP7/AAAAAAAAAAATAP//AAAAAAEAAAAUAP7/AAAAAAAAAAAUAP//AAAAAAEAAAAVAP7/AAAAAAAAAAAVAP//AAAAAAEAAAAWAP7/AAAAAAAAAAAWAP//AAAAAAEAAAAXAP7/AAAAAAAAAAAXAP//AAAAAAEAAAA=")
+tile_set = ExtResource("4_khfb4")

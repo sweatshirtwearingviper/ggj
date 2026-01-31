@@ -6,7 +6,7 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_y4r6g"]
 size = Vector2(32, 32)
 
-[node name="PlayerHardController" type="CharacterBody2D" unique_id=934248184]
+[node name="PlayerEasyControl" type="CharacterBody2D" unique_id=934248184]
 collision_layer = 128
 collision_mask = 128
 script = ExtResource("1_tx5wx")

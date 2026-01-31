@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://ljc24u6k26te"]
+
+[ext_resource type="Script" uid="uid://ddqdmwdos03ey" path="res://ui/mask_bar/mask_bar.gd" id="1_wfy5j"]
+
+[node name="MaskBar" type="Control" unique_id=1770861411]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_wfy5j")

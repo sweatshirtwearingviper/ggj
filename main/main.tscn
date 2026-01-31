@@ -1,14 +1,14 @@
 [gd_scene format=3 uid="uid://cqow47bch5ocs"]
 
-[ext_resource type="PackedScene" uid="uid://ddwmkrj5thpnu" path="res://levels/level_tm_example.tscn" id="1_53q0u"]
 [ext_resource type="PackedScene" uid="uid://bpscfu0koqk2v" path="res://player_controller/player_easy_control/player_easy_control.tscn" id="2_pjrb6"]
+[ext_resource type="PackedScene" uid="uid://bi8lmj74ksy4j" path="res://levels/level_example.tscn" id="3_c651c"]
 [ext_resource type="PackedScene" uid="uid://ditptx7juvhj1" path="res://player_controller/camera/camera.tscn" id="3_xwkvk"]
 
 [node name="Main" type="Node2D" unique_id=331215880]
 
-[node name="LevelTmExample" parent="." unique_id=1808532929 instance=ExtResource("1_53q0u")]
+[node name="Camera" parent="." unique_id=704402319 instance=ExtResource("3_xwkvk")]
+
+[node name="Level" parent="." unique_id=1808532929 instance=ExtResource("3_c651c")]
 
 [node name="PlayerHardController" parent="." unique_id=934248184 instance=ExtResource("2_pjrb6")]
 position = Vector2(16, -112)
-
-[node name="Camera" parent="." unique_id=704402319 instance=ExtResource("3_xwkvk")]
