@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://cs8l7pbspe4bw"]
+
+[ext_resource type="Texture2D" uid="uid://c2usyy0eh5kbf" path="res://textures/backcloudss.webp" id="1_5xv8s"]
+
+[node name="Parallax_Clouds" type="Parallax2D" unique_id=195395145]
+scroll_scale = Vector2(0.6, 1)
+repeat_size = Vector2(920, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=377779340]
+position = Vector2(4, -90)
+texture = ExtResource("1_5xv8s")

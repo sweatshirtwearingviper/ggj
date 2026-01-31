@@ -1,0 +1,48 @@
+[gd_scene format=3 uid="uid://duopwyl01yiih"]
+
+[ext_resource type="Texture2D" uid="uid://7hv2mohjrcyy" path="res://textures/Components/BouncingBlock-Sheet.png" id="1_mxg15"]
+
+[sub_resource type="Animation" id="Animation_u852f"]
+resource_name = "Bounce"
+length = 0.53333336
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.06666667, 0.13333334, 0.16666667, 0.2, 0.23333333, 0.26666668, 0.33333334, 0.36666667, 0.4, 0.43333334, 0.46666667),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+}
+
+[sub_resource type="Animation" id="Animation_70qfs"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_swrwr"]
+_data = {
+&"Bounce": SubResource("Animation_u852f"),
+&"RESET": SubResource("Animation_70qfs")
+}
+
+[node name="BouncingBlock" type="Sprite2D" unique_id=837443864]
+texture = ExtResource("1_mxg15")
+hframes = 10
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1259024621]
+libraries/ = SubResource("AnimationLibrary_swrwr")

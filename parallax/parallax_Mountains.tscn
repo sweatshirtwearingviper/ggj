@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://dpm4hcnnblx0j"]
+
+[ext_resource type="Texture2D" uid="uid://cv4oxkwk4q66s" path="res://textures/backmountains.webp" id="1_18o8p"]
+
+[node name="ParallaxLayer" type="Parallax2D" unique_id=1224149914]
+scroll_scale = Vector2(0.2, 1)
+repeat_size = Vector2(918.865, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=620956080]
+scale = Vector2(1, 0.842)
+texture = ExtResource("1_18o8p")

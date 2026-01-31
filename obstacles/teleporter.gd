@@ -12,6 +12,8 @@ extends Area2D
 
 
 func _ready() -> void:
+	if has_node('AnimatedSprite2D'):
+		$AnimatedSprite2D.play('default')
 	body_entered.connect(teleport)
 	
 	if level_end:
