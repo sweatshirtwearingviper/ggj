@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://dixv1p4pmagw6"]
+
+[ext_resource type="Texture2D" uid="uid://oa7cirfy5xhy" path="res://textures/coolguy.png" id="1_g13hw"]
+
+[node name="Ruler" type="TextureRect" unique_id=1900040170]
+custom_minimum_size = Vector2(8192, 1024)
+offset_top = -1024.0
+offset_right = 8192.0
+texture = ExtResource("1_g13hw")

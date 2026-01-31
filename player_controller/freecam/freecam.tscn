@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://t5mgwy87l4jk"]
+
+[ext_resource type="Script" uid="uid://darhh2i0bqtr8" path="res://player_controller/freecam/freecam.gd" id="1_vp1iq"]
+[ext_resource type="Texture2D" uid="uid://oa7cirfy5xhy" path="res://textures/coolguy.png" id="2_mm7py"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_huhhu"]
+size = Vector2(32, 32)
+
+[node name="Freecam" type="RigidBody2D" unique_id=833011826]
+script = ExtResource("1_vp1iq")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1972431073]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1861468504]
+texture = ExtResource("2_mm7py")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=484475988]
+shape = SubResource("RectangleShape2D_huhhu")
