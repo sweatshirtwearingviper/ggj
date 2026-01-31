@@ -4,10 +4,14 @@ const COLOR_MAX = 2
 enum Colors {RED, GREEN, BLUE, YELLOW, BLACK}
 
 var current_colors:Array = [false, false, false, false, false]
+var unlocked_colors:Array = [false, false, false, false, false]
 
 signal player_position
 signal color_changed
 signal color_blocked
+signal color_unlocked
+signal color_locked
+signal color_cleared
 
 
 func _input(_event:InputEvent) -> void:
@@ -26,6 +30,12 @@ func _input(_event:InputEvent) -> void:
 
 func toggle_color(_color:Colors) -> void:
 	print('toggling %s' % Colors.keys()[_color])
+	
+	# The player doesn't have the color yet, no toggle allowed
+	if not unlocked_colors[_color]:
+		color_locked.emit()
+		return
+	
 	var color_count:int = 0
 	for color:bool in current_colors:
 		if color:
@@ -44,3 +54,16 @@ func toggle_color(_color:Colors) -> void:
 		
 	color_changed.emit()
 	print('current colors: %s' % str(current_colors))
+
+
+func gain_color(_color:Colors) -> void:
+	unlocked_colors[_color] = true
+	color_unlocked.emit()
+
+
+func clear_color() -> void:
+	for color in unlocked_colors:
+		color = false
+	print(unlocked_colors)
+	color_cleared.emit()
+	pass
