@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://bbjalhxt2rtor"]
+
+[ext_resource type="Texture2D" uid="uid://smlwhyc20q2y" path="res://textures/Sky.webp" id="1_miy04"]
+[ext_resource type="Texture2D" uid="uid://c2usyy0eh5kbf" path="res://textures/backcloudss.webp" id="2_vpve8"]
+
+[node name="ParallaxBackground" type="Parallax2D" unique_id=1490634381]
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1219959472]
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("1_miy04")
+
+[node name="TextureRect2" type="TextureRect" parent="." unique_id=2141542702]
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("2_vpve8")
