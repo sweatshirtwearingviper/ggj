@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://ddwmkrj5thpnu"]
+
+[ext_resource type="PackedScene" uid="uid://dixv1p4pmagw6" path="res://levels/ruler.tscn" id="1_cmnp4"]
+[ext_resource type="TileSet" uid="uid://cafxak1n5tjt3" path="res://tilesets/tileset_placeholder.tres" id="2_hp1l4"]
+
+[node name="LevelTmExample" type="Node2D" unique_id=1808532929]
+
+[node name="Ruler" parent="." unique_id=1900040170 instance=ExtResource("1_cmnp4")]
+
+[node name="Mask" type="TileMapLayer" parent="." unique_id=603880927]
+tile_set = ExtResource("2_hp1l4")
+
+[node name="Terrain" type="TileMapLayer" parent="." unique_id=982642566]
+tile_set = ExtResource("2_hp1l4")

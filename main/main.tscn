@@ -1,11 +1,7 @@
 [gd_scene format=3 uid="uid://cqow47bch5ocs"]
 
-[ext_resource type="PackedScene" uid="uid://d1lnhwhur0vac" path="res://levels/template.tscn" id="1_pjrb6"]
-[ext_resource type="PackedScene" uid="uid://t5mgwy87l4jk" path="res://player_controller/freecam/freecam.tscn" id="2_xwkvk"]
+[ext_resource type="PackedScene" uid="uid://ddwmkrj5thpnu" path="res://levels/level_tm_example.tscn" id="1_53q0u"]
 
 [node name="Main" type="Node2D" unique_id=331215880]
 
-[node name="Placeholder" parent="." unique_id=1808532929 instance=ExtResource("1_pjrb6")]
-
-[node name="Freecam" parent="." unique_id=833011826 instance=ExtResource("2_xwkvk")]
-position = Vector2(48, -112)
+[node name="LevelTmExample" parent="." unique_id=1808532929 instance=ExtResource("1_53q0u")]
