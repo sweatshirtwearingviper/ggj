@@ -5,6 +5,7 @@
 [ext_resource type="Script" uid="uid://l7ym5t6nhaf4" path="res://levels/mask_tile_map_layer.gd" id="3_caklk"]
 [ext_resource type="TileSet" uid="uid://dr1au7djoqqhp" path="res://tilesets/tileset_terrain.tres" id="4_khfb4"]
 [ext_resource type="PackedScene" uid="uid://hjaqe0luebee" path="res://obstacles/teleporter.tscn" id="5_g104l"]
+[ext_resource type="PackedScene" uid="uid://dl0y2a4fb4x65" path="res://obstacles/mask.tscn" id="6_caklk"]
 
 [node name="Level" type="Node2D" unique_id=1808532929]
 
@@ -51,3 +52,6 @@ position = Vector2(48, -112)
 position = Vector2(208, -80)
 telepoint = NodePath("../Spawn")
 mask_color = 1
+
+[node name="Mask" parent="." unique_id=1173357927 instance=ExtResource("6_caklk")]
+position = Vector2(80, -80)
