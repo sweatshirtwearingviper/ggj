@@ -4,7 +4,9 @@ extends Area2D
 
 
 func _ready() -> void:
-	area_entered.connect(teleport)
+	body_entered.connect(teleport)
 
 
-func teleport() -> void:
+func teleport(_body:Node2D) -> void:
+	if _body is PlayerEasyControl:
+		_body.position = telepoint.position

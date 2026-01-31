@@ -11,7 +11,7 @@ class_name MaskTileMapLayer
 
 
 func _ready() -> void:
-	hide()
+	modulate = Color(1, 1, 1, 0.2)
 	Global.color_changed.connect(color_changed)
 	
 	
@@ -19,8 +19,8 @@ func color_changed() -> void:
 	var count:int = 0
 	for color:bool in Global.current_colors:
 		if int(pow(2, count)) == mask_color and color:
-			show()
+			modulate = Color(1, 1, 1, 0.2)
 		elif int(pow(2, count)) == mask_color and not color:
-			hide()
+			modulate = Color(1, 1, 1, 1)
 		count += 1
 	
