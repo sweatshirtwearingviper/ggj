@@ -6,6 +6,8 @@ const JUMP_VELOCITY = -400.0
 
 var double_jumped:bool = false
 var is_smashing:bool = false
+var can_dash:bool = true
+var is_dashing:bool = false
 
 @onready var sprite:Sprite2D = $Character
 
@@ -21,6 +23,10 @@ func _ready() -> void:
 
 func _physics_process(delta: float) -> void:
 	Global.player_position.emit(position)
+	
+	if is_dashing:
+		velocity.x = JUMP_VELOCITY * 2.5 * (1 if sprite.flip_h else -1)
+		get_tree().create_timer(0.2).timeout.connect(func() -> void: can_dash = true; is_dashing = false)
 	
 	# Add the gravity. Flip gravity when blue
 	if not is_on_floor():
@@ -48,11 +54,15 @@ func _physics_process(delta: float) -> void:
 			velocity.x = 0
 			is_smashing = true
 			
+	if Input.is_action_just_pressed("dash"):
+		if Global.current_colors[Global.Colors.YELLOW] and can_dash:
+			is_dashing = true
+			can_dash = false
 
 	# Get the input direction and handle the movement/deceleration.
 	# As good practice, you should replace UI actions with custom gameplay actions.
 	var direction := Input.get_axis("left", "right")
-	if direction:
+	if direction and not is_dashing:
 		velocity.x = direction * SPEED
 		# Handle sprite facing direction
 		if direction > 0:

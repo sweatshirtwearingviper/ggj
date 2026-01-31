@@ -16,12 +16,8 @@ func _ready() -> void:
 
 
 func dash(_body:Node2D) -> void:
-	if not is_instance_valid(telepoint):
-		printerr('%s cannot teleport! No telepoint destination defined.' % self)
-		return
 	if _body is PlayerEasyControl:
-		_body.teleported.emit()
-		_body.position = telepoint.position
+		Input.action_press('dash')
 
 
 func color_changed() -> void:

@@ -8,3 +8,5 @@
 [node name="Camera" parent="." unique_id=704402319 instance=ExtResource("3_xwkvk")]
 
 [node name="Level" parent="." unique_id=1808532929 instance=ExtResource("3_c651c")]
+
+[node name="UI" type="CanvasLayer" parent="." unique_id=1085982232]
