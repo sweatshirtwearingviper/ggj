@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://d1ns42gp8pv4o"]
 
 [ext_resource type="Script" uid="uid://egmsxepbteak" path="res://obstacles/smash_block.gd" id="1_rv8pn"]
+[ext_resource type="Texture2D" uid="uid://rvcilc4y7gxj" path="res://textures/Components/BreakableBlock.png" id="2_fbkxr"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ucd4x"]
 size = Vector2(32, 32)
@@ -16,12 +17,8 @@ contact_monitor = true
 max_contacts_reported = 8
 script = ExtResource("1_rv8pn")
 
-[node name="TextureRect" type="ColorRect" parent="." unique_id=715067024]
-offset_left = -16.0
-offset_top = -16.0
-offset_right = 16.0
-offset_bottom = 16.0
-color = Color(0.38039216, 0.3372549, 0.16078432, 1)
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1578007257]
+texture = ExtResource("2_fbkxr")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1257156584]
 shape = SubResource("RectangleShape2D_ucd4x")
