@@ -11,7 +11,6 @@ class_name MaskTileMapLayer
 
 
 func _ready() -> void:
-	modulate = Color(1, 1, 1, 0.2)
 	Global.color_changed.connect(color_changed)
 	
 	
