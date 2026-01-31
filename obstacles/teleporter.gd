@@ -34,12 +34,10 @@ func teleport(_body:Node2D) -> void:
 
 
 func color_changed() -> void:
-	print(mask_color)
 	var count:int = 0
 	for color:bool in Global.current_colors:
 		if int(pow(2, count)) == mask_color and color:
 			$Sprite2D.modulate = Color(1, 1, 1, 0.2)
-			print(count)
 			set_collision_layer_value(count + 1, false)
 			set_collision_mask_value(count + 1, false)
 		elif int(pow(2, count)) == mask_color and not color:
