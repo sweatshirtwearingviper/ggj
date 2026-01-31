@@ -1,7 +1,7 @@
 extends Node
 
 const COLOR_MAX = 2
-enum Colors {RED, GREEN, BLUE, YELLOW, VIOLET}
+enum Colors {RED, GREEN, BLUE, YELLOW, BLACK}
 
 var current_colors:Array = [false, false, false, false, false]
 
@@ -20,8 +20,8 @@ func _input(_event:InputEvent) -> void:
 			toggle_color(Colors.BLUE)
 		if _event.is_action_pressed('toggle_yellow'):
 			toggle_color(Colors.YELLOW)
-		if _event.is_action_pressed('toggle_violet'):
-			toggle_color(Colors.VIOLET)
+		if _event.is_action_pressed('toggle_black'):
+			toggle_color(Colors.BLACK)
 
 
 func toggle_color(_color:Colors) -> void:

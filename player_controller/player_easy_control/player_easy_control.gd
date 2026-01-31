@@ -20,9 +20,12 @@ func _ready() -> void:
 func _physics_process(delta: float) -> void:
 	Global.player_position.emit(position)
 	
-	# Add the gravity.
+	# Add the gravity. Flip gravity when blue
 	if not is_on_floor():
-		velocity += get_gravity() * delta
+		if Global.current_colors[Global.Colors.BLUE]:
+			velocity -= get_gravity() * delta
+		else:
+			velocity += get_gravity() * delta
 	else:
 		# Reset double jump when on ground
 		double_jumped = false
