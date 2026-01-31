@@ -29,7 +29,7 @@ tile_set = ExtResource("2_skox6")
 script = ExtResource("3_8xmsw")
 mask_color = 8
 
-[node name="Violet" type="TileMapLayer" parent="." unique_id=213659598]
+[node name="Black" type="TileMapLayer" parent="." unique_id=213659598]
 tile_set = ExtResource("2_skox6")
 script = ExtResource("3_8xmsw")
 mask_color = 16

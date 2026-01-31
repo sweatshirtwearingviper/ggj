@@ -3,8 +3,15 @@
 [ext_resource type="Script" uid="uid://5tle38c0ficv" path="res://obstacles/teleporter.gd" id="1_1jlp5"]
 [ext_resource type="Texture2D" uid="uid://oa7cirfy5xhy" path="res://textures/coolguy.png" id="2_htmf4"]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_htmf4"]
+
 [node name="Teleporter" type="Area2D" unique_id=511879513]
+collision_layer = 0
+collision_mask = 0
 script = ExtResource("1_1jlp5")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1121103754]
 texture = ExtResource("2_htmf4")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1712981749]
+shape = SubResource("RectangleShape2D_htmf4")

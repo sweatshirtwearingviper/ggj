@@ -8,6 +8,7 @@ var double_jumped:bool = false
 
 @onready var sprite:Sprite2D = $Character
 
+signal teleported ## Emits when the player is teleported. One string is passed in to determine what teleported it (spikes, end of level, etc)
 
 func _ready() -> void:
 	Global.color_changed.connect(color_changed)
