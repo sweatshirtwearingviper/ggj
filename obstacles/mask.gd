@@ -9,7 +9,7 @@ class_name Mask
 
 func _ready() -> void:
 	body_entered.connect(gain_mask)
-	modulate = Color(1, 1, 1, 0)
+	Global.colors_cleared.connect(func() -> void: modulate = Color(1, 1, 1, 1))
 
 
 func gain_mask(_body:Node2D) -> void:

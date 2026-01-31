@@ -54,7 +54,7 @@ tile_map_data = PackedByteArray("AAAAAP7/AAAAAAAAAAAAAP//AAAAAAEAAAABAP7/AAAAAAA
 tile_set = ExtResource("4_khfb4")
 
 [node name="Spawn" type="Marker2D" parent="." unique_id=1329981062]
-position = Vector2(48, -112)
+position = Vector2(48, -272)
 
 [node name="Teleporter" parent="." unique_id=511879513 node_paths=PackedStringArray("telepoint") instance=ExtResource("5_g104l")]
 position = Vector2(208, -80)
@@ -74,13 +74,13 @@ position = Vector2(848, -112)
 position = Vector2(816, -112)
 
 [node name="MaskBlack" parent="." unique_id=152650360 instance=ExtResource("7_v6yxm")]
-position = Vector2(80, -144)
+position = Vector2(176, -80)
 
 [node name="MaskBlue" parent="." unique_id=281301111 instance=ExtResource("8_netub")]
-position = Vector2(80, -112)
+position = Vector2(144, -80)
 
 [node name="MaskGreen" parent="." unique_id=125689372 instance=ExtResource("9_176w8")]
-position = Vector2(48, -112)
+position = Vector2(112, -80)
 
 [node name="MaskRed" parent="." unique_id=327087092 instance=ExtResource("10_mex3m")]
 position = Vector2(80, -80)

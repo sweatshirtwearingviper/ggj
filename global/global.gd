@@ -11,7 +11,7 @@ signal color_changed
 signal color_blocked
 signal color_unlocked
 signal color_locked
-signal color_cleared
+signal colors_cleared
 
 
 func _input(_event:InputEvent) -> void:
@@ -65,5 +65,5 @@ func clear_colors() -> void:
 	for i:int in unlocked_colors.size():
 		unlocked_colors[i] = false
 	print('unlocked colors: %s' % str(unlocked_colors))
-	color_cleared.emit()
+	colors_cleared.emit()
 	pass
