@@ -29,23 +29,23 @@ func _physics_process(delta: float) -> void:
 		get_tree().create_timer(0.2).timeout.connect(func() -> void: can_dash = true; is_dashing = false)
 	
 	# Add the gravity. Flip gravity when blue
-	if not is_on_floor():
+	if is_on_floor():
+		double_jumped = false
+		is_smashing = false
+	else:
+	# Reset double jump when on ground
 		if Global.current_colors[Global.Colors.BLUE]:
 			velocity -= get_gravity() * delta
 		else:
 			velocity += get_gravity() * delta
-	else:
-		# Reset double jump when on ground
-		double_jumped = false
-		is_smashing = false
 
 	# Handle jump and green doublejump
 	if Input.is_action_just_pressed("up"):
-		if Global.current_colors[Global.Colors.GREEN]:
-			velocity.y = JUMP_VELOCITY
-			double_jumped = true
 		if is_on_floor():
 			velocity.y = JUMP_VELOCITY
+		elif Global.current_colors[Global.Colors.GREEN] and not double_jumped:
+			velocity.y = JUMP_VELOCITY
+			double_jumped = true
 	
 	# Red smash
 	if Input.is_action_just_pressed("down"):
