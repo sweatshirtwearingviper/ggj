@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://dpm4hcnnblx0j"]
 
-[ext_resource type="Texture2D" uid="uid://cv4oxkwk4q66s" path="res://textures/backmountains.webp" id="1_18o8p"]
+[ext_resource type="Texture2D" uid="uid://cv4oxkwk4q66s" path="res://textures/Backgrounds/Level1/backmountains.webp" id="1_18o8p"]
 
 [node name="ParallaxLayer" type="Parallax2D" unique_id=1224149914]
 scroll_scale = Vector2(0.2, 1)

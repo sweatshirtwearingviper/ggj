@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://dixv1p4pmagw6"]
 
-[ext_resource type="Texture2D" uid="uid://oa7cirfy5xhy" path="res://textures/coolguy.png" id="1_g13hw"]
+[ext_resource type="Texture2D" uid="uid://oa7cirfy5xhy" path="res://textures/Debug/coolguy.png" id="1_g13hw"]
 
 [node name="Ruler" type="TextureRect" unique_id=1900040170]
 custom_minimum_size = Vector2(8192, 1024)
