@@ -5,6 +5,7 @@ const SPEED = 300.0
 const JUMP_VELOCITY = -400.0
 
 var double_jumped:bool = false
+var is_smashing:bool = false
 
 @onready var sprite:Sprite2D = $Character
 
@@ -30,14 +31,23 @@ func _physics_process(delta: float) -> void:
 	else:
 		# Reset double jump when on ground
 		double_jumped = false
+		is_smashing = false
 
-	# Handle jump.
+	# Handle jump and green doublejump
 	if Input.is_action_just_pressed("up"):
 		if Global.current_colors[Global.Colors.GREEN]:
 			velocity.y = JUMP_VELOCITY
 			double_jumped = true
 		if is_on_floor():
 			velocity.y = JUMP_VELOCITY
+	
+	# Red smash
+	if Input.is_action_just_pressed("down"):
+		if Global.current_colors[Global.Colors.RED] and not is_on_floor():
+			velocity.y = -JUMP_VELOCITY * 2
+			velocity.x = 0
+			is_smashing = true
+			
 
 	# Get the input direction and handle the movement/deceleration.
 	# As good practice, you should replace UI actions with custom gameplay actions.

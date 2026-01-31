@@ -5,32 +5,37 @@
 [ext_resource type="Script" uid="uid://l7ym5t6nhaf4" path="res://levels/mask_tile_map_layer.gd" id="3_caklk"]
 [ext_resource type="TileSet" uid="uid://dr1au7djoqqhp" path="res://tilesets/tileset_terrain.tres" id="4_khfb4"]
 [ext_resource type="PackedScene" uid="uid://hjaqe0luebee" path="res://obstacles/teleporter.tscn" id="5_g104l"]
-[ext_resource type="PackedScene" uid="uid://dl0y2a4fb4x65" path="res://obstacles/mask.tscn" id="6_caklk"]
+[ext_resource type="PackedScene" uid="uid://d1ns42gp8pv4o" path="res://obstacles/smash_block.tscn" id="7_khfb4"]
+[ext_resource type="PackedScene" uid="uid://3euywh8ldl1i" path="res://obstacles/mask_black.tscn" id="7_v6yxm"]
+[ext_resource type="PackedScene" uid="uid://cuvab0utd4w7c" path="res://obstacles/mask_blue.tscn" id="8_netub"]
+[ext_resource type="PackedScene" uid="uid://bqbw05dovkm5a" path="res://obstacles/mask_green.tscn" id="9_176w8"]
+[ext_resource type="PackedScene" uid="uid://bg0syfjjgd7cl" path="res://obstacles/mask_red.tscn" id="10_mex3m"]
+[ext_resource type="PackedScene" uid="uid://chtpsqj3k2xfs" path="res://obstacles/mask_yellow.tscn" id="11_i2eqa"]
 
 [node name="Level" type="Node2D" unique_id=1808532929]
 
 [node name="Ruler" parent="." unique_id=1900040170 instance=ExtResource("1_h7y5g")]
 
 [node name="Red" type="TileMapLayer" parent="." unique_id=786131689]
-tile_map_data = PackedByteArray("AAADAP3/AQADAAEAAAADAPz/AQADAAEAAAADAPv/AQADAAEAAAADAPr/AQADAAEAAAADAPn/AQADAAEAAAAFAP3/AQAFAAEAAAAFAPz/AQAFAAEAAAAFAPv/AQAFAAEAAAAFAPr/AQAFAAEAAAAFAPn/AQAFAAEAAAAEAPj/AQAEAAAAAAADAPj/AQADAAAAAAAFAPj/AQAFAAAAAAAEAPn/AQAEAAEAAAAEAPr/AQAEAAEAAAAEAPv/AQAEAAEAAAAEAPz/AQAEAAEAAAAEAP3/AQAEAAEAAAA=")
+tile_map_data = PackedByteArray("AAADAPv/AQADAAEAAAADAPr/AQADAAEAAAADAPn/AQADAAEAAAAFAPv/AQAFAAEAAAAFAPr/AQAFAAEAAAAFAPn/AQAFAAEAAAAEAPj/AQAEAAAAAAADAPj/AQADAAAAAAAFAPj/AQAFAAAAAAAEAPn/AQAEAAEAAAAEAPr/AQAEAAEAAAAEAPv/AQAEAAEAAAA=")
 tile_set = ExtResource("2_g104l")
 script = ExtResource("3_caklk")
 mask_color = 1
 
 [node name="Green" type="TileMapLayer" parent="." unique_id=202435490]
-tile_map_data = PackedByteArray("AAAIAP3/AQAAAAQAAAAJAP3/AQABAAQAAAAKAP3/AQACAAQAAAAIAPz/AQAAAAQAAAAJAPz/AQABAAQAAAAKAPz/AQACAAQAAAAIAPv/AQAAAAQAAAAJAPv/AQABAAQAAAAKAPv/AQACAAQAAAAIAPr/AQAAAAQAAAAJAPr/AQABAAQAAAAKAPr/AQACAAQAAAAIAPn/AQAAAAQAAAAJAPn/AQABAAQAAAAKAPn/AQACAAQAAAAIAPj/AQAAAAQAAAAJAPj/AQABAAQAAAAKAPj/AQACAAQAAAA=")
+tile_map_data = PackedByteArray("AAAIAPv/AQAAAAQAAAAJAPv/AQABAAQAAAAKAPv/AQACAAQAAAAIAPr/AQAAAAQAAAAJAPr/AQABAAQAAAAKAPr/AQACAAQAAAAIAPn/AQAAAAQAAAAJAPn/AQABAAQAAAAKAPn/AQACAAQAAAAIAPj/AQAAAAQAAAAJAPj/AQABAAQAAAAKAPj/AQACAAQAAAA=")
 tile_set = ExtResource("2_g104l")
 script = ExtResource("3_caklk")
 mask_color = 2
 
 [node name="Blue" type="TileMapLayer" parent="." unique_id=434546063]
-tile_map_data = PackedByteArray("AAAOAP3/AQAAAAEAAAAPAP3/AQABAAEAAAAQAP3/AQACAAEAAAAOAPz/AQAAAAEAAAAPAPz/AQABAAEAAAAQAPz/AQACAAEAAAAOAPv/AQAAAAEAAAAPAPv/AQABAAEAAAAQAPv/AQACAAEAAAAOAPr/AQAAAAEAAAAPAPr/AQABAAEAAAAQAPr/AQACAAEAAAAOAPn/AQAAAAEAAAAPAPn/AQABAAEAAAAQAPn/AQACAAEAAAAOAPj/AQAAAAEAAAAPAPj/AQABAAEAAAAQAPj/AQACAAEAAAA=")
+tile_map_data = PackedByteArray("AAAOAPv/AQAAAAEAAAAPAPv/AQABAAEAAAAQAPv/AQACAAEAAAAOAPr/AQAAAAEAAAAPAPr/AQABAAEAAAAQAPr/AQACAAEAAAAOAPn/AQAAAAEAAAAPAPn/AQABAAEAAAAQAPn/AQACAAEAAAAOAPj/AQAAAAEAAAAPAPj/AQABAAEAAAAQAPj/AQACAAEAAAA=")
 tile_set = ExtResource("2_g104l")
 script = ExtResource("3_caklk")
 mask_color = 4
 
 [node name="Yellow" type="TileMapLayer" parent="." unique_id=1689960147]
-tile_map_data = PackedByteArray("AAATAP3/AQAGAAEAAAAUAP3/AQAHAAEAAAAVAP3/AQAIAAEAAAATAPz/AQAGAAEAAAAUAPz/AQAHAAEAAAAVAPz/AQAIAAEAAAATAPv/AQAGAAEAAAAUAPv/AQAHAAEAAAAVAPv/AQAIAAEAAAATAPr/AQAGAAEAAAAUAPr/AQAHAAEAAAAVAPr/AQAIAAEAAAATAPn/AQAGAAEAAAAUAPn/AQAHAAEAAAAVAPn/AQAIAAEAAAATAPj/AQAGAAEAAAAUAPj/AQAHAAEAAAAVAPj/AQAIAAEAAAA=")
+tile_map_data = PackedByteArray("AAATAPn/AQAGAAEAAAAUAPn/AQAHAAEAAAAVAPn/AQAIAAEAAAATAPj/AQAGAAEAAAAUAPj/AQAHAAEAAAAVAPj/AQAIAAEAAAA=")
 tile_set = ExtResource("2_g104l")
 script = ExtResource("3_caklk")
 mask_color = 8
@@ -53,5 +58,29 @@ position = Vector2(208, -80)
 telepoint = NodePath("../Spawn")
 mask_color = 1
 
-[node name="Mask" parent="." unique_id=1173357927 instance=ExtResource("6_caklk")]
+[node name="SmashBlock" parent="." unique_id=407081017 instance=ExtResource("7_khfb4")]
+position = Vector2(752, -112)
+
+[node name="SmashBlock2" parent="." unique_id=407242680 instance=ExtResource("7_khfb4")]
+position = Vector2(784, -112)
+
+[node name="SmashBlock3" parent="." unique_id=1762706359 instance=ExtResource("7_khfb4")]
+position = Vector2(848, -112)
+
+[node name="SmashBlock4" parent="." unique_id=74933616 instance=ExtResource("7_khfb4")]
+position = Vector2(816, -112)
+
+[node name="MaskBlack" parent="." unique_id=152650360 instance=ExtResource("7_v6yxm")]
+position = Vector2(80, -144)
+
+[node name="MaskBlue" parent="." unique_id=281301111 instance=ExtResource("8_netub")]
+position = Vector2(80, -112)
+
+[node name="MaskGreen" parent="." unique_id=125689372 instance=ExtResource("9_176w8")]
+position = Vector2(48, -112)
+
+[node name="MaskRed" parent="." unique_id=327087092 instance=ExtResource("10_mex3m")]
 position = Vector2(80, -80)
+
+[node name="MaskYellow" parent="." unique_id=1364467720 instance=ExtResource("11_i2eqa")]
+position = Vector2(48, -80)

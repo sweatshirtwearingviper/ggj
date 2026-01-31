@@ -1,13 +1,14 @@
-[gd_scene format=3 uid="uid://dl0y2a4fb4x65"]
+[gd_scene format=3 uid="uid://chtpsqj3k2xfs"]
 
-[ext_resource type="Script" uid="uid://cect258khaes6" path="res://obstacles/mask.gd" id="1_xia0b"]
+[ext_resource type="Script" uid="uid://cect258khaes6" path="res://obstacles/mask.gd" id="1_bg5n8"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_htmf4"]
 
-[node name="Mask" type="Area2D" unique_id=511879513]
+[node name="MaskYellow" type="Area2D" unique_id=511879513]
 collision_layer = 128
 collision_mask = 128
-script = ExtResource("1_xia0b")
+script = ExtResource("1_bg5n8")
+mask_color = 8
 
 [node name="Sprite2D" type="AnimatedSprite2D" parent="." unique_id=1833521623]
 
@@ -19,4 +20,4 @@ offset_left = -10.0
 offset_top = -10.0
 offset_right = 10.0
 offset_bottom = 10.0
-color = Color(1, 0, 0, 1)
+color = Color(1, 1, 0, 1)
