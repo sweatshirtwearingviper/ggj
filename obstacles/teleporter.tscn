@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://hjaqe0luebee"]
+
+[ext_resource type="Script" uid="uid://5tle38c0ficv" path="res://obstacles/teleporter.gd" id="1_1jlp5"]
+
+[node name="Teleporter" type="Area2D" unique_id=511879513]
+script = ExtResource("1_1jlp5")
