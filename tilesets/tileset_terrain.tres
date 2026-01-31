@@ -1,0 +1,15 @@
+[gd_resource type="TileSet" format=3 uid="uid://dr1au7djoqqhp"]
+
+[ext_resource type="Texture2D" uid="uid://d22g0k8ccuap4" path="res://textures/atlas_terrain.png" id="1_faik2"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_xc0u0"]
+texture = ExtResource("1_faik2")
+texture_region_size = Vector2i(42, 32)
+use_texture_padding = false
+1:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+0:0/0 = 0
+
+[resource]
+sources/0 = SubResource("TileSetAtlasSource_xc0u0")

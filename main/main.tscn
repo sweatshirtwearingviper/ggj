@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://cqow47bch5ocs"]
 
-[ext_resource type="PackedScene" uid="uid://d1lnhwhur0vac" path="res://levels/placeholder.tscn" id="1_pjrb6"]
+[ext_resource type="PackedScene" uid="uid://d1lnhwhur0vac" path="res://levels/template.tscn" id="1_pjrb6"]
 [ext_resource type="PackedScene" uid="uid://t5mgwy87l4jk" path="res://player_controller/freecam/freecam.tscn" id="2_xwkvk"]
 
 [node name="Main" type="Node2D" unique_id=331215880]
