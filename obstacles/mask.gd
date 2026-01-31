@@ -9,6 +9,7 @@ class_name Mask
 
 func _ready() -> void:
 	body_entered.connect(gain_mask)
+	modulate = Color(1, 1, 1, 0)
 
 
 func gain_mask(_body:Node2D) -> void:
@@ -16,4 +17,3 @@ func gain_mask(_body:Node2D) -> void:
 	if _body is PlayerEasyControl:
 		Global.gain_color(int(log(mask_color) / log(2)))
 		modulate = Color(1, 1, 1, 0)
-	

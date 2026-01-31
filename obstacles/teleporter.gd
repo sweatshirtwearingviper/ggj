@@ -17,7 +17,7 @@ func _ready() -> void:
 	body_entered.connect(teleport)
 	
 	if level_end:
-		body_entered.connect(Global.clear_colors())
+		body_entered.connect(func() -> void: Global.clear_colors())
 	
 	if mask_color == 0:
 		set_collision_layer_value(8, true)
