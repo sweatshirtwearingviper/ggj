@@ -6,6 +6,68 @@ enum Colors {RED, GREEN, BLUE, YELLOW, BLACK}
 var current_colors:Array = [false, false, false, false, false]
 var unlocked_colors:Array = [false, false, false, false, false]
 
+var mask_collect_dialogues:Array = [
+	PackedStringArray([
+		"HEY. PUT ME DOWN!",
+	]),
+	PackedStringArray([
+		"Hi!!! I'm so happy to see you!!",
+	]),
+	PackedStringArray([
+		"Oh....",
+	]),
+	PackedStringArray([
+		"Who are you?!",
+	]),
+	PackedStringArray([
+		":)",
+	]),
+]
+var mask_equipped_dialogues:Array = [
+	PackedStringArray([
+		"I'M WARNING YOU!!!",
+		"LET GO OF ME!",
+		"I DON'T DESERVE THIS",
+	]),
+	PackedStringArray([
+		"Who are you, by the way?",
+		"Whee!!",
+		"How fun!",
+	]),
+	PackedStringArray([
+		"I'm so disoriented...",
+		"This doesn't feel right...",
+		"Where'd the ground go..?",
+	]),
+	PackedStringArray([
+		"Help me!",
+		"Where am I?!",
+		"Run Away!",
+	]),
+	PackedStringArray([
+		":]",
+		":D",
+		":3",
+	]),
+]
+var mask_unequip_dialogue:Array = [
+	PackedStringArray([
+		"RUDE!",
+	]),
+	PackedStringArray([
+		"Oh! Byebye!",
+	]),
+	PackedStringArray([
+		"goodbye...",
+	]),
+	PackedStringArray([
+		"I'm sorry...",
+	]),
+	PackedStringArray([
+		":(",
+	]),
+]
+
 @export var black_mask_time:float = 1.0 ## Delay between black mask switching
 var black_mask_index:int = 0 ## Tracks which mask should be active when black mask is used
 var last_black_mask_index:int = 3 ## The previous mask that was on should be toggled off
@@ -22,7 +84,12 @@ signal clear_dialogue
 
 
 func _ready() -> void:
+	$DialogueTimer.timeout.connect(clear_dialogue.emit)
 	$Timer.timeout.connect(move_mask)
+	$Red.play()
+	$Green.play()
+	$Blue.play()
+	$Yellow.play()
 
 
 func _input(_event:InputEvent) -> void:
@@ -55,7 +122,7 @@ func toggle_color(_color:Colors) -> void:
 	for color:bool in current_colors:
 		if color:
 			color_count += 1
-			
+	
 	if color_count >= COLOR_MAX:
 		# If there are two colors active, don't activate a new one
 		if not current_colors[_color]:
@@ -67,6 +134,13 @@ func toggle_color(_color:Colors) -> void:
 	else:
 		current_colors[_color] = !current_colors[_color]
 		
+	if current_colors[_color]:
+		dialogue_parse_and_send(mask_equipped_dialogues, _color)
+		unmute_color(wrapi(_color, 0, 4))
+	else:
+		dialogue_parse_and_send(mask_unequip_dialogue, _color)
+		mute_color(wrapi(_color, 0, 4))
+		
 	color_changed.emit()
 	print('current colors: %s' % str(current_colors))
 
@@ -75,7 +149,8 @@ func gain_color(_color:Colors) -> void:
 	# Color already unlocked, don't process
 	if unlocked_colors[_color]:
 		return
-		
+	
+	dialogue_parse_and_send(mask_collect_dialogues, _color)
 	unlocked_colors[_color] = true
 	color_unlocked.emit()
 	
@@ -106,6 +181,7 @@ func start_black_mask() -> void:
 func stop_black_mask() -> void:
 	for i:int in current_colors.size():
 		current_colors[i] = false
+		mute_color(wrapi(i, 0, 4))
 	print('current colors: %s' % str(current_colors))
 	$Timer.stop()
 	pass
@@ -120,3 +196,18 @@ func move_mask() -> void:
 	toggle_color.call_deferred(black_mask_index)
 	last_black_mask_index = black_mask_index
 	black_mask_index = wrapi(black_mask_index + 1, 0, 4)
+
+
+func dialogue_parse_and_send(_array:Array, _color:Colors) -> void:
+	send_dialogue.emit(_array[_color][randi_range(0, _array[_color].size() - 1)])
+	$DialogueTimer.start()
+
+
+func mute_color(_color:Colors) -> void:
+	var offset:int = 2
+	AudioServer.set_bus_mute(offset + _color, true)
+	
+	
+func unmute_color(_color:Colors) -> void:
+	var offset:int = 2
+	AudioServer.set_bus_mute(offset + _color, false)
