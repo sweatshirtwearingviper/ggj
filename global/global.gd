@@ -154,22 +154,17 @@ func gain_color(_color:Colors) -> void:
 	if unlocked_colors[_color]:
 		return
 	
-	unmute_color(wrapi(_color, 0, 4))
-	
 	$MaskCollect.play()
 	dialogue_parse_and_send(mask_collect_dialogues, _color)
 	unlocked_colors[_color] = true
 	color_unlocked.emit()
 	
-	if unlocked_colors[Colors.BLACK]:
+	if unlocked_colors[Colors.BLACK] and not current_colors[Colors.BLACK]:
 		start_black_mask()
 
 
 func clear_colors() -> void:
 	stop_black_mask()
-	for i:int in unlocked_colors.size():
-		unlocked_colors[i] = false
-		mute_color(wrapi(i, 0, 4))
 	print('unlocked colors: %s' % str(unlocked_colors))
 	colors_cleared.emit()
 	pass
@@ -178,6 +173,10 @@ func clear_colors() -> void:
 func start_black_mask() -> void:
 	for i:int in current_colors.size():
 		current_colors[i] = false
+	for i:int in 4:
+		mute_color(i)
+	$Black.play()
+	unmute_color(Colors.BLACK)
 	toggle_color(Colors.BLACK)
 	toggle_color(Colors.YELLOW)
 	last_black_mask_index = 3

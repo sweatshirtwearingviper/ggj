@@ -7,6 +7,7 @@
 [ext_resource type="AudioStream" uid="uid://0b7n3hand5wi" path="res://sfx/green_theme.mp3" id="3_803q2"]
 [ext_resource type="AudioStream" uid="uid://v2s0gjdr2h2w" path="res://sfx/blue_theme.mp3" id="4_5yjsk"]
 [ext_resource type="AudioStream" uid="uid://djxg6gqv22se6" path="res://sfx/yellow_theme.mp3" id="5_pisro"]
+[ext_resource type="AudioStream" uid="uid://ddt28n12mnb67" path="res://sfx/title.mp3" id="6_0f8l1"]
 [ext_resource type="AudioStream" uid="uid://0q7vqpkwulw" path="res://sfx/mask_collect.wav" id="8_5yjsk"]
 [ext_resource type="AudioStream" uid="uid://d0pqvbvo5rma" path="res://sfx/mask_equip.wav" id="9_pisro"]
 [ext_resource type="AudioStream" uid="uid://b4pwmovju6wup" path="res://sfx/gravity_switch.wav" id="10_pisro"]
@@ -29,6 +30,10 @@ bus = &"blue"
 [node name="Yellow" type="AudioStreamPlayer" parent="." unique_id=152821082]
 stream = ExtResource("5_pisro")
 bus = &"yellow"
+
+[node name="Black" type="AudioStreamPlayer" parent="." unique_id=543190679]
+stream = ExtResource("6_0f8l1")
+bus = &"black"
 
 [node name="Timer" type="Timer" parent="." unique_id=727974215]
 
