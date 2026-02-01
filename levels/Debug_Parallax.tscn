@@ -42,14 +42,13 @@ polygon = PackedVector2Array(896.35706, -288.12823, 919.27814, -266.57556, 1024.
 [node name="Level" type="Node2D" unique_id=1808532929]
 
 [node name="ParallaxPurpMtn" type="Node2D" parent="." unique_id=207847497]
-visible = false
 position = Vector2(0, -200)
 
 [node name="Parallax_Stars" parent="ParallaxPurpMtn" unique_id=195395145 instance=ExtResource("6_mnksi")]
 scroll_scale = Vector2(0.01, 1)
 
 [node name="ParallaxLayer" parent="ParallaxPurpMtn" unique_id=1224149914 instance=ExtResource("2_kdebw")]
-scroll_offset = Vector2(-16, 184)
+scroll_offset = Vector2(-16, 1.4755249)
 
 [node name="Parallax_frontMountains" parent="ParallaxPurpMtn" unique_id=1627610917 instance=ExtResource("3_m55k5")]
 light_mask = 524288
@@ -77,6 +76,7 @@ scroll_offset = Vector2(0, -24.683777)
 scroll_offset = Vector2(0, -24.683777)
 
 [node name="ParallaxForest" type="Node2D" parent="." unique_id=865382777]
+visible = false
 
 [node name="Forest_Background" parent="ParallaxForest" unique_id=1491795006 instance=ExtResource("11_psjua")]
 scroll_offset = Vector2(0, -300.52832)
