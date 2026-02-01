@@ -3,10 +3,9 @@
 [ext_resource type="Texture2D" uid="uid://c2usyy0eh5kbf" path="res://textures/Backgrounds/Level1/backcloudss.webp" id="1_3mskm"]
 
 [node name="Parallax_Clouds" type="Parallax2D" unique_id=195395145]
-scroll_scale = Vector2(0.6, 1)
-repeat_size = Vector2(920, 0)
-autoscroll = Vector2(6, 0)
+scale = Vector2(1.2, 1.2)
+autoscroll = Vector2(-8, 0)
+repeat_times = 10
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=377779340]
-position = Vector2(4, -90)
 texture = ExtResource("1_3mskm")
