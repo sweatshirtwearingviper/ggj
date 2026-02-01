@@ -20,6 +20,12 @@
 [ext_resource type="PackedScene" uid="uid://bd8avx4kyfk1f" path="res://obstacles/bouncer.tscn" id="17_p23n3"]
 [ext_resource type="PackedScene" uid="uid://c7v7j4dbcylmd" path="res://obstacles/level_box.tscn" id="21_hm8hl"]
 
+[sub_resource type="Gradient" id="Gradient_niraj"]
+colors = PackedColorArray(0.32966965, 0.21379244, 0.76859474, 1, 0.32941177, 0.21568628, 0.76862746, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_3lv7o"]
+gradient = SubResource("Gradient_niraj")
+
 [node name="1-1" type="Node2D" unique_id=1808532929]
 
 [node name="Spawn" type="Marker2D" parent="." unique_id=1138809788]
@@ -219,3 +225,23 @@ position = Vector2(5776, -432)
 position = Vector2(5808, -432)
 
 [node name="LevelBox" parent="." unique_id=2135824514 instance=ExtResource("21_hm8hl")]
+
+[node name="PointLight2D" type="PointLight2D" parent="." unique_id=398006877]
+position = Vector2(714.75, -531.50006)
+scale = Vector2(22.570313, 16.234375)
+texture = SubResource("GradientTexture2D_3lv7o")
+
+[node name="PointLight2D2" type="PointLight2D" parent="." unique_id=353208058]
+position = Vector2(2158, -564)
+scale = Vector2(22.570313, 16.234375)
+texture = SubResource("GradientTexture2D_3lv7o")
+
+[node name="PointLight2D3" type="PointLight2D" parent="." unique_id=202130981]
+position = Vector2(3614.0002, -510.50006)
+scale = Vector2(22.570313, 18.046873)
+texture = SubResource("GradientTexture2D_3lv7o")
+
+[node name="PointLight2D4" type="PointLight2D" parent="." unique_id=237256830]
+position = Vector2(5057, -510.50006)
+scale = Vector2(22.570313, 18.046873)
+texture = SubResource("GradientTexture2D_3lv7o")
