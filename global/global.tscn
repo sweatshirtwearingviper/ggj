@@ -34,3 +34,6 @@ stream = ExtResource("2_vt5yb")
 
 [node name="Tick" type="AudioStreamPlayer" parent="." unique_id=1696316074]
 stream = ExtResource("2_cqcin")
+
+[node name="DialogueTimer" type="Timer" parent="." unique_id=307676014]
+wait_time = 2.0
