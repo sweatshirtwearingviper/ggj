@@ -1,0 +1,48 @@
+[gd_scene format=3 uid="uid://dr25osp5op6pv"]
+
+[ext_resource type="Texture2D" uid="uid://cl6qvq0qhh04x" path="res://textures/VFX/float_VFX.png" id="1_bwm6g"]
+
+[sub_resource type="Animation" id="Animation_2ys7c"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="Animation" id="Animation_s80nx"]
+resource_name = "float_animation"
+length = 0.96666664
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.13333334, 0.3, 0.46666667, 0.6333333, 0.76666665, 0.8666667, 0.96666664),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4, 6, 7, 8]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_q0sf0"]
+_data = {
+&"RESET": SubResource("Animation_2ys7c"),
+&"float_animation": SubResource("Animation_s80nx")
+}
+
+[node name="float_VFX_anim" type="Sprite2D" unique_id=1586255519]
+texture = ExtResource("1_bwm6g")
+hframes = 9
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1833905108]
+libraries/ = SubResource("AnimationLibrary_q0sf0")

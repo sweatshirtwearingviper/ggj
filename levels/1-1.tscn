@@ -1,7 +1,6 @@
 [gd_scene format=4 uid="uid://6rqnul07rbk8"]
 
 [ext_resource type="PackedScene" uid="uid://dixv1p4pmagw6" path="res://levels/ruler.tscn" id="1_ol7ui"]
-[ext_resource type="Texture2D" path="res://textures/coolguy.png" id="2_81b3w"]
 [ext_resource type="TileSet" uid="uid://dbgnho1wr7mar" path="res://tilesets/tileset_masks.tres" id="2_xy34e"]
 [ext_resource type="Script" uid="uid://l7ym5t6nhaf4" path="res://levels/mask_tile_map_layer.gd" id="3_gtyxv"]
 [ext_resource type="TileSet" uid="uid://dr1au7djoqqhp" path="res://tilesets/tileset_terrain.tres" id="4_bvtcs"]
@@ -14,12 +13,11 @@
 [ext_resource type="PackedScene" uid="uid://chtpsqj3k2xfs" path="res://obstacles/mask_yellow.tscn" id="11_t4rme"]
 [ext_resource type="PackedScene" uid="uid://cuvab0utd4w7c" path="res://obstacles/mask_blue.tscn" id="12_81b3w"]
 [ext_resource type="PackedScene" uid="uid://d4j1on1jykl8x" path="res://obstacles/dash_crystal.tscn" id="13_omt56"]
-[ext_resource type="PackedScene" path="res://obstacles/gravestone.tscn" id="14_t4rme"]
+[ext_resource type="PackedScene" uid="uid://d0v473p6eqiic" path="res://obstacles/gravestone.tscn" id="14_t4rme"]
 
 [node name="Level2" type="Node2D" unique_id=1808532929]
 
 [node name="Ruler" parent="." unique_id=1900040170 instance=ExtResource("1_ol7ui")]
-texture = ExtResource("2_81b3w")
 
 [node name="Red" type="TileMapLayer" parent="." unique_id=786131689]
 tile_map_data = PackedByteArray("AAAnAP//AQADAAEAAAAnAP7/AQADAAEAAAAnAP3/AQADAAEAAAAoAP3/AQAFAAEAAAAoAP7/AQAFAAEAAAAnAPz/AQADAAAAAAAoAPz/AQAFAAAAAAAoAP//AQAFAAEAAAAdAPX/AQALAAAAAAAdAPb/AQADAAEAAAAdAPf/AQADAAEAAAAdAPj/AQADAAEAAAAdAPn/AQADAAEAAAAdAPr/AQADAAEAAAAdAPv/AQADAAEAAAAdAPz/AQADAAIAAAAeAPX/AQAMAAAAAAAeAPb/AQAFAAEAAAAeAPf/AQAFAAEAAAAeAPj/AQAFAAEAAAAeAPn/AQAFAAEAAAAeAPr/AQAFAAEAAAAeAPv/AQAFAAEAAAAeAPz/AQAFAAIAAAB7AO7/AQADAAAAAAB7AO//AQADAAIAAAB8AO7/AQAFAAAAAAB8AO//AQAFAAIAAADEAOP/AQAEAAIAAADFAOP/AQAEAAIAAADGAOP/AQAEAAIAAADHAOP/AQAEAAIAAADIAOP/AQAEAAIAAACgAOn/AQAEAAAAAACfAOn/AQAEAAAAAAA=")

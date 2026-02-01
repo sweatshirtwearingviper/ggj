@@ -1,0 +1,47 @@
+[gd_scene format=3 uid="uid://bp7tq5ss4glip"]
+
+[ext_resource type="Texture2D" uid="uid://c6dawenom2uxo" path="res://textures/VFX/death_VFX.png" id="1_yycek"]
+
+[sub_resource type="Animation" id="Animation_pcvy0"]
+resource_name = "Death_Animation"
+length = 1.2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.4, 0.56666666, 0.73333335, 0.8666667, 1.0333333),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4, 5, 6, 7]
+}
+
+[sub_resource type="Animation" id="Animation_vrv8k"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_idpws"]
+_data = {
+&"Death_Animation": SubResource("Animation_pcvy0"),
+&"RESET": SubResource("Animation_vrv8k")
+}
+
+[node name="Death_VFX" type="Sprite2D" unique_id=1331253803]
+texture = ExtResource("1_yycek")
+hframes = 8
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=839773532]
+libraries/ = SubResource("AnimationLibrary_idpws")
