@@ -7,8 +7,8 @@
 size = Vector2(32, 32)
 
 [node name="DashCrystal" type="Area2D" unique_id=1205630108]
-collision_layer = 8
-collision_mask = 8
+collision_layer = 0
+collision_mask = 0
 script = ExtResource("1_6i0wk")
 mask_color = 8
 

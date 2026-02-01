@@ -4,15 +4,17 @@
 [ext_resource type="PackedScene" uid="uid://duopwyl01yiih" path="res://Animations/Props/bouncing_block.tscn" id="2_kj1u6"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_y623u"]
-size = Vector2(32, 32)
+size = Vector2(32, 40)
 
 [node name="Bouncer" type="Area2D" unique_id=1205630108]
-collision_layer = 2
-collision_mask = 2
+collision_layer = 0
+collision_mask = 0
 script = ExtResource("1_kj1u6")
 mask_color = 2
 
 [node name="BouncingBlock" parent="." unique_id=837443864 instance=ExtResource("2_kj1u6")]
+position = Vector2(0, -16)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1633316433]
+position = Vector2(0, -7.03)
 shape = SubResource("RectangleShape2D_y623u")
