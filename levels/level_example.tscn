@@ -2,6 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://dixv1p4pmagw6" path="res://levels/ruler.tscn" id="1_h7y5g"]
 [ext_resource type="PackedScene" uid="uid://c7v7j4dbcylmd" path="res://obstacles/level_box.tscn" id="1_patda"]
+[ext_resource type="Texture2D" uid="uid://smlwhyc20q2y" path="res://textures/Backgrounds/Level1/Sky.webp" id="2_2t2lo"]
 [ext_resource type="TileSet" uid="uid://dbgnho1wr7mar" path="res://tilesets/tileset_masks.tres" id="2_g104l"]
 [ext_resource type="Script" uid="uid://l7ym5t6nhaf4" path="res://levels/mask_tile_map_layer.gd" id="3_caklk"]
 [ext_resource type="TileSet" uid="uid://dr1au7djoqqhp" path="res://tilesets/tileset_terrain.tres" id="4_khfb4"]
@@ -19,9 +20,8 @@
 
 [node name="Level" type="Node2D" unique_id=1808532929]
 
-[node name="LevelBox" parent="." unique_id=2135824514 instance=ExtResource("1_patda")]
-
 [node name="Ruler" parent="." unique_id=1900040170 instance=ExtResource("1_h7y5g")]
+texture = ExtResource("2_2t2lo")
 
 [node name="Red" type="TileMapLayer" parent="." unique_id=786131689]
 tile_map_data = PackedByteArray("AAADAPv/AQADAAEAAAADAPr/AQADAAEAAAADAPn/AQADAAEAAAAFAPv/AQAFAAEAAAAFAPr/AQAFAAEAAAAFAPn/AQAFAAEAAAAEAPj/AQAEAAAAAAADAPj/AQADAAAAAAAFAPj/AQAFAAAAAAAEAPn/AQAEAAEAAAAEAPr/AQAEAAEAAAAEAPv/AQAEAAEAAAA=")
@@ -59,6 +59,8 @@ tile_set = ExtResource("4_khfb4")
 
 [node name="Spawn" type="Marker2D" parent="." unique_id=1329981062]
 position = Vector2(48, -272)
+
+[node name="LevelBox" parent="." unique_id=2135824514 instance=ExtResource("1_patda")]
 
 [node name="Teleporter" parent="." unique_id=511879513 node_paths=PackedStringArray("telepoint") instance=ExtResource("5_g104l")]
 position = Vector2(208, -80)

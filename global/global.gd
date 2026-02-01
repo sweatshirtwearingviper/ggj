@@ -97,18 +97,25 @@ func start_black_mask() -> void:
 		current_colors[i] = false
 	toggle_color(Colors.BLACK)
 	toggle_color(Colors.YELLOW)
+	last_black_mask_index = 3
 	black_mask_index = 0
 	$Timer.wait_time = black_mask_time
 	$Timer.start()
 	
 	
 func stop_black_mask() -> void:
-	black_mask_index = 0
+	for i:int in current_colors.size():
+		current_colors[i] = false
+	print('current colors: %s' % str(current_colors))
 	$Timer.stop()
 	pass
 
 
 func move_mask() -> void:
+	if black_mask_index == 0:
+		$Bell.play()
+	else:
+		$Tick.play()
 	toggle_color(last_black_mask_index)
 	toggle_color.call_deferred(black_mask_index)
 	last_black_mask_index = black_mask_index
