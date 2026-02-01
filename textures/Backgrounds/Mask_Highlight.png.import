@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bsbkgdlmuxm8u"
-path="res://.godot/imported/Mask_UI2.webp-8126504a32bf16cee73418747decc0bf.ctex"
+uid="uid://bamaopyl1xqlu"
+path="res://.godot/imported/Mask_Highlight.png-62548ed93b876b3a7d036ac700e4f684.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://textures/UI/Mask_UI2.webp"
-dest_files=["res://.godot/imported/Mask_UI2.webp-8126504a32bf16cee73418747decc0bf.ctex"]
+source_file="res://textures/Backgrounds/Mask_Highlight.png"
+dest_files=["res://.godot/imported/Mask_Highlight.png-62548ed93b876b3a7d036ac700e4f684.ctex"]
 
 [params]
 

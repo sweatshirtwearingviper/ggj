@@ -13,6 +13,7 @@
 [ext_resource type="PackedScene" uid="uid://chtpsqj3k2xfs" path="res://obstacles/mask_yellow.tscn" id="11_i2eqa"]
 [ext_resource type="PackedScene" uid="uid://d4j1on1jykl8x" path="res://obstacles/dash_crystal.tscn" id="12_176w8"]
 [ext_resource type="PackedScene" uid="uid://bpscfu0koqk2v" path="res://player_controller/player_easy_control/player_easy_control.tscn" id="12_netub"]
+[ext_resource type="PackedScene" uid="uid://bd8avx4kyfk1f" path="res://obstacles/bouncer.tscn" id="14_i2eqa"]
 [ext_resource type="PackedScene" uid="uid://d0v473p6eqiic" path="res://obstacles/gravestone.tscn" id="14_mex3m"]
 
 [node name="Level" type="Node2D" unique_id=1808532929]
@@ -94,6 +95,11 @@ telepoint = NodePath("../Spawn")
 
 [node name="DashCrystal" parent="." unique_id=1205630108 instance=ExtResource("12_176w8")]
 position = Vector2(400, -80)
+collision_layer = 0
+collision_mask = 0
+
+[node name="Bouncer" parent="." unique_id=1461263668 instance=ExtResource("14_i2eqa")]
+position = Vector2(-48, -48)
 collision_layer = 0
 collision_mask = 0
 

@@ -8,6 +8,7 @@ var double_jumped:bool = false
 var is_smashing:bool = false
 var can_dash:bool = true
 var is_dashing:bool = false
+var is_bouncing:bool = false 
 
 @onready var sprite:Sprite2D = $Character
 
@@ -35,9 +36,14 @@ func _physics_process(delta: float) -> void:
 	else:
 	# Reset double jump when on ground
 		if Global.current_colors[Global.Colors.BLUE]:
-			velocity -= get_gravity() * delta
+			velocity -= get_gravity() / 2 * delta
 		else:
 			velocity += get_gravity() * delta
+
+	# GREEN handle bounce pads
+	if is_bouncing:
+		velocity.y = JUMP_VELOCITY
+		is_bouncing = false
 
 	# Handle jump and green doublejump
 	if Input.is_action_just_pressed("up"):
