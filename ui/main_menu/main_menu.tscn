@@ -2,7 +2,10 @@
 
 [ext_resource type="Script" uid="uid://dth0f2g2qtoy4" path="res://ui/main_menu/main_menu.gd" id="1_mu8pm"]
 [ext_resource type="PackedScene" uid="uid://brmylbru3j6c2" path="res://Animations/TitleScreen/title_screen_anim.tscn" id="1_uhj5c"]
+[ext_resource type="Texture2D" uid="uid://hs51cdrpotj8" path="res://textures/TitleScreen/titlescreenfinaltitle.png" id="3_i5wg5"]
 [ext_resource type="StyleBox" uid="uid://bp68qt8qceiny" path="res://ui/styles/clear_stylebox.tres" id="3_omy8q"]
+[ext_resource type="Script" uid="uid://7ur8a88580eu" path="res://ui/main_menu/button.gd" id="5_3c04x"]
+[ext_resource type="AudioStream" uid="uid://0q7vqpkwulw" path="res://sfx/mask_collect.wav" id="6_joh67"]
 
 [node name="MainMenu" type="Control" unique_id=1518834826]
 layout_mode = 3
@@ -33,19 +36,29 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="TitleScreen_anim" parent="Center" unique_id=949973051 instance=ExtResource("1_uhj5c")]
-scale = Vector2(2, 2)
+texture = ExtResource("3_i5wg5")
 
 [node name="Button" type="Button" parent="." unique_id=2049518134]
 layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_right = 8.0
-offset_bottom = 8.0
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 123.0
+offset_top = -34.0
+offset_right = 251.0
+offset_bottom = 30.0
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_font_sizes/font_size = 64
 theme_override_styles/normal = ExtResource("3_omy8q")
 theme_override_styles/pressed = ExtResource("3_omy8q")
 theme_override_styles/hover = ExtResource("3_omy8q")
 theme_override_styles/disabled = ExtResource("3_omy8q")
 theme_override_styles/focus = ExtResource("3_omy8q")
+text = "START"
+script = ExtResource("5_3c04x")
+
+[node name="Hover" type="AudioStreamPlayer" parent="Button" unique_id=212489584]
+stream = ExtResource("6_joh67")

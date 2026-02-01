@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bamaopyl1xqlu"
-path="res://.godot/imported/Mask_Highlight.png-62548ed93b876b3a7d036ac700e4f684.ctex"
+uid="uid://hs51cdrpotj8"
+path="res://.godot/imported/titlescreenfinaltitle.png-b273e2af82df4e8ac8b1811b23cb3ad8.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://textures/Backgrounds/Mask_Highlight.png"
-dest_files=["res://.godot/imported/Mask_Highlight.png-62548ed93b876b3a7d036ac700e4f684.ctex"]
+source_file="res://textures/TitleScreen/titlescreenfinaltitle.png"
+dest_files=["res://.godot/imported/titlescreenfinaltitle.png-b273e2af82df4e8ac8b1811b23cb3ad8.ctex"]
 
 [params]
 
