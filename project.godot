@@ -11,9 +11,10 @@ config_version=5
 [application]
 
 config/name="Aftermask"
+config/description="A game about a wee ghost and his souls"
 run/main_scene="uid://cqow47bch5ocs"
 config/features=PackedStringArray("4.6", "Forward Plus")
-config/icon="res://icon.svg"
+config/icon="uid://1t5hp37jpjtv"
 
 [autoload]
 
