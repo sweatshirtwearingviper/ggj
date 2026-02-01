@@ -14,6 +14,7 @@
 [ext_resource type="PackedScene" uid="uid://cuvab0utd4w7c" path="res://obstacles/mask_blue.tscn" id="12_81b3w"]
 [ext_resource type="PackedScene" uid="uid://d4j1on1jykl8x" path="res://obstacles/dash_crystal.tscn" id="13_omt56"]
 [ext_resource type="PackedScene" uid="uid://d0v473p6eqiic" path="res://obstacles/gravestone.tscn" id="14_t4rme"]
+[ext_resource type="PackedScene" uid="uid://grv0gvaqrcgk" path="res://obstacles/killplane.tscn" id="15_81b3w"]
 
 [node name="Level2" type="Node2D" unique_id=1808532929]
 
@@ -118,3 +119,9 @@ telepoint = NodePath("../Marker2D")
 [node name="Teleporter3" parent="." unique_id=67368277 node_paths=PackedStringArray("telepoint") instance=ExtResource("8_q3ga1")]
 position = Vector2(6315, -127)
 telepoint = NodePath("../Marker2D")
+
+[node name="Killplane" parent="." unique_id=1662454737 instance=ExtResource("15_81b3w")]
+position = Vector2(1184, 131)
+
+[node name="Killplane" parent="Killplane" unique_id=530537359 instance=ExtResource("15_81b3w")]
+position = Vector2(1247, -1281)
