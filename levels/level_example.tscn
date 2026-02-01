@@ -12,9 +12,9 @@
 [ext_resource type="PackedScene" uid="uid://bg0syfjjgd7cl" path="res://obstacles/mask_red.tscn" id="10_mex3m"]
 [ext_resource type="PackedScene" uid="uid://chtpsqj3k2xfs" path="res://obstacles/mask_yellow.tscn" id="11_i2eqa"]
 [ext_resource type="PackedScene" uid="uid://d4j1on1jykl8x" path="res://obstacles/dash_crystal.tscn" id="12_176w8"]
-[ext_resource type="PackedScene" uid="uid://bpscfu0koqk2v" path="res://player_controller/player_easy_control/player_easy_control.tscn" id="12_netub"]
 [ext_resource type="PackedScene" uid="uid://bd8avx4kyfk1f" path="res://obstacles/bouncer.tscn" id="14_i2eqa"]
 [ext_resource type="PackedScene" uid="uid://d0v473p6eqiic" path="res://obstacles/gravestone.tscn" id="14_mex3m"]
+[ext_resource type="PackedScene" uid="uid://ccv28wbk1kccl" path="res://obstacles/signpost.tscn" id="15_patda"]
 
 [node name="Level" type="Node2D" unique_id=1808532929]
 
@@ -103,7 +103,5 @@ position = Vector2(-48, -48)
 collision_layer = 0
 collision_mask = 0
 
-[node name="PlayerEasyControl" parent="." unique_id=934248184 instance=ExtResource("12_netub")]
-position = Vector2(16, -80)
-collision_layer = 415
-collision_mask = 415
+[node name="Signpost" parent="." unique_id=1066847678 instance=ExtResource("15_patda")]
+position = Vector2(304, -80)

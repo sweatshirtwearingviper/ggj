@@ -3,13 +3,21 @@
 [ext_resource type="PackedScene" uid="uid://ljc24u6k26te" path="res://ui/mask_bar/mask_bar.tscn" id="3_3wy1v"]
 [ext_resource type="PackedScene" uid="uid://bi8lmj74ksy4j" path="res://levels/level_example.tscn" id="3_c651c"]
 [ext_resource type="PackedScene" uid="uid://ditptx7juvhj1" path="res://player_controller/camera/camera.tscn" id="3_xwkvk"]
+[ext_resource type="PackedScene" uid="uid://dplh6k5dvwq13" path="res://ui/dialogue/dialogue.tscn" id="4_c651c"]
+[ext_resource type="PackedScene" uid="uid://bpscfu0koqk2v" path="res://player_controller/player_easy_control/player_easy_control.tscn" id="5_3wy1v"]
 
 [node name="Main" type="Node" unique_id=797082359]
 
+[node name="Level" parent="." unique_id=1808532929 instance=ExtResource("3_c651c")]
+
 [node name="Camera" parent="." unique_id=704402319 instance=ExtResource("3_xwkvk")]
 
-[node name="Level" parent="." unique_id=1808532929 instance=ExtResource("3_c651c")]
+[node name="PlayerEasyControl" parent="." unique_id=934248184 instance=ExtResource("5_3wy1v")]
+position = Vector2(48, -176)
 
 [node name="UI" type="CanvasLayer" parent="." unique_id=1085982232]
 
 [node name="MaskBar" parent="UI" unique_id=1770861411 instance=ExtResource("3_3wy1v")]
+
+[node name="Dialogue" parent="UI" unique_id=2141318 instance=ExtResource("4_c651c")]
+visible = false

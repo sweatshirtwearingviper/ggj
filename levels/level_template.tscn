@@ -4,6 +4,7 @@
 [ext_resource type="TileSet" uid="uid://dbgnho1wr7mar" path="res://tilesets/tileset_masks.tres" id="2_skox6"]
 [ext_resource type="Script" uid="uid://l7ym5t6nhaf4" path="res://levels/mask_tile_map_layer.gd" id="3_8xmsw"]
 [ext_resource type="TileSet" uid="uid://dr1au7djoqqhp" path="res://tilesets/tileset_terrain.tres" id="3_13k7l"]
+[ext_resource type="PackedScene" uid="uid://c7v7j4dbcylmd" path="res://obstacles/level_box.tscn" id="5_8xmsw"]
 
 [node name="Level" type="Node2D" unique_id=1808532929]
 
@@ -36,3 +37,8 @@ mask_color = 16
 
 [node name="Terrain" type="TileMapLayer" parent="." unique_id=333135433]
 tile_set = ExtResource("3_13k7l")
+
+[node name="Spawn" type="Marker2D" parent="." unique_id=100175022]
+position = Vector2(128, -160)
+
+[node name="LevelBox" parent="." unique_id=2135824514 instance=ExtResource("5_8xmsw")]

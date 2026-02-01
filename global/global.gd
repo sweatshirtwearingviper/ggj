@@ -13,6 +13,9 @@ signal color_unlocked
 signal color_locked
 signal colors_cleared
 
+signal send_dialogue
+signal clear_dialogue
+
 
 func _input(_event:InputEvent) -> void:
 	if _event is InputEventKey:

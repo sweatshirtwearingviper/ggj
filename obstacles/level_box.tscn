@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://c7v7j4dbcylmd"]
+
+[ext_resource type="PackedScene" uid="uid://grv0gvaqrcgk" path="res://obstacles/killplane.tscn" id="1_hibp2"]
+[ext_resource type="Script" uid="uid://cwq6dp4ake0u5" path="res://obstacles/level_box.gd" id="1_y4tv0"]
+[ext_resource type="PackedScene" uid="uid://bkr2t15i4hkkg" path="res://obstacles/wall.tscn" id="2_y4tv0"]
+
+[node name="LevelBox" type="Node2D" unique_id=2135824514]
+script = ExtResource("1_y4tv0")
+
+[node name="Killplane1" parent="." unique_id=511879513 instance=ExtResource("1_hibp2")]
+position = Vector2(4096, 144)
+
+[node name="Killplane2" parent="." unique_id=257592412 instance=ExtResource("1_hibp2")]
+position = Vector2(4112, -1168)
+
+[node name="Wall1" parent="." unique_id=1823316497 instance=ExtResource("2_y4tv0")]
+position = Vector2(8320, -512)
+
+[node name="Wall2" parent="." unique_id=1252604051 instance=ExtResource("2_y4tv0")]
+position = Vector2(-128, -512)

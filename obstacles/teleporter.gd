@@ -1,8 +1,7 @@
 ## Teleports the player to an assigned marker node. Click the "Assign..." button next to the
 ## Telepoint property in the inspector, and select a currently present Marker2D node in the scene.
-
-
 extends Area2D
+class_name Teleporter
 
 @export var telepoint:Marker2D
 

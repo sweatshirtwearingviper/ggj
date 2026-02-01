@@ -1,0 +1,32 @@
+[gd_scene format=3 uid="uid://dplh6k5dvwq13"]
+
+[ext_resource type="Script" uid="uid://cxuv8c6now7th" path="res://ui/dialogue/dialogue.gd" id="1_8q5o4"]
+
+[node name="Dialogue" type="MarginContainer" unique_id=2141318]
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
+script = ExtResource("1_8q5o4")
+
+[node name="BG" type="ColorRect" parent="." unique_id=692792571]
+custom_minimum_size = Vector2(0, 32)
+layout_mode = 2
+color = Color(0, 0, 0, 1)
+
+[node name="Box" type="MarginContainer" parent="." unique_id=211025828]
+layout_mode = 2
+theme_override_constants/margin_left = 4
+theme_override_constants/margin_top = 4
+theme_override_constants/margin_right = 4
+theme_override_constants/margin_bottom = 4
+
+[node name="Text" type="Label" parent="Box" unique_id=146388530]
+layout_mode = 2
+text = "text"

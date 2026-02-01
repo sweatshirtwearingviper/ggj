@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://ccv28wbk1kccl"]
+
+[ext_resource type="Script" uid="uid://cmven6s4mvrks" path="res://obstacles/signpost.gd" id="1_qhkim"]
+[ext_resource type="Texture2D" uid="uid://oa7cirfy5xhy" path="res://textures/Debug/coolguy.png" id="2_shgxl"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qhkim"]
+size = Vector2(64, 64)
+
+[node name="Signpost" type="Area2D" unique_id=1066847678]
+script = ExtResource("1_qhkim")
+dialogue = "I am a sign post!"
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=648929796]
+texture = ExtResource("2_shgxl")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1199768428]
+position = Vector2(0, -16)
+shape = SubResource("RectangleShape2D_qhkim")

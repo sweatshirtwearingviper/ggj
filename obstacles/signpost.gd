@@ -1,13 +1,14 @@
 ## When the player touches this, runs the player's dash ability next frame
 extends Area2D
 
+@export_multiline var dialogue:String = ''
 # For "Export Flags" the int will be a power of 2 i.e. 2, 4, 6, 8, 16
 @export_flags("Red", "Green", "Blue", "Yellow", "Black") var mask_color:int = 0
 
 
 func _ready() -> void:
-	body_entered.connect(dash)
-	$Sprite2D.modulate = Color(1, 1, 1, 0.2)
+	body_entered.connect(sign_enter)
+	body_exited.connect(sign_exit)
 
 	if mask_color == 0:
 		set_collision_layer_value(8, true)
@@ -16,9 +17,14 @@ func _ready() -> void:
 		Global.color_changed.connect(color_changed)
 
 
-func dash(_body:Node2D) -> void:
+func sign_enter(_body:Node2D) -> void:
 	if _body is PlayerEasyControl:
-		_body.is_dashing = true
+		Global.send_dialogue.emit(dialogue)
+		
+
+func sign_exit(_body:Node2D) -> void:
+	if _body is PlayerEasyControl:
+		Global.clear_dialogue.emit()
 
 
 func color_changed() -> void:
