@@ -3,9 +3,29 @@
 [ext_resource type="Script" uid="uid://cjbtsloqjqg2q" path="res://global/global.gd" id="1_2k1wk"]
 [ext_resource type="AudioStream" uid="uid://bmshbgwqft0n5" path="res://sfx/BeepBox-tick.wav" id="2_cqcin"]
 [ext_resource type="AudioStream" uid="uid://bt0rf7mejh00n" path="res://sfx/BeepBox-bell.wav" id="2_vt5yb"]
+[ext_resource type="AudioStream" uid="uid://b7bfkr0nax08t" path="res://sfx/red_theme.wav" id="4_aewma"]
+[ext_resource type="AudioStream" uid="uid://crcr5dg5vh25n" path="res://sfx/green_theme.wav" id="5_4acp8"]
+[ext_resource type="AudioStream" uid="uid://c4fcmd6ms6y2r" path="res://sfx/blue_theme.wav" id="6_l7tt2"]
+[ext_resource type="AudioStream" uid="uid://kekij62a0de5" path="res://sfx/yellow_theme.wav" id="7_ery7i"]
 
 [node name="Global" type="Node" unique_id=369998726]
 script = ExtResource("1_2k1wk")
+
+[node name="Red" type="AudioStreamPlayer" parent="." unique_id=678732466]
+stream = ExtResource("4_aewma")
+bus = &"red"
+
+[node name="Green" type="AudioStreamPlayer" parent="." unique_id=631647894]
+stream = ExtResource("5_4acp8")
+bus = &"green"
+
+[node name="Blue" type="AudioStreamPlayer" parent="." unique_id=1203728946]
+stream = ExtResource("6_l7tt2")
+bus = &"blue"
+
+[node name="Yellow" type="AudioStreamPlayer" parent="." unique_id=152821082]
+stream = ExtResource("7_ery7i")
+bus = &"yellow"
 
 [node name="Timer" type="Timer" parent="." unique_id=727974215]
 

@@ -23,6 +23,10 @@ signal clear_dialogue
 
 func _ready() -> void:
 	$Timer.timeout.connect(move_mask)
+	$Red.play()
+	$Green.play()
+	$Blue.play()
+	$Yellow.play()
 
 
 func _input(_event:InputEvent) -> void:
@@ -55,7 +59,7 @@ func toggle_color(_color:Colors) -> void:
 	for color:bool in current_colors:
 		if color:
 			color_count += 1
-			
+	
 	if color_count >= COLOR_MAX:
 		# If there are two colors active, don't activate a new one
 		if not current_colors[_color]:
@@ -66,6 +70,11 @@ func toggle_color(_color:Colors) -> void:
 	# If the colors are not at the max, then just toggle it
 	else:
 		current_colors[_color] = !current_colors[_color]
+		
+	if current_colors[_color]:
+		unmute_color(wrapi(_color, 0, 4))
+	else:
+		mute_color(wrapi(_color, 0, 4))
 		
 	color_changed.emit()
 	print('current colors: %s' % str(current_colors))
@@ -106,6 +115,7 @@ func start_black_mask() -> void:
 func stop_black_mask() -> void:
 	for i:int in current_colors.size():
 		current_colors[i] = false
+		mute_color(wrapi(i, 0, 4))
 	print('current colors: %s' % str(current_colors))
 	$Timer.stop()
 	pass
@@ -120,3 +130,13 @@ func move_mask() -> void:
 	toggle_color.call_deferred(black_mask_index)
 	last_black_mask_index = black_mask_index
 	black_mask_index = wrapi(black_mask_index + 1, 0, 4)
+
+
+func mute_color(_color:Colors) -> void:
+	var offset:int = 2
+	AudioServer.set_bus_mute(offset + _color, true)
+	
+	
+func unmute_color(_color:Colors) -> void:
+	var offset:int = 2
+	AudioServer.set_bus_mute(offset + _color, false)
