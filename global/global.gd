@@ -6,6 +6,10 @@ enum Colors {RED, GREEN, BLUE, YELLOW, BLACK}
 var current_colors:Array = [false, false, false, false, false]
 var unlocked_colors:Array = [false, false, false, false, false]
 
+@export var black_mask_time:float = 1.0 ## Delay between black mask switching
+var black_mask_index:int = 0 ## Tracks which mask should be active when black mask is used
+var last_black_mask_index:int = 3 ## The previous mask that was on should be toggled off
+
 signal player_position
 signal color_changed
 signal color_blocked
@@ -17,7 +21,15 @@ signal send_dialogue
 signal clear_dialogue
 
 
+func _ready() -> void:
+	$Timer.timeout.connect(move_mask)
+
+
 func _input(_event:InputEvent) -> void:
+	# If the current worn mask is black, block mask input 
+	if current_colors[Colors.BLACK]:
+		color_locked.emit()
+		return
 	if _event is InputEventKey:
 		if _event.is_action_pressed('toggle_red'):
 			toggle_color(Colors.RED)
@@ -60,13 +72,44 @@ func toggle_color(_color:Colors) -> void:
 
 
 func gain_color(_color:Colors) -> void:
+	# Color already unlocked, don't process
+	if unlocked_colors[_color]:
+		return
+		
 	unlocked_colors[_color] = true
 	color_unlocked.emit()
+	
+	if unlocked_colors[Colors.BLACK]:
+		start_black_mask()
 
 
 func clear_colors() -> void:
+	stop_black_mask()
 	for i:int in unlocked_colors.size():
 		unlocked_colors[i] = false
 	print('unlocked colors: %s' % str(unlocked_colors))
 	colors_cleared.emit()
 	pass
+	
+
+func start_black_mask() -> void:
+	for i:int in current_colors.size():
+		current_colors[i] = false
+	toggle_color(Colors.BLACK)
+	toggle_color(Colors.YELLOW)
+	black_mask_index = 0
+	$Timer.wait_time = black_mask_time
+	$Timer.start()
+	
+	
+func stop_black_mask() -> void:
+	black_mask_index = 0
+	$Timer.stop()
+	pass
+
+
+func move_mask() -> void:
+	toggle_color(last_black_mask_index)
+	toggle_color.call_deferred(black_mask_index)
+	last_black_mask_index = black_mask_index
+	black_mask_index = wrapi(black_mask_index + 1, 0, 4)

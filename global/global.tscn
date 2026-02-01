@@ -4,3 +4,5 @@
 
 [node name="Global" type="Node" unique_id=369998726]
 script = ExtResource("1_2k1wk")
+
+[node name="Timer" type="Timer" parent="." unique_id=727974215]
