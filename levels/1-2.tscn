@@ -2,9 +2,12 @@
 
 [ext_resource type="PackedScene" uid="uid://dixv1p4pmagw6" path="res://levels/ruler.tscn" id="1_x53ii"]
 [ext_resource type="TileSet" uid="uid://dbgnho1wr7mar" path="res://tilesets/tileset_masks.tres" id="2_evm8j"]
+[ext_resource type="PackedScene" uid="uid://btdacjen1ausb" path="res://parallax/WaterWorld/waterbackground.tscn" id="2_rl2po"]
 [ext_resource type="Script" uid="uid://l7ym5t6nhaf4" path="res://levels/mask_tile_map_layer.gd" id="3_rpheg"]
+[ext_resource type="PackedScene" uid="uid://wmutl2pg3l2i" path="res://parallax/WaterWorld/waterClouds1.tscn" id="3_x53ii"]
 [ext_resource type="TileSet" uid="uid://dr1au7djoqqhp" path="res://tilesets/tileset_terrain.tres" id="4_ss8cr"]
 [ext_resource type="PackedScene" uid="uid://ditptx7juvhj1" path="res://player_controller/camera/camera.tscn" id="5_87y4b"]
+[ext_resource type="PackedScene" uid="uid://tgln8hydxnj4" path="res://parallax/WaterWorld/waterfalls.tscn" id="5_rpheg"]
 [ext_resource type="PackedScene" uid="uid://d0v473p6eqiic" path="res://obstacles/gravestone.tscn" id="6_ys6wt"]
 [ext_resource type="PackedScene" uid="uid://bpscfu0koqk2v" path="res://player_controller/player_easy_control/player_easy_control.tscn" id="7_wgv8v"]
 [ext_resource type="PackedScene" uid="uid://bqbw05dovkm5a" path="res://obstacles/mask_green.tscn" id="10_kv8tq"]
@@ -12,9 +15,26 @@
 [ext_resource type="PackedScene" uid="uid://cuvab0utd4w7c" path="res://obstacles/mask_blue.tscn" id="13_1p0h3"]
 [ext_resource type="PackedScene" uid="uid://grv0gvaqrcgk" path="res://obstacles/killplane.tscn" id="15_8u7a8"]
 
-[node name="Level2" type="Node2D" unique_id=1808532929]
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_lk43i"]
+load_path = "res://.godot/imported/coolguy.png-b067e60ed9e98047d87601f19cac2438.ctex"
+
+[node name="Level3" type="Node2D" unique_id=1808532929]
 
 [node name="Ruler" parent="." unique_id=1900040170 instance=ExtResource("1_x53ii")]
+texture = SubResource("CompressedTexture2D_lk43i")
+
+[node name="Waterbackground" parent="." unique_id=1095108786 instance=ExtResource("2_rl2po")]
+scroll_offset = Vector2(12, -495)
+
+[node name="Waterfalls" parent="." unique_id=387220386 instance=ExtResource("5_rpheg")]
+scale = Vector2(1, 1.7)
+scroll_offset = Vector2(7387.9995, -404.00003)
+
+[node name="waterClouds2" parent="." unique_id=635817167 instance=ExtResource("3_x53ii")]
+scroll_offset = Vector2(-41, -464)
+
+[node name="waterClouds1" parent="." unique_id=869439015 instance=ExtResource("3_x53ii")]
+scroll_offset = Vector2(-2778, -961)
 
 [node name="Red" type="TileMapLayer" parent="." unique_id=786131689]
 tile_set = ExtResource("2_evm8j")
@@ -58,10 +78,10 @@ scale = Vector2(1.5, 1.5)
 position = Vector2(47, -670)
 
 [node name="Killplane" parent="." unique_id=1662454737 instance=ExtResource("15_8u7a8")]
-position = Vector2(1184, 131)
+position = Vector2(2780, 113)
 
 [node name="Killplane" parent="Killplane" unique_id=530537359 instance=ExtResource("15_8u7a8")]
-position = Vector2(1247, -1281)
+position = Vector2(420, -1271)
 
 [node name="MaskGreen" parent="." unique_id=511879513 instance=ExtResource("10_kv8tq")]
 position = Vector2(834, -418)

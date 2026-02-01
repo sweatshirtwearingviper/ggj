@@ -1,0 +1,74 @@
+[gd_scene format=4 uid="uid://cgsnw8gvkbcre"]
+
+[ext_resource type="PackedScene" uid="uid://dixv1p4pmagw6" path="res://levels/ruler.tscn" id="1_omtu2"]
+[ext_resource type="TileSet" uid="uid://dbgnho1wr7mar" path="res://tilesets/tileset_masks.tres" id="2_ela4a"]
+[ext_resource type="PackedScene" path="res://obstacles/bouncer.tscn" id="2_vdfkv"]
+[ext_resource type="Script" uid="uid://l7ym5t6nhaf4" path="res://levels/mask_tile_map_layer.gd" id="3_bjfp1"]
+[ext_resource type="TileSet" uid="uid://dr1au7djoqqhp" path="res://tilesets/tileset_terrain.tres" id="4_dnh7o"]
+[ext_resource type="PackedScene" uid="uid://ditptx7juvhj1" path="res://player_controller/camera/camera.tscn" id="5_fgfpr"]
+[ext_resource type="PackedScene" uid="uid://d0v473p6eqiic" path="res://obstacles/gravestone.tscn" id="6_jl1b7"]
+[ext_resource type="PackedScene" uid="uid://bpscfu0koqk2v" path="res://player_controller/player_easy_control/player_easy_control.tscn" id="7_vr6bf"]
+[ext_resource type="PackedScene" uid="uid://grv0gvaqrcgk" path="res://obstacles/killplane.tscn" id="8_fec7d"]
+
+[node name="Level4" type="Node2D" unique_id=1808532929]
+
+[node name="Ruler" parent="." unique_id=1900040170 instance=ExtResource("1_omtu2")]
+custom_minimum_size = Vector2(1024, 1024)
+offset_right = 1040.0
+offset_bottom = 7408.0
+
+[node name="Bouncer" parent="." unique_id=1205630108 instance=ExtResource("2_vdfkv")]
+position = Vector2(688, 7344)
+
+[node name="Bouncer2" parent="." unique_id=1858709962 instance=ExtResource("2_vdfkv")]
+position = Vector2(720, 7344)
+
+[node name="Bouncer3" parent="." unique_id=893215258 instance=ExtResource("2_vdfkv")]
+position = Vector2(752, 7344)
+
+[node name="Red" type="TileMapLayer" parent="." unique_id=786131689]
+tile_set = ExtResource("2_ela4a")
+script = ExtResource("3_bjfp1")
+mask_color = 1
+
+[node name="Green" type="TileMapLayer" parent="." unique_id=202435490]
+tile_set = ExtResource("2_ela4a")
+script = ExtResource("3_bjfp1")
+mask_color = 2
+
+[node name="Blue" type="TileMapLayer" parent="." unique_id=434546063]
+tile_set = ExtResource("2_ela4a")
+script = ExtResource("3_bjfp1")
+mask_color = 4
+
+[node name="Yellow" type="TileMapLayer" parent="." unique_id=1689960147]
+tile_set = ExtResource("2_ela4a")
+script = ExtResource("3_bjfp1")
+mask_color = 8
+
+[node name="Violet" type="TileMapLayer" parent="." unique_id=213659598]
+tile_map_data = PackedByteArray("AAAAAOYAAQAEAAMAAAABAOYAAQAEAAMAAAACAOYAAQAEAAMAAAADAOYAAQAEAAMAAAAEAOYAAQAEAAMAAAAFAOYAAQAEAAMAAAAGAOYAAQAEAAMAAAAHAOYAAQAEAAMAAAAIAOYAAQAEAAMAAAAJAOYAAQAEAAMAAAAKAOYAAQAEAAMAAAALAOYAAQAEAAMAAAAMAOYAAQAEAAMAAAANAOYAAQAEAAMAAAAOAOYAAQAEAAMAAAAPAOYAAQAEAAMAAAAQAOYAAQAEAAMAAAARAOYAAQAEAAMAAAASAOYAAQAEAAMAAAATAOYAAQAEAAMAAAAUAOYAAQAEAAMAAAAVAOYAAQAEAAMAAAAWAOYAAQAEAAMAAAAXAOYAAQAEAAMAAAAYAOYAAQAEAAMAAAAZAOYAAQAEAAMAAAAaAOYAAQAEAAMAAAAbAOYAAQAEAAMAAAAcAOYAAQAEAAMAAAAdAOYAAQAEAAMAAAAeAOYAAQAEAAMAAAAfAOYAAQAEAAMAAAAgAOYAAQAEAAMAAAAEAOUAAQAEAAMAAAAFAOUAAQAEAAMAAAAGAOUAAQAEAAMAAAA=")
+tile_set = ExtResource("2_ela4a")
+script = ExtResource("3_bjfp1")
+mask_color = 16
+
+[node name="Terrain" type="TileMapLayer" parent="." unique_id=333135433]
+tile_set = ExtResource("4_dnh7o")
+
+[node name="Camera" parent="." unique_id=704402319 instance=ExtResource("5_fgfpr")]
+position = Vector2(368, 7120)
+
+[node name="Gravestone" parent="." unique_id=19032468 instance=ExtResource("6_jl1b7")]
+position = Vector2(8086.0005, -343)
+scale = Vector2(1.5, 1.5)
+
+[node name="PlayerEasyControl" parent="." unique_id=934248184 instance=ExtResource("7_vr6bf")]
+position = Vector2(272, 7280)
+
+[node name="Killplane" parent="." unique_id=1662454737 instance=ExtResource("8_fec7d")]
+position = Vector2(1168, 7376)
+rotation = 1.5707964
+
+[node name="Killplane" parent="Killplane" unique_id=530537359 instance=ExtResource("8_fec7d")]
+position = Vector2(-1375.9999, 1312)
+rotation = 3.1415927
