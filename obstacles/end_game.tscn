@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://kmb2u3v6nyne"]
+
+[ext_resource type="Script" uid="uid://brjjaqaur54na" path="res://obstacles/end_game.gd" id="1_fdkbc"]
+[ext_resource type="PackedScene" uid="uid://sje5q26r7tou" path="res://Animations/Props/portal.tscn" id="2_hs5wn"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_htmf4"]
+
+[node name="Teleporter" type="Area2D" unique_id=511879513]
+collision_layer = 128
+collision_mask = 128
+script = ExtResource("1_fdkbc")
+
+[node name="Portal" parent="." unique_id=519963469 instance=ExtResource("2_hs5wn")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1712981749]
+shape = SubResource("RectangleShape2D_htmf4")

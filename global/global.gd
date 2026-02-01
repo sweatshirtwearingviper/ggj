@@ -188,7 +188,7 @@ func start_black_mask() -> void:
 func stop_black_mask() -> void:
 	for i:int in current_colors.size():
 		current_colors[i] = false
-		mute_color(wrapi(i, 0, 4))
+		mute_color(i)
 	print('current colors: %s' % str(current_colors))
 	$Timer.stop()
 	pass
