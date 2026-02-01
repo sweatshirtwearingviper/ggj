@@ -10,6 +10,7 @@
 [node name="Main" type="Node" unique_id=797082359]
 
 [node name="Level" parent="." unique_id=1808532929 instance=ExtResource("3_c651c")]
+position = Vector2(0, -64)
 
 [node name="Camera" parent="." unique_id=704402319 instance=ExtResource("3_xwkvk")]
 

@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://dixv1p4pmagw6" path="res://levels/ruler.tscn" id="1_h7y5g"]
 [ext_resource type="PackedScene" uid="uid://c7v7j4dbcylmd" path="res://obstacles/level_box.tscn" id="1_patda"]
-[ext_resource type="Texture2D" uid="uid://smlwhyc20q2y" path="res://textures/Backgrounds/Level1/Sky.webp" id="2_2t2lo"]
+[ext_resource type="Texture2D" uid="uid://smlwhyc20q2y" path="res://textures/Backgrounds/PurpMountains/Sky.webp" id="2_2t2lo"]
 [ext_resource type="TileSet" uid="uid://dbgnho1wr7mar" path="res://tilesets/tileset_masks.tres" id="2_g104l"]
 [ext_resource type="Script" uid="uid://l7ym5t6nhaf4" path="res://levels/mask_tile_map_layer.gd" id="3_caklk"]
 [ext_resource type="TileSet" uid="uid://dr1au7djoqqhp" path="res://tilesets/tileset_terrain.tres" id="4_khfb4"]
@@ -80,7 +80,7 @@ position = Vector2(848, -112)
 position = Vector2(816, -112)
 
 [node name="MaskBlack" parent="." unique_id=152650360 instance=ExtResource("7_v6yxm")]
-position = Vector2(176, -80)
+position = Vector2(976, -80)
 
 [node name="MaskBlue" parent="." unique_id=281301111 instance=ExtResource("8_netub")]
 position = Vector2(144, -80)

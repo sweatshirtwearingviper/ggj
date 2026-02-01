@@ -29,5 +29,5 @@ bus/5/name = &"yellow"
 bus/5/solo = false
 bus/5/mute = true
 bus/5/bypass_fx = false
-bus/5/volume_db = 0.0
+bus/5/volume_db = 3.995758
 bus/5/send = &"music"
