@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://dplh6k5dvwq13"]
 
 [ext_resource type="Script" uid="uid://cxuv8c6now7th" path="res://ui/dialogue/dialogue.gd" id="1_8q5o4"]
-[ext_resource type="Texture2D" uid="uid://dcb58gdq5wi7o" path="res://textures/UI/text_box.webp" id="2_h4lfh"]
+[ext_resource type="Texture2D" uid="uid://b2xnvqcwhv4t1" path="res://textures/UI/text_box2.webp" id="2_h4lfh"]
 
 [node name="Dialogue" type="MarginContainer" unique_id=2141318]
 anchors_preset = 12
