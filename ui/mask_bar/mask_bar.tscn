@@ -1,8 +1,71 @@
 [gd_scene format=3 uid="uid://ljc24u6k26te"]
 
 [ext_resource type="Script" uid="uid://ddqdmwdos03ey" path="res://ui/mask_bar/mask_bar.gd" id="1_wfy5j"]
+[ext_resource type="Texture2D" uid="uid://bsbkgdlmuxm8u" path="res://textures/UI/Mask_UI2.webp" id="2_yvcxw"]
+[ext_resource type="Texture2D" uid="uid://cc4jcq63b1agc" path="res://textures/UI/Mask_Highlight.png" id="3_8ntr2"]
 
 [node name="MaskBar" type="Control" unique_id=1770861411]
 layout_mode = 3
 anchors_preset = 0
 script = ExtResource("1_wfy5j")
+
+[node name="Highlights" type="HBoxContainer" parent="." unique_id=1641005689]
+custom_minimum_size = Vector2(160, 32)
+layout_mode = 0
+offset_right = 160.0
+offset_bottom = 32.0
+theme_override_constants/separation = 0
+
+[node name="R" type="TextureRect" parent="Highlights" unique_id=516388942]
+layout_mode = 2
+texture = ExtResource("3_8ntr2")
+
+[node name="B" type="TextureRect" parent="Highlights" unique_id=187186124]
+layout_mode = 2
+texture = ExtResource("3_8ntr2")
+
+[node name="G" type="TextureRect" parent="Highlights" unique_id=2076072261]
+layout_mode = 2
+texture = ExtResource("3_8ntr2")
+
+[node name="Y" type="TextureRect" parent="Highlights" unique_id=601768303]
+layout_mode = 2
+texture = ExtResource("3_8ntr2")
+
+[node name="K" type="TextureRect" parent="Highlights" unique_id=1240137561]
+layout_mode = 2
+texture = ExtResource("3_8ntr2")
+
+[node name="Masks" type="TextureRect" parent="." unique_id=1847040507]
+layout_mode = 0
+offset_right = 160.0
+offset_bottom = 32.0
+texture = ExtResource("2_yvcxw")
+
+[node name="Blackouts" type="HBoxContainer" parent="." unique_id=2093020742]
+custom_minimum_size = Vector2(160, 32)
+layout_mode = 0
+offset_right = 160.0
+offset_bottom = 32.0
+theme_override_constants/separation = 0
+alignment = 2
+
+[node name="R" type="TextureRect" parent="Blackouts" unique_id=1555388792]
+layout_mode = 2
+texture = ExtResource("3_8ntr2")
+
+[node name="B" type="TextureRect" parent="Blackouts" unique_id=1036042898]
+layout_mode = 2
+texture = ExtResource("3_8ntr2")
+
+[node name="G" type="TextureRect" parent="Blackouts" unique_id=532082705]
+layout_mode = 2
+texture = ExtResource("3_8ntr2")
+
+[node name="Y" type="TextureRect" parent="Blackouts" unique_id=740437115]
+layout_mode = 2
+texture = ExtResource("3_8ntr2")
+
+[node name="K" type="TextureRect" parent="Blackouts" unique_id=1627902281]
+layout_mode = 2
+texture = ExtResource("3_8ntr2")
