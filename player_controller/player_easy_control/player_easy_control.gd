@@ -34,6 +34,8 @@ func _physics_process(delta: float) -> void:
 		double_jumped = false
 		is_smashing = false
 	else:
+		$FloatParticlesLeft.emitting = false
+		$FloatParticlesRight.emitting = false
 	# Reset double jump when on ground
 		if Global.current_colors[Global.Colors.BLUE]:
 			velocity -= get_gravity() / 2 * delta
@@ -72,10 +74,18 @@ func _physics_process(delta: float) -> void:
 		velocity.x = direction * SPEED
 		# Handle sprite facing direction
 		if direction > 0:
+			if is_on_floor():
+				$FloatParticlesLeft.emitting = false
+				$FloatParticlesRight.emitting = true
 			sprite.flip_h = false
 		else:
+			if is_on_floor():
+				$FloatParticlesLeft.emitting = true
+				$FloatParticlesRight.emitting = false
 			sprite.flip_h = true
 	else:
+		$FloatParticlesLeft.emitting = false
+		$FloatParticlesRight.emitting = false
 		velocity.x = move_toward(velocity.x, 0, SPEED)
 
 	move_and_slide()
