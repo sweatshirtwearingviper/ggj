@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://3euywh8ldl1i"]
 
 [ext_resource type="Script" uid="uid://cect258khaes6" path="res://obstacles/mask.gd" id="1_1fk6f"]
+[ext_resource type="Texture2D" uid="uid://5vtttkghpmc6" path="res://textures/Components/BlackMask.png" id="2_ju8ly"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_htmf4"]
 
@@ -10,14 +11,8 @@ collision_mask = 128
 script = ExtResource("1_1fk6f")
 mask_color = 16
 
-[node name="Sprite2D" type="AnimatedSprite2D" parent="." unique_id=1833521623]
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1315285198]
+texture = ExtResource("2_ju8ly")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1712981749]
 shape = SubResource("RectangleShape2D_htmf4")
-
-[node name="TextureRect" type="ColorRect" parent="." unique_id=585570561]
-offset_left = -10.0
-offset_top = -10.0
-offset_right = 10.0
-offset_bottom = 10.0
-color = Color(0, 0, 0, 1)

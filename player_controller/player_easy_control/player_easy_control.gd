@@ -94,7 +94,7 @@ func _physics_process(delta: float) -> void:
 func color_changed() -> void:
 	var count:int = 1
 	for color:bool in Global.current_colors:
-		if count == Global.Colors.BLACK:
+		if count == Global.Colors.BLACK + 1:
 			return
 		set_collision_layer_value(count, !color)
 		set_collision_mask_value(count, !color)
