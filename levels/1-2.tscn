@@ -13,12 +13,12 @@
 [ext_resource type="PackedScene" uid="uid://bqbw05dovkm5a" path="res://obstacles/mask_green.tscn" id="10_kv8tq"]
 [ext_resource type="PackedScene" uid="uid://ccv28wbk1kccl" path="res://obstacles/signpost.tscn" id="11_lap63"]
 [ext_resource type="PackedScene" uid="uid://cuvab0utd4w7c" path="res://obstacles/mask_blue.tscn" id="13_1p0h3"]
-[ext_resource type="PackedScene" uid="uid://grv0gvaqrcgk" path="res://obstacles/killplane.tscn" id="15_8u7a8"]
+[ext_resource type="PackedScene" uid="uid://c7v7j4dbcylmd" path="res://obstacles/level_box.tscn" id="14_hw3ul"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_lk43i"]
 load_path = "res://.godot/imported/coolguy.png-b067e60ed9e98047d87601f19cac2438.ctex"
 
-[node name="Level3" type="Node2D" unique_id=1808532929]
+[node name="1-2" type="Node2D" unique_id=1808532929]
 
 [node name="Ruler" parent="." unique_id=1900040170 instance=ExtResource("1_x53ii")]
 texture = SubResource("CompressedTexture2D_lk43i")
@@ -77,12 +77,6 @@ scale = Vector2(1.5, 1.5)
 [node name="PlayerEasyControl" parent="." unique_id=934248184 instance=ExtResource("7_wgv8v")]
 position = Vector2(47, -670)
 
-[node name="Killplane" parent="." unique_id=1662454737 instance=ExtResource("15_8u7a8")]
-position = Vector2(2780, 113)
-
-[node name="Killplane" parent="Killplane" unique_id=530537359 instance=ExtResource("15_8u7a8")]
-position = Vector2(420, -1271)
-
 [node name="MaskGreen" parent="." unique_id=511879513 instance=ExtResource("10_kv8tq")]
 position = Vector2(834, -418)
 
@@ -100,3 +94,8 @@ dialogue = "It's okay to be sad sometimes."
 [node name="Signpost3" parent="." unique_id=780009725 instance=ExtResource("11_lap63")]
 position = Vector2(7910, -336)
 dialogue = "The Highs and Lows of life are all worth it in the end"
+
+[node name="LevelBox" parent="." unique_id=2135824514 instance=ExtResource("14_hw3ul")]
+
+[node name="Spawn" type="Marker2D" parent="." unique_id=1130501145]
+position = Vector2(144, -663)

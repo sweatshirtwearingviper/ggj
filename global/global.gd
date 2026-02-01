@@ -82,6 +82,7 @@ signal colors_cleared
 signal send_dialogue
 signal clear_dialogue
 
+signal camera_offset
 
 func _ready() -> void:
 	$DialogueTimer.timeout.connect(clear_dialogue.emit)

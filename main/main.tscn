@@ -1,21 +1,41 @@
 [gd_scene format=3 uid="uid://cqow47bch5ocs"]
 
+[ext_resource type="Script" uid="uid://jeelvmpnd01i" path="res://main/main.gd" id="1_fwcvl"]
 [ext_resource type="PackedScene" uid="uid://dmbe8hb3lw0oy" path="res://levels/2-1.tscn" id="2_kfbq2"]
 [ext_resource type="PackedScene" uid="uid://ljc24u6k26te" path="res://ui/mask_bar/mask_bar.tscn" id="3_3wy1v"]
 [ext_resource type="PackedScene" uid="uid://ditptx7juvhj1" path="res://player_controller/camera/camera.tscn" id="3_xwkvk"]
 [ext_resource type="PackedScene" uid="uid://dplh6k5dvwq13" path="res://ui/dialogue/dialogue.tscn" id="4_c651c"]
+[ext_resource type="PackedScene" uid="uid://6rqnul07rbk8" path="res://levels/1-1.tscn" id="4_na0o7"]
 [ext_resource type="PackedScene" uid="uid://bpscfu0koqk2v" path="res://player_controller/player_easy_control/player_easy_control.tscn" id="5_3wy1v"]
+[ext_resource type="PackedScene" uid="uid://cpdpclqy766b5" path="res://levels/1-2.tscn" id="5_73k8k"]
+[ext_resource type="PackedScene" uid="uid://dad5wco8qh04g" path="res://levels/4-1.tscn" id="6_5xyti"]
 [ext_resource type="PackedScene" uid="uid://d1l57tsady2fg" path="res://ui/main_menu/main_menu.tscn" id="6_kfbq2"]
 [ext_resource type="PackedScene" uid="uid://chtpsqj3k2xfs" path="res://obstacles/mask_yellow.tscn" id="7_4dugh"]
+[ext_resource type="PackedScene" uid="uid://s3covi06g5lh" path="res://levels/4-2.tscn" id="7_n3o0a"]
 
 [node name="Main" type="Node" unique_id=797082359]
+script = ExtResource("1_fwcvl")
 
 [node name="Camera" parent="." unique_id=704402319 instance=ExtResource("3_xwkvk")]
 
-[node name="2-1" parent="." unique_id=1808532929 instance=ExtResource("2_kfbq2")]
+[node name="Levels" type="Node2D" parent="." unique_id=576658508]
+
+[node name="1-1" parent="Levels" unique_id=1808532929 instance=ExtResource("4_na0o7")]
+
+[node name="1-2" parent="Levels" unique_id=1226874470 instance=ExtResource("5_73k8k")]
+position = Vector2(0, -2048)
+
+[node name="4-1" parent="Levels" unique_id=290754584 instance=ExtResource("6_5xyti")]
+position = Vector2(0, -4096)
+
+[node name="4-2" parent="Levels" unique_id=1711877357 instance=ExtResource("7_n3o0a")]
+position = Vector2(0, -6144)
+
+[node name="2-1" parent="Levels" unique_id=1693467651 instance=ExtResource("2_kfbq2")]
+position = Vector2(0, -8192)
 
 [node name="PlayerEasyControl" parent="." unique_id=934248184 instance=ExtResource("5_3wy1v")]
-position = Vector2(416, -416)
+position = Vector2(128, -256)
 
 [node name="UI" type="CanvasLayer" parent="." unique_id=1085982232]
 

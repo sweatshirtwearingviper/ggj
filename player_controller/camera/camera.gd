@@ -11,6 +11,7 @@ var player_position:Vector2 = Vector2.ZERO
 
 func _ready() -> void:
 	Global.player_position.connect(func(_pos:Vector2) -> void: player_position = _pos)
+	Global.camera_offset.connect(func() -> void: cam_y_offset = -2048.0)
 
 
 func _physics_process(delta: float) -> void:

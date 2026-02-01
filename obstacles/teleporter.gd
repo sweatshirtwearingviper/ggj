@@ -18,7 +18,7 @@ func _ready() -> void:
 	body_entered.connect(teleport)
 	
 	if level_end:
-		body_entered.connect(func(_body:Node2D) -> void: Global.clear_colors())
+		body_entered.connect(func(_body:Node2D) -> void: Global.clear_colors(); Global.camera_offset.emit())
 	
 	if mask_color == 0:
 		set_collision_layer_value(8, true)
