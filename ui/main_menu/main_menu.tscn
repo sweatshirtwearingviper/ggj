@@ -1,0 +1,51 @@
+[gd_scene format=3 uid="uid://d1l57tsady2fg"]
+
+[ext_resource type="Script" uid="uid://dth0f2g2qtoy4" path="res://ui/main_menu/main_menu.gd" id="1_mu8pm"]
+[ext_resource type="PackedScene" uid="uid://brmylbru3j6c2" path="res://Animations/TitleScreen/title_screen_anim.tscn" id="1_uhj5c"]
+[ext_resource type="StyleBox" uid="uid://bp68qt8qceiny" path="res://ui/styles/clear_stylebox.tres" id="3_omy8q"]
+
+[node name="MainMenu" type="Control" unique_id=1518834826]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_mu8pm")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1203677798]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.30588236, 0.23921569, 0.34509805, 1)
+
+[node name="Center" type="Control" parent="." unique_id=1235101657]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TitleScreen_anim" parent="Center" unique_id=949973051 instance=ExtResource("1_uhj5c")]
+scale = Vector2(2, 2)
+
+[node name="Button" type="Button" parent="." unique_id=2049518134]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 8.0
+offset_bottom = 8.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/normal = ExtResource("3_omy8q")
+theme_override_styles/pressed = ExtResource("3_omy8q")
+theme_override_styles/hover = ExtResource("3_omy8q")
+theme_override_styles/disabled = ExtResource("3_omy8q")
+theme_override_styles/focus = ExtResource("3_omy8q")

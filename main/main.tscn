@@ -5,6 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://ditptx7juvhj1" path="res://player_controller/camera/camera.tscn" id="3_xwkvk"]
 [ext_resource type="PackedScene" uid="uid://dplh6k5dvwq13" path="res://ui/dialogue/dialogue.tscn" id="4_c651c"]
 [ext_resource type="PackedScene" uid="uid://bpscfu0koqk2v" path="res://player_controller/player_easy_control/player_easy_control.tscn" id="5_3wy1v"]
+[ext_resource type="PackedScene" uid="uid://d1l57tsady2fg" path="res://ui/main_menu/main_menu.tscn" id="6_kfbq2"]
 
 [node name="Main" type="Node" unique_id=797082359]
 
@@ -21,3 +22,5 @@ position = Vector2(48, -176)
 
 [node name="Dialogue" parent="UI" unique_id=2141318 instance=ExtResource("4_c651c")]
 visible = false
+
+[node name="MainMenu" parent="UI" unique_id=1518834826 instance=ExtResource("6_kfbq2")]
