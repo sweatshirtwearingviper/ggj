@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://d22g0k8ccuap4"
-path="res://.godot/imported/atlas_terrain.png-817d07be07fd16bd6b5a45327e558f16.ctex"
+uid="uid://kodubgghbkkl"
+path="res://.godot/imported/Dash_VFX.png-6e7883729d604f7022905a5aa81edc80.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://textures/Backgrounds/Level1/atlas_terrain.png"
-dest_files=["res://.godot/imported/atlas_terrain.png-817d07be07fd16bd6b5a45327e558f16.ctex"]
+source_file="res://textures/VFX/Dash_VFX.png"
+dest_files=["res://.godot/imported/Dash_VFX.png-6e7883729d604f7022905a5aa81edc80.ctex"]
 
 [params]
 

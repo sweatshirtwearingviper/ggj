@@ -1,0 +1,12 @@
+[gd_scene format=3 uid="uid://bhnk6cb604pk"]
+
+[ext_resource type="Texture2D" uid="uid://cxrm4msq108ok" path="res://textures/Backgrounds/Level1/frontmountains.webp" id="1_jes1y"]
+
+[node name="Parallax_frontMountains" type="Parallax2D" unique_id=1627610917]
+scroll_scale = Vector2(0.7, 1)
+repeat_size = Vector2(1103.525, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1237560113]
+position = Vector2(0, -40)
+scale = Vector2(1.2, 1.2)
+texture = ExtResource("1_jes1y")

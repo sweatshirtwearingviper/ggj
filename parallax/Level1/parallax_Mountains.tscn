@@ -4,8 +4,9 @@
 
 [node name="ParallaxLayer" type="Parallax2D" unique_id=1224149914]
 scroll_scale = Vector2(0.2, 1)
-repeat_size = Vector2(918.865, 0)
+repeat_size = Vector2(1838.16, 0)
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=620956080]
-scale = Vector2(1, 0.842)
+position = Vector2(1, -44)
+scale = Vector2(2, 2)
 texture = ExtResource("1_18o8p")
