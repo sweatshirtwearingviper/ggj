@@ -55,7 +55,7 @@ func _physics_process(delta: float) -> void:
 			velocity.y = JUMP_VELOCITY
 			double_jumped = true
 	
-	# Red smash
+	# Red smasha
 	if Input.is_action_just_pressed("down"):
 		if Global.current_colors[Global.Colors.RED] and not is_on_floor():
 			velocity.y = -JUMP_VELOCITY * 2
