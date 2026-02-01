@@ -156,6 +156,7 @@ func gain_color(_color:Colors) -> void:
 		return
 	
 	$MaskCollect.play()
+	unmute_color(_color)
 	dialogue_parse_and_send(mask_collect_dialogues, _color)
 	unlocked_colors[_color] = true
 	color_unlocked.emit()

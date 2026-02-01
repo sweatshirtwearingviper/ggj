@@ -35,7 +35,7 @@ position = Vector2(0, -6144)
 position = Vector2(0, -8192)
 
 [node name="PlayerEasyControl" parent="." unique_id=934248184 instance=ExtResource("5_3wy1v")]
-position = Vector2(128, -256)
+position = Vector2(7936, -480)
 
 [node name="UI" type="CanvasLayer" parent="." unique_id=1085982232]
 

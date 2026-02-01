@@ -1,6 +1,5 @@
 [gd_scene format=4 uid="uid://6rqnul07rbk8"]
 
-[ext_resource type="PackedScene" uid="uid://dixv1p4pmagw6" path="res://levels/ruler.tscn" id="1_ol7ui"]
 [ext_resource type="PackedScene" uid="uid://cfdj8x78ohd3x" path="res://parallax/PurpMountain/parallax_backgroundSky.tscn" id="2_dr6sl"]
 [ext_resource type="TileSet" uid="uid://dbgnho1wr7mar" path="res://tilesets/tileset_masks.tres" id="2_xy34e"]
 [ext_resource type="PackedScene" uid="uid://dpm4hcnnblx0j" path="res://parallax/PurpMountain/parallax_Mountains.tscn" id="3_grpdb"]
@@ -8,7 +7,6 @@
 [ext_resource type="TileSet" uid="uid://dr1au7djoqqhp" path="res://tilesets/tileset_terrain.tres" id="4_bvtcs"]
 [ext_resource type="PackedScene" uid="uid://bhnk6cb604pk" path="res://parallax/PurpMountain/parallax_front_mountains.tscn" id="4_lrivg"]
 [ext_resource type="PackedScene" uid="uid://cs8l7pbspe4bw" path="res://parallax/PurpMountain/parallax_clouds.tscn" id="5_g3hso"]
-[ext_resource type="PackedScene" uid="uid://ditptx7juvhj1" path="res://player_controller/camera/camera.tscn" id="5_gtyxv"]
 [ext_resource type="PackedScene" uid="uid://dyrnbed0n42tn" path="res://parallax/PurpMountain/parallax_front_clouds.tscn" id="6_4r8hi"]
 [ext_resource type="PackedScene" uid="uid://hjaqe0luebee" path="res://obstacles/teleporter.tscn" id="8_q3ga1"]
 [ext_resource type="PackedScene" uid="uid://bg0syfjjgd7cl" path="res://obstacles/mask_red.tscn" id="8_x3ugg"]
@@ -27,12 +25,10 @@
 [node name="Spawn" type="Marker2D" parent="." unique_id=1138809788]
 position = Vector2(131, -278)
 
-[node name="Ruler" parent="." unique_id=1900040170 instance=ExtResource("1_ol7ui")]
-
 [node name="Parallax_Stars" parent="." unique_id=195395145 instance=ExtResource("2_dr6sl")]
 
 [node name="Parallax_Stars2" parent="." unique_id=656898978 instance=ExtResource("2_dr6sl")]
-scroll_offset = Vector2(-23, -27)
+scroll_offset = Vector2(-48, 12)
 
 [node name="Parallax_BGMountains2" parent="." unique_id=1224149914 instance=ExtResource("3_grpdb")]
 
@@ -137,9 +133,6 @@ mask_color = 16
 
 [node name="Terrain" type="TileMapLayer" parent="." unique_id=333135433]
 tile_set = ExtResource("4_bvtcs")
-
-[node name="Camera" parent="." unique_id=704402319 instance=ExtResource("5_gtyxv")]
-position = Vector2(34, -204)
 
 [node name="Gravestone" parent="." unique_id=19032468 instance=ExtResource("14_t4rme")]
 position = Vector2(8090.0005, -376)

@@ -36,7 +36,7 @@ func teleport(_body:Node2D) -> void:
 		return
 	if _body is PlayerEasyControl:
 		_body.teleported.emit()
-		_body.position = telepoint.position
+		_body.position = telepoint.global_position
 
 
 func color_changed() -> void:

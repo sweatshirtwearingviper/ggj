@@ -15,5 +15,7 @@ func _ready() -> void:
 
 
 func _physics_process(delta: float) -> void:
+	#position = player_position
+	#pass
 	position = Vector2(clampf(player_position.x, min_x, max_x),
 					   clampf(player_position.y, min_y + cam_y_offset, max_y  + cam_y_offset))
