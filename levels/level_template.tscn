@@ -1,12 +1,67 @@
 [gd_scene format=3 uid="uid://d1lnhwhur0vac"]
 
+[ext_resource type="PackedScene" uid="uid://cfdj8x78ohd3x" path="res://parallax/PurpMountain/parallax_backgroundSky.tscn" id="1_3dbtp"]
 [ext_resource type="PackedScene" uid="uid://dixv1p4pmagw6" path="res://levels/ruler.tscn" id="1_vgt4e"]
+[ext_resource type="PackedScene" uid="uid://dpm4hcnnblx0j" path="res://parallax/PurpMountain/parallax_Mountains.tscn" id="2_j8l06"]
 [ext_resource type="TileSet" uid="uid://dbgnho1wr7mar" path="res://tilesets/tileset_masks.tres" id="2_skox6"]
 [ext_resource type="Script" uid="uid://l7ym5t6nhaf4" path="res://levels/mask_tile_map_layer.gd" id="3_8xmsw"]
 [ext_resource type="TileSet" uid="uid://dr1au7djoqqhp" path="res://tilesets/tileset_terrain.tres" id="3_13k7l"]
+[ext_resource type="PackedScene" uid="uid://bhnk6cb604pk" path="res://parallax/PurpMountain/parallax_front_mountains.tscn" id="3_peaqv"]
+[ext_resource type="PackedScene" uid="uid://cs8l7pbspe4bw" path="res://parallax/PurpMountain/parallax_clouds.tscn" id="4_o53ap"]
 [ext_resource type="PackedScene" uid="uid://c7v7j4dbcylmd" path="res://obstacles/level_box.tscn" id="5_8xmsw"]
+[ext_resource type="PackedScene" uid="uid://dyrnbed0n42tn" path="res://parallax/PurpMountain/parallax_front_clouds.tscn" id="5_phlur"]
+[ext_resource type="PackedScene" uid="uid://btdacjen1ausb" path="res://parallax/WaterWorld/waterbackground.tscn" id="6_rcbig"]
+[ext_resource type="PackedScene" uid="uid://tgln8hydxnj4" path="res://parallax/WaterWorld/waterfalls.tscn" id="7_ohm4n"]
+[ext_resource type="PackedScene" uid="uid://wmutl2pg3l2i" path="res://parallax/WaterWorld/waterClouds1.tscn" id="8_2hiwd"]
+[ext_resource type="PackedScene" uid="uid://ccbiiispki76e" path="res://parallax/WaterWorld/waterClouds2.tscn" id="9_0buo8"]
+[ext_resource type="PackedScene" uid="uid://dhokngkduaslx" path="res://parallax/Forest/forest_background.tscn" id="10_h4x42"]
+[ext_resource type="PackedScene" uid="uid://bgmksugx58ngk" path="res://parallax/Forest/treeSilhouette.tscn" id="11_08nls"]
 
 [node name="Level" type="Node2D" unique_id=1808532929]
+
+[node name="ParallaxPurpMtn" type="Node2D" parent="." unique_id=2064541583]
+visible = false
+position = Vector2(0, -300)
+
+[node name="Parallax_Stars" parent="ParallaxPurpMtn" unique_id=195395145 instance=ExtResource("1_3dbtp")]
+scroll_scale = Vector2(0.01, 1)
+
+[node name="ParallaxLayer" parent="ParallaxPurpMtn" unique_id=1224149914 instance=ExtResource("2_j8l06")]
+scroll_offset = Vector2(-16, 184)
+
+[node name="Parallax_frontMountains" parent="ParallaxPurpMtn" unique_id=1627610917 instance=ExtResource("3_peaqv")]
+light_mask = 524288
+scroll_offset = Vector2(-16, 92)
+
+[node name="Parallax_Clouds" parent="ParallaxPurpMtn" unique_id=363644778 instance=ExtResource("4_o53ap")]
+repeat_size = Vector2(1000, 0)
+
+[node name="Parallax_frontClouds" parent="ParallaxPurpMtn" unique_id=258749142 instance=ExtResource("5_phlur")]
+scroll_offset = Vector2(16, 24)
+
+[node name="ParallaxWaterWrld" type="Node2D" parent="." unique_id=2027484364]
+visible = false
+position = Vector2(0, -130)
+
+[node name="Waterbackground" parent="ParallaxWaterWrld" unique_id=1095108786 instance=ExtResource("6_rcbig")]
+scroll_offset = Vector2(-5.706299, -196.33704)
+
+[node name="waterfalls" parent="ParallaxWaterWrld" unique_id=1055729749 instance=ExtResource("7_ohm4n")]
+scroll_offset = Vector2(0, -295)
+
+[node name="waterClouds1" parent="ParallaxWaterWrld" unique_id=1567469378 instance=ExtResource("8_2hiwd")]
+scroll_offset = Vector2(0, -24.683777)
+
+[node name="waterClouds2" parent="ParallaxWaterWrld" unique_id=122595863 instance=ExtResource("9_0buo8")]
+scroll_offset = Vector2(0, -24.683777)
+
+[node name="ParallaxForest" type="Node2D" parent="." unique_id=1968570367]
+visible = false
+
+[node name="Forest_Background" parent="ParallaxForest" unique_id=1389021478 instance=ExtResource("10_h4x42")]
+
+[node name="treeSilhouette" parent="ParallaxForest" unique_id=704564932 instance=ExtResource("11_08nls")]
+scroll_offset = Vector2(0, -300)
 
 [node name="Ruler" parent="." unique_id=1900040170 instance=ExtResource("1_vgt4e")]
 

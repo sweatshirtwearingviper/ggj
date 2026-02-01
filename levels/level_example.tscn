@@ -2,17 +2,28 @@
 
 [ext_resource type="PackedScene" uid="uid://dixv1p4pmagw6" path="res://levels/ruler.tscn" id="1_h7y5g"]
 [ext_resource type="PackedScene" uid="uid://c7v7j4dbcylmd" path="res://obstacles/level_box.tscn" id="1_patda"]
+[ext_resource type="PackedScene" uid="uid://cfdj8x78ohd3x" path="res://parallax/PurpMountain/parallax_backgroundSky.tscn" id="1_pwle4"]
 [ext_resource type="Texture2D" uid="uid://smlwhyc20q2y" path="res://textures/Backgrounds/PurpMountains/Sky.webp" id="2_2t2lo"]
 [ext_resource type="TileSet" uid="uid://dbgnho1wr7mar" path="res://tilesets/tileset_masks.tres" id="2_g104l"]
+[ext_resource type="PackedScene" uid="uid://dpm4hcnnblx0j" path="res://parallax/PurpMountain/parallax_Mountains.tscn" id="2_m78su"]
 [ext_resource type="Script" uid="uid://l7ym5t6nhaf4" path="res://levels/mask_tile_map_layer.gd" id="3_caklk"]
+[ext_resource type="PackedScene" uid="uid://bhnk6cb604pk" path="res://parallax/PurpMountain/parallax_front_mountains.tscn" id="3_g53dp"]
+[ext_resource type="PackedScene" uid="uid://cs8l7pbspe4bw" path="res://parallax/PurpMountain/parallax_clouds.tscn" id="4_8aqcx"]
 [ext_resource type="TileSet" uid="uid://dr1au7djoqqhp" path="res://tilesets/tileset_terrain.tres" id="4_khfb4"]
+[ext_resource type="PackedScene" uid="uid://dyrnbed0n42tn" path="res://parallax/PurpMountain/parallax_front_clouds.tscn" id="5_0rd5u"]
 [ext_resource type="PackedScene" uid="uid://hjaqe0luebee" path="res://obstacles/teleporter.tscn" id="5_g104l"]
+[ext_resource type="PackedScene" uid="uid://btdacjen1ausb" path="res://parallax/WaterWorld/waterbackground.tscn" id="6_xd8cf"]
 [ext_resource type="PackedScene" uid="uid://d1ns42gp8pv4o" path="res://obstacles/smash_block.tscn" id="7_khfb4"]
+[ext_resource type="PackedScene" uid="uid://tgln8hydxnj4" path="res://parallax/WaterWorld/waterfalls.tscn" id="7_lxy6k"]
 [ext_resource type="PackedScene" uid="uid://3euywh8ldl1i" path="res://obstacles/mask_black.tscn" id="7_v6yxm"]
 [ext_resource type="PackedScene" uid="uid://cuvab0utd4w7c" path="res://obstacles/mask_blue.tscn" id="8_netub"]
+[ext_resource type="PackedScene" uid="uid://wmutl2pg3l2i" path="res://parallax/WaterWorld/waterClouds1.tscn" id="8_pe4id"]
 [ext_resource type="PackedScene" uid="uid://bqbw05dovkm5a" path="res://obstacles/mask_green.tscn" id="9_176w8"]
+[ext_resource type="PackedScene" uid="uid://ccbiiispki76e" path="res://parallax/WaterWorld/waterClouds2.tscn" id="9_hn1w2"]
 [ext_resource type="PackedScene" uid="uid://bg0syfjjgd7cl" path="res://obstacles/mask_red.tscn" id="10_mex3m"]
+[ext_resource type="PackedScene" uid="uid://dhokngkduaslx" path="res://parallax/Forest/forest_background.tscn" id="10_s3jys"]
 [ext_resource type="PackedScene" uid="uid://chtpsqj3k2xfs" path="res://obstacles/mask_yellow.tscn" id="11_i2eqa"]
+[ext_resource type="PackedScene" uid="uid://bgmksugx58ngk" path="res://parallax/Forest/treeSilhouette.tscn" id="11_jc6uw"]
 [ext_resource type="PackedScene" uid="uid://d4j1on1jykl8x" path="res://obstacles/dash_crystal.tscn" id="12_176w8"]
 [ext_resource type="PackedScene" uid="uid://bd8avx4kyfk1f" path="res://obstacles/bouncer.tscn" id="14_i2eqa"]
 [ext_resource type="PackedScene" uid="uid://d0v473p6eqiic" path="res://obstacles/gravestone.tscn" id="14_mex3m"]
@@ -20,7 +31,52 @@
 
 [node name="Level" type="Node2D" unique_id=1808532929]
 
+[node name="ParallaxPurpMtn" type="Node2D" parent="." unique_id=612413404]
+visible = false
+position = Vector2(0, -300)
+
+[node name="Parallax_Stars" parent="ParallaxPurpMtn" unique_id=195395145 instance=ExtResource("1_pwle4")]
+scroll_scale = Vector2(0.01, 1)
+
+[node name="ParallaxLayer" parent="ParallaxPurpMtn" unique_id=1224149914 instance=ExtResource("2_m78su")]
+scroll_offset = Vector2(-16, 184)
+
+[node name="Parallax_frontMountains" parent="ParallaxPurpMtn" unique_id=1627610917 instance=ExtResource("3_g53dp")]
+light_mask = 524288
+scroll_offset = Vector2(-16, 92)
+
+[node name="Parallax_Clouds" parent="ParallaxPurpMtn" unique_id=650522961 instance=ExtResource("4_8aqcx")]
+repeat_size = Vector2(1000, 0)
+
+[node name="Parallax_frontClouds" parent="ParallaxPurpMtn" unique_id=258749142 instance=ExtResource("5_0rd5u")]
+scroll_offset = Vector2(16, 24)
+
+[node name="ParallaxWaterWrld" type="Node2D" parent="." unique_id=851983480]
+visible = false
+position = Vector2(0, -130)
+
+[node name="Waterbackground" parent="ParallaxWaterWrld" unique_id=1095108786 instance=ExtResource("6_xd8cf")]
+scroll_offset = Vector2(-5.706299, -196.33704)
+
+[node name="waterfalls" parent="ParallaxWaterWrld" unique_id=1297648802 instance=ExtResource("7_lxy6k")]
+scroll_offset = Vector2(0, -295)
+
+[node name="waterClouds1" parent="ParallaxWaterWrld" unique_id=261094900 instance=ExtResource("8_pe4id")]
+scroll_offset = Vector2(0, -24.683777)
+
+[node name="waterClouds2" parent="ParallaxWaterWrld" unique_id=803111171 instance=ExtResource("9_hn1w2")]
+scroll_offset = Vector2(0, -24.683777)
+
+[node name="ParallaxForest" type="Node2D" parent="." unique_id=520929608]
+visible = false
+
+[node name="Forest_Background" parent="ParallaxForest" unique_id=1759216042 instance=ExtResource("10_s3jys")]
+
+[node name="treeSilhouette" parent="ParallaxForest" unique_id=23776211 instance=ExtResource("11_jc6uw")]
+scroll_offset = Vector2(0, -300)
+
 [node name="Ruler" parent="." unique_id=1900040170 instance=ExtResource("1_h7y5g")]
+visible = false
 texture = ExtResource("2_2t2lo")
 
 [node name="Red" type="TileMapLayer" parent="." unique_id=786131689]

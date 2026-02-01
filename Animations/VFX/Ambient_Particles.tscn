@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://cuan5rj6tlhl0"]
+[gd_scene format=3 uid="uid://c0egynfssdvuh"]
 
 [sub_resource type="Gradient" id="Gradient_gmlri"]
 offsets = PackedFloat32Array(0, 0.2234957, 0.5386819, 0.7994269, 0.9971347)
@@ -25,7 +25,7 @@ curve = SubResource("Curve_q52sd")
 [sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_7sjih"]
 particle_flag_disable_z = true
 emission_shape = 3
-emission_box_extents = Vector3(200, 200, 1)
+emission_box_extents = Vector3(720, 540, 1)
 gravity = Vector3(6, -5, 0)
 tangential_accel_min = 0.99999774
 tangential_accel_max = 2.9999976

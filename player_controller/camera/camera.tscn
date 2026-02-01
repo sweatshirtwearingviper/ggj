@@ -1,6 +1,15 @@
 [gd_scene format=3 uid="uid://ditptx7juvhj1"]
 
 [ext_resource type="Script" uid="uid://o1f12hnpdqjl" path="res://player_controller/camera/camera.gd" id="1_x3e4b"]
+[ext_resource type="PackedScene" path="res://Animations/VFX/Ambient_Particles.tscn" id="13_5wsyf"]
+[ext_resource type="PackedScene" path="res://Animations/VFX/Wind_Particles.tscn" id="14_3jv7a"]
 
 [node name="Camera" type="Camera2D" unique_id=704402319]
 script = ExtResource("1_x3e4b")
+
+[node name="VFX" type="Node2D" parent="." unique_id=1095515748]
+
+[node name="Ambient_Particles" parent="VFX" unique_id=1338574097 instance=ExtResource("13_5wsyf")]
+fixed_fps = 10
+
+[node name="Wind_Particles" parent="VFX" unique_id=1216654483 instance=ExtResource("14_3jv7a")]
