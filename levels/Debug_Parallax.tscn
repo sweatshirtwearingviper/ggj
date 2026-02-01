@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://cs8l7pbspe4bw" path="res://parallax/Level1/parallax_clouds.tscn" id="4_l0ypk"]
 [ext_resource type="TileSet" uid="uid://dr1au7djoqqhp" path="res://tilesets/tileset_terrain.tres" id="4_v8wu6"]
 [ext_resource type="PackedScene" uid="uid://dyrnbed0n42tn" path="res://parallax/Level1/parallax_front_clouds.tscn" id="5_asdu4"]
+[ext_resource type="PackedScene" uid="uid://b5dc4uefpwe48" path="res://tilesets/tilemap_layer_spooky_terrain.tscn" id="9_m55k5"]
 [ext_resource type="PackedScene" uid="uid://bpscfu0koqk2v" path="res://player_controller/player_easy_control/player_easy_control.tscn" id="9_mnksi"]
 [ext_resource type="PackedScene" uid="uid://ditptx7juvhj1" path="res://player_controller/camera/camera.tscn" id="10_yg60g"]
 
@@ -56,6 +57,9 @@ mask_color = 16
 
 [node name="Terrain" type="TileMapLayer" parent="." unique_id=333135433]
 tile_set = ExtResource("4_v8wu6")
+
+[node name="TilemapLayer_SpookyTerrain" parent="." unique_id=1083359373 instance=ExtResource("9_m55k5")]
+tile_map_data = PackedByteArray("AAAOAPv/AQAHAAAAAAAWAPv/AQAHAAAAAAAXAPv/AQAOAAEAAAAcAPv/AQATAAAAAAAgAPv/AQAVAAMAAAAQAPv/AQAVAAMAAAATAPv/AQAFAAIAAAAbAPv/AQALAAMAAAAdAPv/AQAFAAIAAAASAPv/AQALAAMAAAAKAPv/AQALAAMAAAAiAPv/AQACAAIAAAAHAPv/AQABAAMAAAAlAPv/AQABAAMAAAA=")
 
 [node name="PlayerEasyControl" parent="." unique_id=934248184 instance=ExtResource("9_mnksi")]
 position = Vector2(112, -144)
