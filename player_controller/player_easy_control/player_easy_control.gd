@@ -55,7 +55,7 @@ func _physics_process(delta: float) -> void:
 			velocity.y = JUMP_VELOCITY
 			double_jumped = true
 	
-	# Red smash
+	# Red smasha
 	if Input.is_action_just_pressed("down"):
 		if Global.current_colors[Global.Colors.RED] and not is_on_floor():
 			velocity.y = -JUMP_VELOCITY * 2
@@ -94,6 +94,8 @@ func _physics_process(delta: float) -> void:
 func color_changed() -> void:
 	var count:int = 1
 	for color:bool in Global.current_colors:
+		if count == Global.Colors.BLACK:
+			return
 		set_collision_layer_value(count, !color)
 		set_collision_mask_value(count, !color)
 		count += 1
