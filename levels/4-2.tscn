@@ -25,9 +25,6 @@
 
 [node name="4-2" type="Node2D" unique_id=1808532929]
 
-[node name="Gravestone" parent="." unique_id=1209879538 instance=ExtResource("24_bxuw7")]
-position = Vector2(7984, -592)
-
 [node name="ParallaxPurpMtn" type="Node2D" parent="." unique_id=2064541583]
 visible = false
 position = Vector2(0, -300)
@@ -122,6 +119,9 @@ position = Vector2(240, -80)
 
 [node name="MaskRed" parent="Masks" unique_id=924591076 instance=ExtResource("23_6a7ks")]
 position = Vector2(5744, -464)
+
+[node name="Gravestone" parent="." unique_id=1209879538 instance=ExtResource("24_bxuw7")]
+position = Vector2(7984, -592)
 
 [node name="Spikes" type="Node2D" parent="." unique_id=1741007837]
 
