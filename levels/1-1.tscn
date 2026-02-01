@@ -178,6 +178,10 @@ dialogue = "It's okay to fail. What's important is you get up again"
 position = Vector2(6416, -113)
 dialogue = "You're so close. You can do this."
 
+[node name="Signpost13" parent="." unique_id=1498216405 instance=ExtResource("12_nsued")]
+position = Vector2(7632, -464)
+dialogue = "Welcome Home. We missed you."
+
 [node name="Bouncer" parent="." unique_id=90535261 instance=ExtResource("17_p23n3")]
 position = Vector2(5656, -432)
 
@@ -195,7 +199,3 @@ position = Vector2(5776, -432)
 
 [node name="Bouncer6" parent="." unique_id=337773228 instance=ExtResource("17_p23n3")]
 position = Vector2(5808, -432)
-
-[node name="Signpost13" parent="." unique_id=1498216405 instance=ExtResource("12_nsued")]
-position = Vector2(7632, -464)
-dialogue = "Welcome Home. We missed you."
