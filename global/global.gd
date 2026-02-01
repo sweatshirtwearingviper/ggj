@@ -199,6 +199,9 @@ func move_mask() -> void:
 
 
 func dialogue_parse_and_send(_array:Array, _color:Colors) -> void:
+	# If black mask is equipped, just override the color
+	if current_colors[Colors.BLACK]:
+		_color = Colors.BLACK
 	send_dialogue.emit(_array[_color][randi_range(0, _array[_color].size() - 1)])
 	$DialogueTimer.start()
 
