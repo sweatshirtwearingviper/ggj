@@ -18,6 +18,8 @@
 [ext_resource type="PackedScene" uid="uid://wmutl2pg3l2i" path="res://parallax/WaterWorld/waterClouds1.tscn" id="9_psjua"]
 [ext_resource type="PackedScene" uid="uid://ccbiiispki76e" path="res://parallax/WaterWorld/waterClouds2.tscn" id="10_maqji"]
 [ext_resource type="PackedScene" uid="uid://ditptx7juvhj1" path="res://player_controller/camera/camera.tscn" id="10_yg60g"]
+[ext_resource type="PackedScene" uid="uid://dhokngkduaslx" path="res://parallax/Forest/forest_background.tscn" id="11_psjua"]
+[ext_resource type="PackedScene" uid="uid://bgmksugx58ngk" path="res://parallax/Forest/treeSilhouette.tscn" id="12_maqji"]
 
 [sub_resource type="Gradient" id="Gradient_asdu4"]
 offsets = PackedFloat32Array(0.004819277, 1)
@@ -74,6 +76,14 @@ scroll_offset = Vector2(0, -24.683777)
 
 [node name="waterClouds2" parent="ParallaxWaterWrld" unique_id=501842267 instance=ExtResource("10_maqji")]
 scroll_offset = Vector2(0, -24.683777)
+
+[node name="ParallaxForest" type="Node2D" parent="." unique_id=1293842415]
+visible = false
+
+[node name="Forest_Background" parent="ParallaxForest" unique_id=1606605958 instance=ExtResource("11_psjua")]
+
+[node name="treeSilhouette" parent="ParallaxForest" unique_id=679680780 instance=ExtResource("12_maqji")]
+scroll_offset = Vector2(0, -300)
 
 [node name="VFX" type="Node2D" parent="." unique_id=1430632349]
 
