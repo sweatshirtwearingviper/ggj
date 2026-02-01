@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://cfdj8x78ohd3x"]
+
+[ext_resource type="Texture2D" uid="uid://smlwhyc20q2y" path="res://textures/Backgrounds/PurpMountains/Sky.webp" id="1_djd4m"]
+
+[node name="Parallax_Stars" type="Parallax2D" unique_id=195395145]
+scroll_scale = Vector2(0.01, 0.01)
+repeat_size = Vector2(3219.97, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=377779340]
+scale = Vector2(3.5, 3.5)
+texture = ExtResource("1_djd4m")
+
+[node name="Sprite2D3" type="Sprite2D" parent="." unique_id=162269958]
+position = Vector2(8.381903e-09, -629.94604)
+scale = Vector2(3.5, 3.5)
+texture = ExtResource("1_djd4m")
+flip_v = true
+
+[node name="Sprite2D2" type="Sprite2D" parent="." unique_id=1350992332]
+position = Vector2(1.8626451e-09, 629.9596)
+scale = Vector2(3.5, 3.5)
+texture = ExtResource("1_djd4m")
+flip_v = true

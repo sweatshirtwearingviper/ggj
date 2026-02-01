@@ -1,11 +1,10 @@
 [gd_scene format=3 uid="uid://dpm4hcnnblx0j"]
 
-[ext_resource type="Texture2D" uid="uid://cv4oxkwk4q66s" path="res://textures/Backgrounds/Level1/backmountains.webp" id="1_18o8p"]
+[ext_resource type="Texture2D" uid="uid://cv4oxkwk4q66s" path="res://textures/Backgrounds/PurpMountains/backmountains.webp" id="1_18o8p"]
 
 [node name="Parallax_BGMountains" type="Parallax2D" unique_id=1224149914]
-scroll_scale = Vector2(0.2, 1)
+scroll_scale = Vector2(0.1, 1)
 repeat_size = Vector2(1838.16, 0)
-repeat_times = 10
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=620956080]
 position = Vector2(1, -44)

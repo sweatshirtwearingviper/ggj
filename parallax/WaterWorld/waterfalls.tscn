@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://tgln8hydxnj4"]
+
+[ext_resource type="Texture2D" uid="uid://b0ywsv7v2ynkn" path="res://textures/Backgrounds/WaterWorld/waterfalls.png" id="1_1yoj2"]
+
+[node name="Waterfalls" type="Parallax2D" unique_id=1095108786]
+scroll_scale = Vector2(0.3, 1)
+repeat_size = Vector2(920, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=134926653]
+scale = Vector2(1, 4)
+texture = ExtResource("1_1yoj2")

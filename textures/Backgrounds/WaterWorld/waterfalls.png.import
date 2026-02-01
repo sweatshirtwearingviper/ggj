@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://smlwhyc20q2y"
-path="res://.godot/imported/Sky.webp-fe6e4963a3b11235475cb3b029b03b6b.ctex"
+uid="uid://b0ywsv7v2ynkn"
+path="res://.godot/imported/waterfalls.png-98cb706e0416e8a95e25b75470161831.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://textures/Backgrounds/Level1/Sky.webp"
-dest_files=["res://.godot/imported/Sky.webp-fe6e4963a3b11235475cb3b029b03b6b.ctex"]
+source_file="res://textures/Backgrounds/WaterWorld/waterfalls.png"
+dest_files=["res://.godot/imported/waterfalls.png-98cb706e0416e8a95e25b75470161831.ctex"]
 
 [params]
 

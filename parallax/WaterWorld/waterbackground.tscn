@@ -1,0 +1,43 @@
+[gd_scene format=3 uid="uid://btdacjen1ausb"]
+
+[ext_resource type="Texture2D" uid="uid://bpu8g3vk8cg6e" path="res://textures/Backgrounds/WaterWorld/waterbackgound.png" id="1_6ymgm"]
+
+[node name="Waterbackground" type="Parallax2D" unique_id=1095108786]
+scroll_scale = Vector2(0.01, 1)
+repeat_size = Vector2(1920, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=134926653]
+scale = Vector2(1, 2)
+texture = ExtResource("1_6ymgm")
+
+[node name="Sprite2" type="Sprite2D" parent="." unique_id=898016544]
+position = Vector2(960, 0)
+scale = Vector2(1, 2)
+texture = ExtResource("1_6ymgm")
+flip_h = true
+
+[node name="Sprite2D2" type="Sprite2D" parent="." unique_id=539604773]
+position = Vector2(0, 360)
+scale = Vector2(1, 2)
+texture = ExtResource("1_6ymgm")
+flip_v = true
+
+[node name="Sprite3" type="Sprite2D" parent="." unique_id=1989449940]
+position = Vector2(960, 360)
+scale = Vector2(1, 2)
+texture = ExtResource("1_6ymgm")
+flip_h = true
+flip_v = true
+
+[node name="Sprite2D3" type="Sprite2D" parent="." unique_id=866038024]
+position = Vector2(0, -360)
+scale = Vector2(1, 2)
+texture = ExtResource("1_6ymgm")
+flip_v = true
+
+[node name="Sprite4" type="Sprite2D" parent="." unique_id=1756735491]
+position = Vector2(960, -360)
+scale = Vector2(1, 2)
+texture = ExtResource("1_6ymgm")
+flip_h = true
+flip_v = true

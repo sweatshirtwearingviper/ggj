@@ -1,11 +1,11 @@
 [gd_scene format=3 uid="uid://cs8l7pbspe4bw"]
 
-[ext_resource type="Texture2D" uid="uid://c2usyy0eh5kbf" path="res://textures/Backgrounds/Level1/backcloudss.webp" id="1_3mskm"]
+[ext_resource type="Texture2D" uid="uid://c2usyy0eh5kbf" path="res://textures/Backgrounds/PurpMountains/backcloudss.webp" id="1_3mskm"]
 
 [node name="Parallax_Clouds" type="Parallax2D" unique_id=195395145]
-scale = Vector2(1.2, 1.2)
+scroll_scale = Vector2(0.25, 1)
 autoscroll = Vector2(-8, 0)
-repeat_times = 10
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=377779340]
+scale = Vector2(1.2, 1.2)
 texture = ExtResource("1_3mskm")

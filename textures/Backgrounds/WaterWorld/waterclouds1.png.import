@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cxrm4msq108ok"
-path="res://.godot/imported/frontmountains.webp-6725d6f4731d5f3af22dd1ec98e500c7.ctex"
+uid="uid://deioftmxm6xje"
+path="res://.godot/imported/waterclouds1.png-12d63cd3959ccd55599ac17648be34b2.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://textures/Backgrounds/Level1/frontmountains.webp"
-dest_files=["res://.godot/imported/frontmountains.webp-6725d6f4731d5f3af22dd1ec98e500c7.ctex"]
+source_file="res://textures/Backgrounds/WaterWorld/waterclouds1.png"
+dest_files=["res://.godot/imported/waterclouds1.png-12d63cd3959ccd55599ac17648be34b2.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b0f1yvcwx8ahv"
-path="res://.godot/imported/frontclouds.webp-e5f92bd17531632bdef20d94ab5b4cc0.ctex"
+uid="uid://c2usyy0eh5kbf"
+path="res://.godot/imported/backcloudss.webp-15ae14fd8bb719c9b8ffce63c20e9906.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://textures/Backgrounds/Level1/frontclouds.webp"
-dest_files=["res://.godot/imported/frontclouds.webp-e5f92bd17531632bdef20d94ab5b4cc0.ctex"]
+source_file="res://textures/Backgrounds/PurpMountains/backcloudss.webp"
+dest_files=["res://.godot/imported/backcloudss.webp-15ae14fd8bb719c9b8ffce63c20e9906.ctex"]
 
 [params]
 

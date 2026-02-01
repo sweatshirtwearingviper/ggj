@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cv4oxkwk4q66s"
-path="res://.godot/imported/backmountains.webp-199319419ea5066cce813193def34940.ctex"
+path="res://.godot/imported/backmountains.webp-1944a02c50e6e72e3fd36ffddd5e0639.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://textures/Backgrounds/Level1/backmountains.webp"
-dest_files=["res://.godot/imported/backmountains.webp-199319419ea5066cce813193def34940.ctex"]
+source_file="res://textures/Backgrounds/PurpMountains/backmountains.webp"
+dest_files=["res://.godot/imported/backmountains.webp-1944a02c50e6e72e3fd36ffddd5e0639.ctex"]
 
 [params]
 
