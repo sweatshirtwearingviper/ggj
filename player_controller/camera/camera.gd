@@ -1,8 +1,8 @@
 extends Camera2D
 
 @export var cam_y_offset:float = 0
-@export var max_y:float = (-540 / 2) - 64
-@export var min_y:float = (-32 * 32) + ((540 / 2) - 64 )
+@export var max_y:float = (-540 / 2)
+@export var min_y:float = (-32 * 32) + ((540 / 2))
 @export var max_x:float = (256 * 32) - (720 / 2)
 @export var min_x:float = (720 / 2)
 

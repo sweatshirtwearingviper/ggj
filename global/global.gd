@@ -136,10 +136,14 @@ func toggle_color(_color:Colors) -> void:
 		
 	if current_colors[_color]:
 		dialogue_parse_and_send(mask_equipped_dialogues, _color)
-		unmute_color(wrapi(_color, 0, 4))
+		$MaskEquip.play()
 	else:
 		dialogue_parse_and_send(mask_unequip_dialogue, _color)
-		mute_color(wrapi(_color, 0, 4))
+		$MaskUnequip.play()
+		
+	## Mask global SFX
+	if current_colors[Colors.BLUE]:
+		$GravityFlip.play()
 		
 	color_changed.emit()
 	print('current colors: %s' % str(current_colors))
@@ -150,6 +154,9 @@ func gain_color(_color:Colors) -> void:
 	if unlocked_colors[_color]:
 		return
 	
+	unmute_color(wrapi(_color, 0, 4))
+	
+	$MaskCollect.play()
 	dialogue_parse_and_send(mask_collect_dialogues, _color)
 	unlocked_colors[_color] = true
 	color_unlocked.emit()
@@ -162,6 +169,7 @@ func clear_colors() -> void:
 	stop_black_mask()
 	for i:int in unlocked_colors.size():
 		unlocked_colors[i] = false
+		mute_color(wrapi(i, 0, 4))
 	print('unlocked colors: %s' % str(unlocked_colors))
 	colors_cleared.emit()
 	pass

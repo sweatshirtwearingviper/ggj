@@ -116,7 +116,7 @@ tile_set = ExtResource("4_v8wu6")
 tile_map_data = PackedByteArray("AAAOAPv/AQAHAAAAAAAWAPv/AQAHAAAAAAAgAPv/AQAVAAMAAAAQAPv/AQAVAAMAAAAbAPv/AQALAAMAAAASAPv/AQALAAMAAAAKAPv/AQALAAMAAAAHAPv/AQABAAMAAAAlAPv/AQABAAMAAAAZAPv/AQAFAAIAAAAjAPv/AQAFAAIAAAAiAPv/AQACAAIAAAA=")
 
 [node name="PlayerEasyControl" parent="." unique_id=934248184 instance=ExtResource("9_mnksi")]
-position = Vector2(112, -144)
+position = Vector2(32, -96)
 
 [node name="Camera" parent="." unique_id=704402319 instance=ExtResource("10_yg60g")]
 

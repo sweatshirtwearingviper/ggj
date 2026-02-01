@@ -7,6 +7,9 @@
 [ext_resource type="AudioStream" uid="uid://0b7n3hand5wi" path="res://sfx/green_theme.mp3" id="3_803q2"]
 [ext_resource type="AudioStream" uid="uid://v2s0gjdr2h2w" path="res://sfx/blue_theme.mp3" id="4_5yjsk"]
 [ext_resource type="AudioStream" uid="uid://djxg6gqv22se6" path="res://sfx/yellow_theme.mp3" id="5_pisro"]
+[ext_resource type="AudioStream" uid="uid://0q7vqpkwulw" path="res://sfx/mask_collect.wav" id="8_5yjsk"]
+[ext_resource type="AudioStream" uid="uid://d0pqvbvo5rma" path="res://sfx/mask_equip.wav" id="9_pisro"]
+[ext_resource type="AudioStream" uid="uid://b4pwmovju6wup" path="res://sfx/gravity_switch.wav" id="10_pisro"]
 
 [node name="Global" type="Node" unique_id=369998726]
 script = ExtResource("1_2k1wk")
@@ -37,3 +40,20 @@ stream = ExtResource("2_cqcin")
 
 [node name="DialogueTimer" type="Timer" parent="." unique_id=307676014]
 wait_time = 2.0
+
+[node name="MaskCollect" type="AudioStreamPlayer" parent="." unique_id=1818118851]
+stream = ExtResource("8_5yjsk")
+bus = &"sfx"
+
+[node name="MaskEquip" type="AudioStreamPlayer" parent="." unique_id=1193787655]
+stream = ExtResource("9_pisro")
+bus = &"sfx"
+
+[node name="MaskUnequip" type="AudioStreamPlayer" parent="." unique_id=2044278531]
+stream = ExtResource("9_pisro")
+pitch_scale = 0.5
+bus = &"sfx"
+
+[node name="GravityFlip" type="AudioStreamPlayer" parent="." unique_id=1856580985]
+stream = ExtResource("10_pisro")
+bus = &"sfx"

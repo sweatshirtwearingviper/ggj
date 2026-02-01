@@ -12,7 +12,6 @@
 [node name="Camera" parent="." unique_id=704402319 instance=ExtResource("3_xwkvk")]
 
 [node name="Level" parent="." unique_id=1808532929 instance=ExtResource("3_c651c")]
-position = Vector2(0, -64)
 
 [node name="PlayerEasyControl" parent="." unique_id=934248184 instance=ExtResource("5_3wy1v")]
 position = Vector2(48, -176)
