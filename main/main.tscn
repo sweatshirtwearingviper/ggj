@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://cqow47bch5ocs"]
 
+[ext_resource type="PackedScene" uid="uid://dmbe8hb3lw0oy" path="res://levels/2-1.tscn" id="2_kfbq2"]
 [ext_resource type="PackedScene" uid="uid://ljc24u6k26te" path="res://ui/mask_bar/mask_bar.tscn" id="3_3wy1v"]
-[ext_resource type="PackedScene" uid="uid://bi8lmj74ksy4j" path="res://levels/level_example.tscn" id="3_c651c"]
 [ext_resource type="PackedScene" uid="uid://ditptx7juvhj1" path="res://player_controller/camera/camera.tscn" id="3_xwkvk"]
 [ext_resource type="PackedScene" uid="uid://dplh6k5dvwq13" path="res://ui/dialogue/dialogue.tscn" id="4_c651c"]
 [ext_resource type="PackedScene" uid="uid://bpscfu0koqk2v" path="res://player_controller/player_easy_control/player_easy_control.tscn" id="5_3wy1v"]
@@ -11,7 +11,7 @@
 
 [node name="Camera" parent="." unique_id=704402319 instance=ExtResource("3_xwkvk")]
 
-[node name="Level" parent="." unique_id=1808532929 instance=ExtResource("3_c651c")]
+[node name="2-1" parent="." unique_id=1808532929 instance=ExtResource("2_kfbq2")]
 
 [node name="PlayerEasyControl" parent="." unique_id=934248184 instance=ExtResource("5_3wy1v")]
 position = Vector2(48, -176)

@@ -68,7 +68,7 @@ var mask_unequip_dialogue:Array = [
 	]),
 ]
 
-@export var black_mask_time:float = 1.0 ## Delay between black mask switching
+@export var black_mask_time:float = 2.0 ## Delay between black mask switching
 var black_mask_index:int = 0 ## Tracks which mask should be active when black mask is used
 var last_black_mask_index:int = 3 ## The previous mask that was on should be toggled off
 
