@@ -3,9 +3,16 @@
 [ext_resource type="Script" uid="uid://5tle38c0ficv" path="res://obstacles/teleporter.gd" id="1_1yt3t"]
 [ext_resource type="Texture2D" uid="uid://c5uuw0ydskmmm" path="res://textures/Components/Spikes-Red.png" id="2_ri5d5"]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1yt3t"]
+size = Vector2(32, 16)
+
 [node name="SpikeRed" type="Area2D" unique_id=511879513]
 script = ExtResource("1_1yt3t")
 mask_color = 1
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1121103754]
 texture = ExtResource("2_ri5d5")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=702764010]
+position = Vector2(0, 8)
+shape = SubResource("RectangleShape2D_1yt3t")
