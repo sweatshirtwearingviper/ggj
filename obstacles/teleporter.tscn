@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://hjaqe0luebee"]
 
 [ext_resource type="Script" uid="uid://5tle38c0ficv" path="res://obstacles/teleporter.gd" id="1_1jlp5"]
-[ext_resource type="Texture2D" uid="uid://oa7cirfy5xhy" path="res://textures/Debug/coolguy.png" id="2_htmf4"]
+[ext_resource type="PackedScene" uid="uid://sje5q26r7tou" path="res://Animations/Props/portal.tscn" id="2_htmf4"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_htmf4"]
 
@@ -10,8 +10,7 @@ collision_layer = 0
 collision_mask = 0
 script = ExtResource("1_1jlp5")
 
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1121103754]
-texture = ExtResource("2_htmf4")
+[node name="Portal" parent="." unique_id=519963469 instance=ExtResource("2_htmf4")]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1712981749]
 shape = SubResource("RectangleShape2D_htmf4")
