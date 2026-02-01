@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://bgmksugx58ngk"]
+
+[ext_resource type="Texture2D" uid="uid://b1xv2g2w5jrg2" path="res://textures/Backgrounds/Forest/treesleaves.png" id="1_rmf1a"]
+
+[node name="treesLeaves" type="Parallax2D" unique_id=1095108786]
+scroll_scale = Vector2(0.4, 1)
+repeat_size = Vector2(1920, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=134926653]
+scale = Vector2(2, 3)
+texture = ExtResource("1_rmf1a")

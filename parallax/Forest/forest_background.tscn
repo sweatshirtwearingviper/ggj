@@ -1,28 +1,31 @@
 [gd_scene format=3 uid="uid://dhokngkduaslx"]
 
-[ext_resource type="Texture2D" uid="uid://b5fiaf6eeekv6" path="res://textures/Backgrounds/Forest/background_forest.png" id="1_p17n0"]
+[ext_resource type="Texture2D" uid="uid://b38ts3326r10c" path="res://textures/Backgrounds/Forest/treesbackground.png" id="1_p17n0"]
 
 [node name="Forest_Background" type="Parallax2D" unique_id=1095108786]
 scroll_scale = Vector2(0.01, 1)
 repeat_size = Vector2(1920, 0)
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=134926653]
-scale = Vector2(1, 2)
+scale = Vector2(2, 3)
 texture = ExtResource("1_p17n0")
 
 [node name="Sprite2" type="Sprite2D" parent="." unique_id=898016544]
+visible = false
 position = Vector2(960, 0)
 scale = Vector2(1, 2)
 texture = ExtResource("1_p17n0")
 flip_h = true
 
 [node name="Sprite2D2" type="Sprite2D" parent="." unique_id=539604773]
+visible = false
 position = Vector2(0, 360)
 scale = Vector2(1, 2)
 texture = ExtResource("1_p17n0")
 flip_v = true
 
 [node name="Sprite3" type="Sprite2D" parent="." unique_id=1989449940]
+visible = false
 position = Vector2(960, 360)
 scale = Vector2(1, 2)
 texture = ExtResource("1_p17n0")
@@ -30,12 +33,14 @@ flip_h = true
 flip_v = true
 
 [node name="Sprite2D3" type="Sprite2D" parent="." unique_id=866038024]
+visible = false
 position = Vector2(0, -360)
 scale = Vector2(1, 2)
 texture = ExtResource("1_p17n0")
 flip_v = true
 
 [node name="Sprite4" type="Sprite2D" parent="." unique_id=1756735491]
+visible = false
 position = Vector2(960, -360)
 scale = Vector2(1, 2)
 texture = ExtResource("1_p17n0")

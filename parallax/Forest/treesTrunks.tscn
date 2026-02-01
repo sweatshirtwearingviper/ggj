@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://bu4uci6bc6i2q"]
+
+[ext_resource type="Texture2D" uid="uid://temoump738d7" path="res://textures/Backgrounds/Forest/treestrunks.png" id="1_uyw4j"]
+
+[node name="treesTrunks" type="Parallax2D" unique_id=1095108786]
+scroll_scale = Vector2(0.4, 1)
+repeat_size = Vector2(1920, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=134926653]
+scale = Vector2(2, 3)
+texture = ExtResource("1_uyw4j")
