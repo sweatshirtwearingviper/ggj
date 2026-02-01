@@ -11,6 +11,8 @@ class_name MaskTileMapLayer
 
 
 func _ready() -> void:
+	if mask_color == pow(2, Global.Colors.BLACK):
+		return
 	Global.color_changed.connect(color_changed)
 	
 	

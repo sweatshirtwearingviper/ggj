@@ -1,0 +1,104 @@
+[gd_scene format=3 uid="uid://dmbe8hb3lw0oy"]
+
+[ext_resource type="PackedScene" uid="uid://cfdj8x78ohd3x" path="res://parallax/PurpMountain/parallax_backgroundSky.tscn" id="1_30bke"]
+[ext_resource type="PackedScene" uid="uid://dpm4hcnnblx0j" path="res://parallax/PurpMountain/parallax_Mountains.tscn" id="2_3xbqd"]
+[ext_resource type="PackedScene" uid="uid://bhnk6cb604pk" path="res://parallax/PurpMountain/parallax_front_mountains.tscn" id="3_o1tca"]
+[ext_resource type="PackedScene" uid="uid://cs8l7pbspe4bw" path="res://parallax/PurpMountain/parallax_clouds.tscn" id="4_yh4bw"]
+[ext_resource type="PackedScene" uid="uid://dyrnbed0n42tn" path="res://parallax/PurpMountain/parallax_front_clouds.tscn" id="5_j4yc3"]
+[ext_resource type="PackedScene" uid="uid://btdacjen1ausb" path="res://parallax/WaterWorld/waterbackground.tscn" id="6_jrw4y"]
+[ext_resource type="PackedScene" uid="uid://tgln8hydxnj4" path="res://parallax/WaterWorld/waterfalls.tscn" id="7_ufls4"]
+[ext_resource type="PackedScene" uid="uid://wmutl2pg3l2i" path="res://parallax/WaterWorld/waterClouds1.tscn" id="8_akwd4"]
+[ext_resource type="PackedScene" uid="uid://ccbiiispki76e" path="res://parallax/WaterWorld/waterClouds2.tscn" id="9_nt7lu"]
+[ext_resource type="PackedScene" uid="uid://dhokngkduaslx" path="res://parallax/Forest/forest_background.tscn" id="10_nbrqw"]
+[ext_resource type="PackedScene" uid="uid://bu4uci6bc6i2q" path="res://parallax/Forest/treesTrunks.tscn" id="11_0c55o"]
+[ext_resource type="PackedScene" uid="uid://bgmksugx58ngk" path="res://parallax/Forest/treesLeaves.tscn" id="12_f7ccg"]
+[ext_resource type="PackedScene" uid="uid://dixv1p4pmagw6" path="res://levels/ruler.tscn" id="13_kdt7p"]
+[ext_resource type="TileSet" uid="uid://dbgnho1wr7mar" path="res://tilesets/tileset_masks.tres" id="14_3lsl4"]
+[ext_resource type="Script" uid="uid://l7ym5t6nhaf4" path="res://levels/mask_tile_map_layer.gd" id="15_8yvsa"]
+[ext_resource type="TileSet" uid="uid://dr1au7djoqqhp" path="res://tilesets/tileset_terrain.tres" id="16_2vgqg"]
+[ext_resource type="PackedScene" uid="uid://c7v7j4dbcylmd" path="res://obstacles/level_box.tscn" id="17_j13xl"]
+
+[node name="Level" type="Node2D" unique_id=1808532929]
+
+[node name="ParallaxPurpMtn" type="Node2D" parent="." unique_id=2064541583]
+position = Vector2(0, -300)
+
+[node name="Parallax_Stars" parent="ParallaxPurpMtn" unique_id=195395145 instance=ExtResource("1_30bke")]
+scroll_scale = Vector2(0.01, 1)
+
+[node name="ParallaxLayer" parent="ParallaxPurpMtn" unique_id=1224149914 instance=ExtResource("2_3xbqd")]
+scroll_offset = Vector2(-16, 124)
+
+[node name="Parallax_frontMountains" parent="ParallaxPurpMtn" unique_id=1627610917 instance=ExtResource("3_o1tca")]
+light_mask = 524288
+scroll_offset = Vector2(-16, 124)
+
+[node name="Parallax_Clouds" parent="ParallaxPurpMtn" unique_id=363644778 instance=ExtResource("4_yh4bw")]
+repeat_size = Vector2(1000, 0)
+
+[node name="Parallax_frontClouds" parent="ParallaxPurpMtn" unique_id=258749142 instance=ExtResource("5_j4yc3")]
+scroll_offset = Vector2(16, 24)
+
+[node name="ParallaxWaterWrld" type="Node2D" parent="." unique_id=2027484364]
+visible = false
+position = Vector2(0, -130)
+
+[node name="Waterbackground" parent="ParallaxWaterWrld" unique_id=1095108786 instance=ExtResource("6_jrw4y")]
+scroll_offset = Vector2(-5.706299, -171.33704)
+
+[node name="waterfalls" parent="ParallaxWaterWrld" unique_id=1055729749 instance=ExtResource("7_ufls4")]
+scroll_offset = Vector2(0, -270)
+
+[node name="waterClouds1" parent="ParallaxWaterWrld" unique_id=1567469378 instance=ExtResource("8_akwd4")]
+scroll_offset = Vector2(0, 0.31622314)
+
+[node name="waterClouds2" parent="ParallaxWaterWrld" unique_id=122595863 instance=ExtResource("9_nt7lu")]
+scroll_offset = Vector2(0, 0.31622314)
+
+[node name="ParallaxForest" type="Node2D" parent="." unique_id=1968570367]
+visible = false
+
+[node name="Forest_Background" parent="ParallaxForest" unique_id=1389021478 instance=ExtResource("10_nbrqw")]
+scroll_offset = Vector2(0, -304)
+
+[node name="treesTrunks" parent="ParallaxForest" unique_id=1681345699 instance=ExtResource("11_0c55o")]
+scroll_offset = Vector2(0, -304)
+
+[node name="treeSilhouette" parent="ParallaxForest" unique_id=704564932 instance=ExtResource("12_f7ccg")]
+scroll_offset = Vector2(0, -300)
+
+[node name="Ruler" parent="." unique_id=1900040170 instance=ExtResource("13_kdt7p")]
+visible = false
+
+[node name="Red" type="TileMapLayer" parent="." unique_id=786131689]
+tile_set = ExtResource("14_3lsl4")
+script = ExtResource("15_8yvsa")
+mask_color = 1
+
+[node name="Green" type="TileMapLayer" parent="." unique_id=202435490]
+tile_set = ExtResource("14_3lsl4")
+script = ExtResource("15_8yvsa")
+mask_color = 2
+
+[node name="Blue" type="TileMapLayer" parent="." unique_id=434546063]
+tile_set = ExtResource("14_3lsl4")
+script = ExtResource("15_8yvsa")
+mask_color = 4
+
+[node name="Yellow" type="TileMapLayer" parent="." unique_id=1689960147]
+tile_set = ExtResource("14_3lsl4")
+script = ExtResource("15_8yvsa")
+mask_color = 8
+
+[node name="Black" type="TileMapLayer" parent="." unique_id=213659598]
+tile_set = ExtResource("14_3lsl4")
+script = ExtResource("15_8yvsa")
+mask_color = 16
+
+[node name="Terrain" type="TileMapLayer" parent="." unique_id=333135433]
+tile_set = ExtResource("16_2vgqg")
+
+[node name="Spawn" type="Marker2D" parent="." unique_id=100175022]
+position = Vector2(128, -160)
+
+[node name="LevelBox" parent="." unique_id=2135824514 instance=ExtResource("17_j13xl")]
