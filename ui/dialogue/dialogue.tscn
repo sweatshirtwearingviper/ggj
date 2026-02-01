@@ -28,11 +28,12 @@ axis_stretch_vertical = 1
 
 [node name="Box" type="MarginContainer" parent="." unique_id=211025828]
 layout_mode = 2
-theme_override_constants/margin_left = 16
+theme_override_constants/margin_left = 32
 theme_override_constants/margin_top = 16
 theme_override_constants/margin_right = 16
 theme_override_constants/margin_bottom = 16
 
 [node name="Text" type="Label" parent="Box" unique_id=146388530]
 layout_mode = 2
+theme_override_font_sizes/font_size = 20
 text = "text"
