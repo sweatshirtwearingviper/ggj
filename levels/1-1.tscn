@@ -55,7 +55,8 @@ tile_set = ExtResource("4_bvtcs")
 position = Vector2(34, -204)
 
 [node name="Gravestone" parent="." unique_id=19032468 instance=ExtResource("14_t4rme")]
-position = Vector2(8089, -369)
+position = Vector2(8090.0005, -376)
+scale = Vector2(1.5, 1.5)
 
 [node name="PlayerEasyControl" parent="." unique_id=934248184 instance=ExtResource("7_bvtcs")]
 position = Vector2(80, -208)
