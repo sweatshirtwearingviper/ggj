@@ -6,7 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://cw1t2bf6bocqg" path="res://textures/VFX/float-VFX-left.png" id="4_rew2l"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_y4r6g"]
-size = Vector2(32, 32)
+size = Vector2(30, 30)
 
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_rew2l"]
 particles_animation = true
@@ -40,6 +40,7 @@ script = ExtResource("1_tx5wx")
 [node name="Character" parent="." unique_id=1832436909 instance=ExtResource("2_2002d")]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=556411955]
+position = Vector2(0, 1)
 shape = SubResource("RectangleShape2D_y4r6g")
 
 [node name="FloatParticlesRight" type="GPUParticles2D" parent="." unique_id=71871386]

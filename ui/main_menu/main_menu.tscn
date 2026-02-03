@@ -6,6 +6,8 @@
 [ext_resource type="StyleBox" uid="uid://bp68qt8qceiny" path="res://ui/styles/clear_stylebox.tres" id="3_omy8q"]
 [ext_resource type="Script" uid="uid://7ur8a88580eu" path="res://ui/main_menu/button.gd" id="5_3c04x"]
 [ext_resource type="AudioStream" uid="uid://0q7vqpkwulw" path="res://sfx/mask_collect.wav" id="6_joh67"]
+[ext_resource type="Script" uid="uid://drduqx5jptjlj" path="res://ui/main_menu/version.gd" id="7_u184e"]
+[ext_resource type="AudioStream" uid="uid://ddt28n12mnb67" path="res://sfx/title.mp3" id="8_6mijq"]
 
 [node name="MainMenu" type="Control" unique_id=1518834826]
 layout_mode = 3
@@ -62,3 +64,22 @@ script = ExtResource("5_3c04x")
 
 [node name="Hover" type="AudioStreamPlayer" parent="Button" unique_id=212489584]
 stream = ExtResource("6_joh67")
+
+[node name="Version" type="Label" parent="." unique_id=686426700]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -40.0
+offset_top = -16.0
+grow_horizontal = 0
+grow_vertical = 0
+text = "v0.0.0"
+script = ExtResource("7_u184e")
+
+[node name="TitleTheme" type="AudioStreamPlayer" parent="." unique_id=644262721]
+stream = ExtResource("8_6mijq")
+autoplay = true
+bus = &"music"

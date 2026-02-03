@@ -7,6 +7,7 @@ class_name Teleporter
 
 # For "Export Flags" the int will be a power of 2 i.e. 2, 4, 6, 8, 16
 @export var level_end:bool = false ## If true, clears the player's collected masks
+@export var offset_camera:bool = false ## If true, offsets the camera restrictions to the next level
 @export_flags("Red", "Green", "Blue", "Yellow", "Black") var mask_color:int = 0
 
 
@@ -18,7 +19,10 @@ func _ready() -> void:
 	body_entered.connect(teleport)
 	
 	if level_end:
-		body_entered.connect(func(_body:Node2D) -> void: Global.clear_colors(); Global.camera_offset.emit())
+		body_entered.connect(func(_body:Node2D) -> void: if _body is PlayerEasyControl: Global.clear_colors())
+	if offset_camera:
+		body_entered.connect(func(_body:Node2D) -> void: if _body is PlayerEasyControl: Global.camera_offset.emit())
+		
 	
 	if mask_color == 0:
 		set_collision_layer_value(8, true)

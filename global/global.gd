@@ -166,6 +166,11 @@ func gain_color(_color:Colors) -> void:
 
 
 func clear_colors() -> void:
+	for i:int in current_colors.size():
+		current_colors[i] = false
+		unlocked_colors[i] = false
+		mute_color(i)
+	color_changed.emit()
 	stop_black_mask()
 	print('unlocked colors: %s' % str(unlocked_colors))
 	colors_cleared.emit()
@@ -188,10 +193,6 @@ func start_black_mask() -> void:
 	
 	
 func stop_black_mask() -> void:
-	for i:int in current_colors.size():
-		current_colors[i] = false
-		mute_color(i)
-	print('current colors: %s' % str(current_colors))
 	$Timer.stop()
 	pass
 

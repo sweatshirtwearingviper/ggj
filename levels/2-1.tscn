@@ -113,6 +113,7 @@ tile_set = ExtResource("16_2vgqg")
 [node name="Endstone" parent="." unique_id=511879513 node_paths=PackedStringArray("telepoint") instance=ExtResource("17_0c55o")]
 position = Vector2(5136, -432)
 telepoint = NodePath("../Credits")
+offset_camera = false
 
 [node name="Spawn" type="Marker2D" parent="." unique_id=100175022]
 position = Vector2(128, -160)

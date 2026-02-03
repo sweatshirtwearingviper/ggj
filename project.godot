@@ -12,6 +12,7 @@ config_version=5
 
 config/name="Aftermask"
 config/description="A game about a wee ghost and his souls"
+config/version="1.0.0"
 run/main_scene="uid://cqow47bch5ocs"
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="uid://1t5hp37jpjtv"
@@ -29,6 +30,7 @@ Global="*uid://cetniy8a5b8r6"
 window/size/viewport_width=1440
 window/size/viewport_height=1080
 window/stretch/scale=2.0
+display_server/driver.linuxbsd="wayland"
 
 [gui]
 

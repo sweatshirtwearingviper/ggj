@@ -1,17 +1,17 @@
 extends Camera2D
 
 @export var cam_y_offset:float = 0
-@export var max_y:float = (-540 / 2)
-@export var min_y:float = (-32 * 32) + ((540 / 2))
-@export var max_x:float = (256 * 32) - (720 / 2)
-@export var min_x:float = (720 / 2)
+@export var max_y:float = -540.0 / 2.0
+@export var min_y:float = (-32.0 * 32.0) + (540.0 / 2.0)
+@export var max_x:float = (256.0 * 32.0) - (720.0 / 2.0)
+@export var min_x:float = 720.0 / 2.0
 
 var player_position:Vector2 = Vector2.ZERO
 
 
 func _ready() -> void:
 	Global.player_position.connect(func(_pos:Vector2) -> void: player_position = _pos)
-	Global.camera_offset.connect(func() -> void: cam_y_offset = -2048.0)
+	Global.camera_offset.connect(func() -> void: cam_y_offset += -2048.0)
 
 
 func _physics_process(delta: float) -> void:
