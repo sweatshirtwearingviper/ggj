@@ -20,10 +20,12 @@ func _ready() -> void:
 func sign_enter(_body:Node2D) -> void:
 	if _body is PlayerEasyControl:
 		Global.send_dialogue.emit(dialogue)
+		Global.lock_dialogue.emit()
 		
 
 func sign_exit(_body:Node2D) -> void:
 	if _body is PlayerEasyControl:
+		Global.unlock_dialogue.emit()
 		Global.clear_dialogue.emit()
 
 

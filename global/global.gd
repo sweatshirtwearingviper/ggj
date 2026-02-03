@@ -81,6 +81,8 @@ signal colors_cleared
 
 signal send_dialogue
 signal clear_dialogue
+signal lock_dialogue
+signal unlock_dialogue
 
 signal camera_offset
 
