@@ -17,13 +17,13 @@ func _ready() -> void:
 	if has_node('Portal'):
 		$Portal/AnimationPlayer.play('Portal_Idle')
 	body_entered.connect(teleport)
-	
+
 	if level_end:
 		body_entered.connect(func(_body:Node2D) -> void: if _body is PlayerEasyControl: Global.clear_colors())
 	if offset_camera:
 		body_entered.connect(func(_body:Node2D) -> void: if _body is PlayerEasyControl: Global.camera_offset.emit())
-		
-	
+
+
 	if mask_color == 0:
 		set_collision_layer_value(8, true)
 		set_collision_mask_value(8, true)

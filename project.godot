@@ -27,9 +27,8 @@ Global="*uid://cetniy8a5b8r6"
 
 [display]
 
-window/size/viewport_width=1440
-window/size/viewport_height=1080
-window/stretch/scale=2.0
+window/size/viewport_width=720
+window/size/viewport_height=540
 display_server/driver.linuxbsd="wayland"
 
 [gui]

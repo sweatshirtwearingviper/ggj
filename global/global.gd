@@ -3,8 +3,8 @@ extends Node
 const COLOR_MAX = 2
 enum Colors {RED, GREEN, BLUE, YELLOW, BLACK}
 
-var current_colors:Array = [false, false, false, false, false]
-var unlocked_colors:Array = [false, false, false, false, false]
+var current_colors:Array[bool] = [false, false, false, false, false]
+var unlocked_colors:Array[bool] = [false, false, false, false, false]
 
 var mask_collect_dialogues:Array = [
 	PackedStringArray([
@@ -96,7 +96,7 @@ func _ready() -> void:
 
 
 func _input(_event:InputEvent) -> void:
-	# If the current worn mask is black, block mask input 
+	# If the current worn mask is black, block mask input
 	if current_colors[Colors.BLACK]:
 		color_locked.emit()
 		return
@@ -115,17 +115,17 @@ func _input(_event:InputEvent) -> void:
 
 func toggle_color(_color:Colors) -> void:
 	print('toggling %s' % Colors.keys()[_color])
-	
+
 	# The player doesn't have the color yet, no toggle allowed
 	if not unlocked_colors[_color]:
 		color_locked.emit()
 		return
-	
+
 	var color_count:int = 0
 	for color:bool in current_colors:
 		if color:
 			color_count += 1
-	
+
 	if color_count >= COLOR_MAX:
 		# If there are two colors active, don't activate a new one
 		if not current_colors[_color]:
@@ -136,18 +136,18 @@ func toggle_color(_color:Colors) -> void:
 	# If the colors are not at the max, then just toggle it
 	else:
 		current_colors[_color] = !current_colors[_color]
-		
+
 	if current_colors[_color]:
 		dialogue_parse_and_send(mask_equipped_dialogues, _color)
 		$MaskEquip.play()
 	else:
 		dialogue_parse_and_send(mask_unequip_dialogue, _color)
 		$MaskUnequip.play()
-		
+
 	## Mask global SFX
 	if current_colors[Colors.BLUE]:
 		$GravityFlip.play()
-		
+
 	color_changed.emit()
 	print('current colors: %s' % str(current_colors))
 
@@ -156,13 +156,13 @@ func gain_color(_color:Colors) -> void:
 	# Color already unlocked, don't process
 	if unlocked_colors[_color]:
 		return
-	
+
 	$MaskCollect.play()
 	unmute_color(_color)
 	dialogue_parse_and_send(mask_collect_dialogues, _color)
 	unlocked_colors[_color] = true
 	color_unlocked.emit()
-	
+
 	if unlocked_colors[Colors.BLACK] and not current_colors[Colors.BLACK]:
 		start_black_mask()
 
@@ -177,7 +177,7 @@ func clear_colors() -> void:
 	print('unlocked colors: %s' % str(unlocked_colors))
 	colors_cleared.emit()
 	pass
-	
+
 
 func start_black_mask() -> void:
 	for i:int in current_colors.size():
@@ -192,8 +192,8 @@ func start_black_mask() -> void:
 	black_mask_index = 0
 	$Timer.wait_time = black_mask_time
 	$Timer.start()
-	
-	
+
+
 func stop_black_mask() -> void:
 	$Timer.stop()
 	pass
@@ -221,8 +221,8 @@ func dialogue_parse_and_send(_array:Array, _color:Colors) -> void:
 func mute_color(_color:Colors) -> void:
 	var offset:int = 2
 	AudioServer.set_bus_mute(offset + _color, true)
-	
-	
+
+
 func unmute_color(_color:Colors) -> void:
 	var offset:int = 2
 	AudioServer.set_bus_mute(offset + _color, false)

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dnd4bvket7k4o"
-path="res://.godot/imported/MaskBlocks.webp-97a5c1cfa110c2c32de452c1c93b431d.ctex"
+uid="uid://b3yqxe7iygr4"
+path="res://.godot/imported/gravestonetexture.webp-60e8844d0e7c38d9e8af1122d1299fb9.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://textures/MaskBlocks.webp"
-dest_files=["res://.godot/imported/MaskBlocks.webp-97a5c1cfa110c2c32de452c1c93b431d.ctex"]
+source_file="res://textures/Components/gravestonetexture.webp"
+dest_files=["res://.godot/imported/gravestonetexture.webp-60e8844d0e7c38d9e8af1122d1299fb9.ctex"]
 
 [params]
 

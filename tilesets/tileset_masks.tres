@@ -1,6 +1,6 @@
 [gd_resource type="TileSet" format=3 uid="uid://dbgnho1wr7mar"]
 
-[ext_resource type="Texture2D" uid="uid://dnd4bvket7k4o" path="res://textures/MaskBlocks.webp" id="1_ldkkk"]
+[ext_resource type="Texture2D" uid="uid://dnd4bvket7k4o" path="res://textures/Terrain/MaskBlocks.webp" id="1_ldkkk"]
 
 [sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_ldkkk"]
 polygon = PackedVector2Array(-16, -16, 16, 16, -16, 16)

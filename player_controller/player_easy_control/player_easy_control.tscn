@@ -1,8 +1,9 @@
 [gd_scene format=3 uid="uid://bpscfu0koqk2v"]
 
 [ext_resource type="Script" uid="uid://crr780sbwbfvp" path="res://player_controller/player_easy_control/player_easy_control.gd" id="1_tx5wx"]
-[ext_resource type="PackedScene" uid="uid://c8bqadixpsxyn" path="res://Animations/Character/character.tscn" id="2_2002d"]
 [ext_resource type="Texture2D" uid="uid://cl6qvq0qhh04x" path="res://textures/VFX/float_VFX.png" id="3_2002d"]
+[ext_resource type="SpriteFrames" uid="uid://c64ijqgo62w8t" path="res://spritesheets/player_masks.tres" id="3_lfrnj"]
+[ext_resource type="PackedScene" uid="uid://c4pd4hfjsw3ce" path="res://Animations/Character/mask_spritesheet.tscn" id="4_lfrnj"]
 [ext_resource type="Texture2D" uid="uid://cw1t2bf6bocqg" path="res://textures/VFX/float-VFX-left.png" id="4_rew2l"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_y4r6g"]
@@ -37,7 +38,9 @@ collision_layer = 415
 collision_mask = 415
 script = ExtResource("1_tx5wx")
 
-[node name="Character" parent="." unique_id=1832436909 instance=ExtResource("2_2002d")]
+[node name="MaskSpritesheets" parent="." unique_id=1137142151 instance=ExtResource("4_lfrnj")]
+sprite_frames = ExtResource("3_lfrnj")
+animation = &"none"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=556411955]
 position = Vector2(0, 1)

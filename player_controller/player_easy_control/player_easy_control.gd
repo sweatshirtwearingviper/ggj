@@ -8,27 +8,24 @@ var double_jumped:bool = false
 var is_smashing:bool = false
 var can_dash:bool = true
 var is_dashing:bool = false
-var is_bouncing:bool = false 
+var is_bouncing:bool = false
 
-@onready var sprite:Sprite2D = $Character
+@onready var sprite:AnimatedSprite2D = $MaskSpritesheets
 
 signal teleported ## Emits when the player is teleported. One string is passed in to determine what teleported it (spikes, end of level, etc)
 
 func _ready() -> void:
 	Global.color_changed.connect(color_changed)
-	
-	# Get the sprite's child animation node and play it here
-	var animations:AnimationPlayer = sprite.get_node('AnimationPlayer')
-	animations.current_animation = 'Idle'
+	sprite.play('none')
 
 
 func _physics_process(delta: float) -> void:
 	Global.player_position.emit(position)
-	
+
 	if is_dashing:
 		velocity.x = JUMP_VELOCITY * 2.5 * (1 if sprite.flip_h else -1)
 		get_tree().create_timer(0.2).timeout.connect(func() -> void: can_dash = true; is_dashing = false)
-	
+
 	# Add the gravity. Flip gravity when blue
 	if is_on_floor():
 		double_jumped = false
@@ -54,14 +51,14 @@ func _physics_process(delta: float) -> void:
 		elif Global.current_colors[Global.Colors.GREEN] and not double_jumped:
 			velocity.y = JUMP_VELOCITY
 			double_jumped = true
-	
+
 	# Red smasha
 	if Input.is_action_just_pressed("down"):
 		if Global.current_colors[Global.Colors.RED] and not is_on_floor():
 			velocity.y = -JUMP_VELOCITY * 2
 			velocity.x = 0
 			is_smashing = true
-			
+
 	if Input.is_action_just_pressed("dash"):
 		if Global.current_colors[Global.Colors.YELLOW] and can_dash:
 			is_dashing = true
@@ -92,12 +89,28 @@ func _physics_process(delta: float) -> void:
 
 
 func color_changed() -> void:
-	var count:int = 1
+	var count:int = 0
+	# Collision layers 1, 2, 3, 4, and 5 correspond to the colors
 	for color:bool in Global.current_colors:
-		if count == Global.Colors.BLACK + 1:
-			return
+		count += 1
 		set_collision_layer_value(count, !color)
 		set_collision_mask_value(count, !color)
-		count += 1
-		
-	
+
+	# Read the current_colors array from left to right to find the left color.
+	# Then, read from right to find the right color.
+	# If the left color never finds an active color, 'none' animation is played.
+	var first_color:String = 'none'
+	for i:int in Global.current_colors.size():
+		if Global.current_colors[i]:
+			first_color = Global.Colors.keys()[i]
+
+	if first_color == 'none':
+		sprite.animation = 'none'
+		return
+
+	var second_color:String = ''
+	for i:int in Global.current_colors.size():
+		if Global.current_colors[Global.current_colors.size() - (i + 1)]:
+			second_color = Global.Colors.keys()[Global.current_colors.size() - (i + 1)]
+
+	sprite.animation = '%s_%s' % [first_color.to_lower(), second_color.to_lower()]
