@@ -91,7 +91,10 @@ func _physics_process(delta: float) -> void:
 func color_changed() -> void:
 	var count:int = 0
 	# Collision layers 1, 2, 3, 4, and 5 correspond to the colors
+	# Black is special and doesn't disable the players collision
 	for color:bool in Global.current_colors:
+		if count == Global.Colors.BLACK:
+			continue
 		count += 1
 		set_collision_layer_value(count, !color)
 		set_collision_mask_value(count, !color)
