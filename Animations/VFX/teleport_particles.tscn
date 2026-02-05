@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://c46ncomx2g11d"]
+
+[ext_resource type="Texture2D" uid="uid://c6dawenom2uxo" path="res://textures/VFX/death_VFX.png" id="1_pau5j"]
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_rew2l"]
+particles_animation = true
+particles_anim_h_frames = 8
+particles_anim_v_frames = 1
+particles_anim_loop = true
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_rew2l"]
+particle_flag_disable_z = true
+spread = 0.0
+gravity = Vector3(0, 0, 0)
+scale_min = 2.0
+scale_max = 2.0
+anim_speed_min = 1.0
+anim_speed_max = 1.0
+
+[node name="TeleportParticles" type="GPUParticles2D" unique_id=1729648056]
+material = SubResource("CanvasItemMaterial_rew2l")
+amount = 1
+texture = ExtResource("1_pau5j")
+lifetime = 0.5
+process_material = SubResource("ParticleProcessMaterial_rew2l")

@@ -9,10 +9,11 @@ var is_smashing:bool = false
 var can_dash:bool = true
 var is_dashing:bool = false
 var is_bouncing:bool = false
+var is_dead:bool = false
+var turned_off_particles:bool = false
 
 @onready var sprite:AnimatedSprite2D = $MaskSpritesheets
 
-signal teleported ## Emits when the player is teleported. One string is passed in to determine what teleported it (spikes, end of level, etc)
 
 func _ready() -> void:
 	Global.color_changed.connect(color_changed)
@@ -21,6 +22,15 @@ func _ready() -> void:
 
 func _physics_process(delta: float) -> void:
 	Global.player_position.emit(position)
+
+	if is_dead:
+		if not turned_off_particles:
+			turned_off_particles = true
+			for child:Node in get_children():
+				if child is GPUParticles2D and child.name != 'TeleportParticles':
+					child.emitting = false
+		velocity = Vector2.ZERO
+		return
 
 	if is_dashing:
 		# HACK Get the direction in the most cursed way possible
@@ -136,3 +146,22 @@ func color_changed() -> void:
 			second_color = Global.Colors.keys()[Global.current_colors.size() - (i + 1)]
 
 	sprite.animation = '%s_%s' % [first_color.to_lower(), second_color.to_lower()]
+
+
+func teleport(_position:Vector2, _time:bool = false, _is_dead:bool = false):
+	$TeleportParticles.emitting = true
+	sprite.modulate = Color(1,1,1,0)
+	is_dead = _is_dead
+
+	# Returns player to controllable state at teleported point
+	var reset:Callable = func() -> void:
+		turned_off_particles = false
+		$TeleportParticles.emitting = false
+		sprite.modulate = Color(1,1,1,1)
+		is_dead = false
+		position = _position
+
+	if is_zero_approx(_time):
+		reset.call()
+	else:
+		get_tree().create_timer(_time).timeout.connect(reset)

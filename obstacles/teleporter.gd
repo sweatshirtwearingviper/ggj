@@ -8,6 +8,7 @@ class_name Teleporter
 # For "Export Flags" the int will be a power of 2 i.e. 2, 4, 6, 8, 16
 @export var level_end:bool = false ## If true, clears the player's collected masks
 @export var offset_camera:bool = false ## If true, offsets the camera restrictions to the next level
+@export var kills_player:bool = false ## If true, makes the player wait 1 second to teleport and gain access to controls again
 @export_flags("Red", "Green", "Blue", "Yellow", "Black") var mask_color:int = 0
 
 
@@ -39,8 +40,7 @@ func teleport(_body:Node2D) -> void:
 		printerr('%s cannot teleport! No telepoint destination defined.' % self)
 		return
 	if _body is PlayerEasyControl:
-		_body.teleported.emit()
-		_body.position = telepoint.global_position
+		_body.teleport(telepoint.global_position, 1.0 if kills_player else 0.0, kills_player)
 
 
 func color_changed() -> void:

@@ -9,6 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://brmvsrrd6b3ms" path="res://Animations/VFX/dash_particles_left.tscn" id="6_ndnpw"]
 [ext_resource type="AudioStream" uid="uid://c5fbiuku1ecwg" path="res://sfx/dash.wav" id="8_2opk1"]
 [ext_resource type="AudioStream" uid="uid://bk5yn1dk3n5kh" path="res://sfx/jump.wav" id="9_pxudf"]
+[ext_resource type="PackedScene" uid="uid://c46ncomx2g11d" path="res://Animations/VFX/teleport_particles.tscn" id="10_t2cil"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_y4r6g"]
 size = Vector2(30, 30)
@@ -29,6 +30,11 @@ emitting = false
 [node name="MaskSpritesheets" parent="." unique_id=1137142151 instance=ExtResource("4_lfrnj")]
 sprite_frames = ExtResource("3_lfrnj")
 animation = &"none"
+
+[node name="TeleportParticles" parent="." unique_id=1516940527 instance=ExtResource("10_t2cil")]
+position = Vector2(0, -16)
+emitting = false
+lifetime = 1.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=556411955]
 position = Vector2(0, 1)

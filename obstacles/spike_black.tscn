@@ -8,6 +8,7 @@ size = Vector2(32, 16)
 
 [node name="SpikeBlack" type="Area2D" unique_id=511879513]
 script = ExtResource("1_k74ts")
+kills_player = true
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1121103754]
 texture = ExtResource("2_k74ts")

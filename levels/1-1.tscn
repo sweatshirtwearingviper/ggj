@@ -7,6 +7,7 @@
 [ext_resource type="TileSet" uid="uid://dr1au7djoqqhp" path="res://tilesets/tileset_terrain.tres" id="4_bvtcs"]
 [ext_resource type="PackedScene" uid="uid://bhnk6cb604pk" path="res://parallax/PurpMountain/parallax_front_mountains.tscn" id="4_lrivg"]
 [ext_resource type="PackedScene" uid="uid://cs8l7pbspe4bw" path="res://parallax/PurpMountain/parallax_clouds.tscn" id="5_g3hso"]
+[ext_resource type="PackedScene" uid="uid://bpji2tjtmoyqx" path="res://obstacles/spike_black.tscn" id="6_3lv7o"]
 [ext_resource type="PackedScene" uid="uid://dyrnbed0n42tn" path="res://parallax/PurpMountain/parallax_front_clouds.tscn" id="6_4r8hi"]
 [ext_resource type="PackedScene" uid="uid://hjaqe0luebee" path="res://obstacles/teleporter.tscn" id="8_q3ga1"]
 [ext_resource type="PackedScene" uid="uid://bg0syfjjgd7cl" path="res://obstacles/mask_red.tscn" id="8_x3ugg"]
@@ -51,6 +52,10 @@ scroll_offset = Vector2(5736, -688)
 scroll_offset = Vector2(2496, -305)
 
 [node name="Parallax_frontClouds3" parent="." unique_id=1275567171 instance=ExtResource("6_4r8hi")]
+
+[node name="SpikeBlack" parent="." unique_id=511879513 node_paths=PackedStringArray("telepoint") instance=ExtResource("6_3lv7o")]
+position = Vector2(230, -178)
+telepoint = NodePath("../Spawn")
 
 [node name="Signpost" parent="." unique_id=1066847678 instance=ExtResource("12_nsued")]
 position = Vector2(706, -208)
@@ -184,7 +189,7 @@ telepoint = NodePath("../Marker2D")
 position = Vector2(6315, -127)
 telepoint = NodePath("../Marker2D")
 
-[node name="MaskRed" parent="." unique_id=511879513 instance=ExtResource("8_x3ugg")]
+[node name="MaskRed" parent="." unique_id=666045684 instance=ExtResource("8_x3ugg")]
 position = Vector2(516, -283)
 
 [node name="MaskGreen" parent="." unique_id=381335240 instance=ExtResource("9_omt56")]
