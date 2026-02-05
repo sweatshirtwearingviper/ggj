@@ -23,8 +23,23 @@ func _physics_process(delta: float) -> void:
 	Global.player_position.emit(position)
 
 	if is_dashing:
-		velocity.x = JUMP_VELOCITY * 2.5 * (1 if sprite.flip_h else -1)
-		get_tree().create_timer(0.2).timeout.connect(func() -> void: can_dash = true; is_dashing = false)
+		# HACK Get the direction in the most cursed way possible
+		var sprite_face:int = 0
+		if not $DashSound.playing:
+			$DashSound.play()
+		if sprite.flip_h:
+			sprite_face = 1
+			$DashParticlesLeft.emitting = true
+		else:
+			sprite_face = -1
+			$DashParticlesRight.emitting = true
+		velocity.x = JUMP_VELOCITY * 2.5 * sprite_face
+		get_tree().create_timer(0.2).timeout.connect(func() -> void:
+			can_dash = true
+			is_dashing = false
+			$DashParticlesLeft.emitting = false
+			$DashParticlesRight.emitting = false
+			)
 
 	# Add the gravity. Flip gravity when blue
 	if is_on_floor():
@@ -41,14 +56,18 @@ func _physics_process(delta: float) -> void:
 
 	# GREEN handle bounce pads
 	if is_bouncing:
+		$JumpSound.play()
 		velocity.y = JUMP_VELOCITY
 		is_bouncing = false
+		double_jumped = false
 
 	# Handle jump and green doublejump
 	if Input.is_action_just_pressed("up"):
 		if is_on_floor():
+			$JumpSound.play()
 			velocity.y = JUMP_VELOCITY
 		elif Global.current_colors[Global.Colors.GREEN] and not double_jumped:
+			$JumpSound.play()
 			velocity.y = JUMP_VELOCITY
 			double_jumped = true
 

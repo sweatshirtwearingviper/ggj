@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://brmvsrrd6b3ms"]
+
+[ext_resource type="Texture2D" uid="uid://mb5q2wkpf061" path="res://textures/VFX/Dash_VFX_left.png" id="1_hvgyr"]
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_rew2l"]
+particles_animation = true
+particles_anim_h_frames = 5
+particles_anim_v_frames = 1
+particles_anim_loop = true
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_rew2l"]
+particle_flag_disable_z = true
+spread = 0.0
+gravity = Vector3(0, 0, 0)
+anim_speed_min = 1.0
+anim_speed_max = 1.0
+
+[node name="DashParticlesLeft" type="GPUParticles2D" unique_id=1729648056]
+material = SubResource("CanvasItemMaterial_rew2l")
+amount = 4
+texture = ExtResource("1_hvgyr")
+lifetime = 0.2
+process_material = SubResource("ParticleProcessMaterial_rew2l")

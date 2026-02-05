@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://cect258khaes6" path="res://obstacles/mask.gd" id="1_ct1nx"]
 [ext_resource type="Texture2D" uid="uid://blhykri8y6qv2" path="res://textures/Components/BlueMask.png" id="2_u4yku"]
+[ext_resource type="Script" uid="uid://ct7sfdasag4sk" path="res://obstacles/sprite_wobbler.gd" id="3_sq162"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_htmf4"]
 
@@ -13,6 +14,8 @@ mask_color = 4
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1767571723]
 texture = ExtResource("2_u4yku")
+script = ExtResource("3_sq162")
+progress = 0.4
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1712981749]
 shape = SubResource("RectangleShape2D_htmf4")

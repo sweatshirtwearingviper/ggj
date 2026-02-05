@@ -1,0 +1,24 @@
+[gd_scene format=3 uid="uid://qpg1go0ghutf"]
+
+[ext_resource type="Texture2D" uid="uid://cw1t2bf6bocqg" path="res://textures/VFX/float-VFX-left.png" id="1_0ejqg"]
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_rew2l"]
+particles_animation = true
+particles_anim_h_frames = 9
+particles_anim_v_frames = 1
+particles_anim_loop = true
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_rew2l"]
+particle_flag_disable_z = true
+spread = 0.0
+initial_velocity_min = -60.0
+initial_velocity_max = -20.0
+gravity = Vector3(0, 0, 0)
+anim_speed_min = 1.0
+anim_speed_max = 1.0
+
+[node name="FloatParticlesLeft" type="GPUParticles2D" unique_id=1729648056]
+material = SubResource("CanvasItemMaterial_rew2l")
+amount = 4
+texture = ExtResource("1_0ejqg")
+process_material = SubResource("ParticleProcessMaterial_rew2l")

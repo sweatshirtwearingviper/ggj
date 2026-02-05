@@ -11,6 +11,7 @@
 [ext_resource type="PackedScene" uid="uid://dad5wco8qh04g" path="res://levels/4-1.tscn" id="6_5xyti"]
 [ext_resource type="PackedScene" uid="uid://d1l57tsady2fg" path="res://ui/main_menu/main_menu.tscn" id="6_kfbq2"]
 [ext_resource type="PackedScene" uid="uid://s3covi06g5lh" path="res://levels/4-2.tscn" id="7_n3o0a"]
+[ext_resource type="PackedScene" uid="uid://bd8avx4kyfk1f" path="res://obstacles/bouncer.tscn" id="12_fwcvl"]
 
 [node name="Main" type="Node" unique_id=797082359]
 script = ExtResource("1_fwcvl")
@@ -34,7 +35,7 @@ position = Vector2(0, -8192)
 [node name="Camera" parent="." unique_id=704402319 instance=ExtResource("3_xwkvk")]
 
 [node name="PlayerEasyControl" parent="." unique_id=934248184 instance=ExtResource("5_3wy1v")]
-position = Vector2(96, -224)
+position = Vector2(48, -208)
 
 [node name="UI" type="CanvasLayer" parent="." unique_id=1085982232]
 
@@ -44,3 +45,6 @@ position = Vector2(96, -224)
 visible = false
 
 [node name="MainMenu" parent="UI" unique_id=1518834826 instance=ExtResource("6_kfbq2")]
+
+[node name="Bouncer" parent="." unique_id=1205630108 instance=ExtResource("12_fwcvl")]
+position = Vector2(461, -248)
